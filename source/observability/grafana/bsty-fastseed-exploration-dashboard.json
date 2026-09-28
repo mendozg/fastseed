@@ -1,0 +1,12 @@
+{
+  "title": "BSTY FastSeed — Exploration Scheduler",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "30s",
+  "panels": [
+    {"type":"timeseries","title":"Exploration Selection Ratio","targets":[{"expr":"fastseed:exploration_selection_ratio"}]},
+    {"type":"timeseries","title":"Exploration Share by Transport","targets":[{"expr":"fastseed:exploration_transport_share"}]},
+    {"type":"timeseries","title":"Starvation Rate","targets":[{"expr":"fastseed:exploration_starvation_rate"}]},
+    {"type":"timeseries","title":"Admission Rejection Rate","targets":[{"expr":"fastseed:exploration_rejection_rate"}]}
+  ]
+}

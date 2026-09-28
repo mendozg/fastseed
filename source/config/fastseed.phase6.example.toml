@@ -1,0 +1,32 @@
+[network]
+p2p_port = 8226
+
+[dns]
+zone = "seed.globalboost.info"
+listen_port = 53
+ttl_seconds = 60
+max_answers = 32
+include_warm = true
+max_response_size = 1232
+
+[dns.rate_limit]
+per_source_per_second = 100
+global_per_second = 5000
+max_sources = 4096
+
+[database]
+path = "fastseed.sqlite3"
+max_peers = 250000
+stale_days = 30
+failed_days = 14
+busy_timeout_ms = 2500
+
+[database.persistence]
+max_items = 10000
+batch_size = 128
+flush_interval_ms = 500
+
+[crawler]
+max_concurrent_probes = 256
+connect_timeout_ms = 1500
+handshake_timeout_ms = 2500

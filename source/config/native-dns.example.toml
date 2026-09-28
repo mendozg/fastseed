@@ -1,0 +1,12 @@
+[dns]
+zone = "seed.globalboost.info"
+listen_port = 53
+max_answers = 32
+ttl_seconds = 60
+max_response_size = 1232
+include_warm = true
+
+[dns.rate_limit]
+per_source_per_second = 100
+global_per_second = 5000
+max_sources = 4096

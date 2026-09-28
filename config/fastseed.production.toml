@@ -1,0 +1,47 @@
+# BSTY FastSeed v1.0.0 production baseline
+[dns]
+zone = "seed.globalboost.info"
+listen_port = 53
+max_answers = 32
+ttl_seconds = 60
+max_response_size = 1232
+include_warm = true
+
+[dns.rate_limit]
+per_source_per_second = 100
+global_per_second = 5000
+max_sources = 4096
+
+[crawler]
+max_concurrent_probes = 256
+max_open_connections = 2048
+max_candidates = 100000
+connect_timeout_ms = 1500
+handshake_timeout_ms = 2500
+
+[cache]
+hot_ipv4 = 1000
+hot_ipv6 = 500
+warm_max = 10000
+cold_max = 50000
+
+[health]
+minimum_observations_for_hot = 3
+freshness_seconds = 1800
+quarantine_seconds = 3600
+
+[database]
+path = "/var/lib/bsty-fastseed/fastseed.sqlite3"
+max_peers = 250000
+stale_after_days = 30
+failed_after_days = 14
+busy_timeout_ms = 2500
+
+[network_intelligence]
+enabled = true
+learning_half_life_seconds = 21600
+minimum_observations = 3
+reliability_weight = 0.40
+latency_weight = 0.25
+freshness_weight = 0.15
+diversity_weight = 0.20

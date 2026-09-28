@@ -1,0 +1,12 @@
+[network_intelligence]
+enabled=true
+learning_half_life_seconds=21600
+minimum_observations=3
+reliability_weight=0.40
+latency_weight=0.25
+freshness_weight=0.15
+diversity_weight=0.20
+
+[network_intelligence.diversity]
+ipv4_prefix_bits=24
+ipv6_prefix_bits=48

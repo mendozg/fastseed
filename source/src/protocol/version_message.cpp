@@ -1,0 +1,16 @@
+#include "fastseed/protocol/version_message.hpp"
+#include "fastseed/protocol/constants.hpp"
+#include "fastseed/protocol/serializer.hpp"
+#include "fastseed/protocol/protocol_limits.hpp"
+#include <boost/asio/ip/address_v4.hpp>
+#include <chrono>
+#include <stdexcept>
+namespace fastseed::protocol {
+std::array<std::uint8_t,16> ipv4_mapped(const boost::asio::ip::address& a){std::array<std::uint8_t,16> x{};auto b=a.to_v4().to_bytes();x[10]=0xff;x[11]=0xff;std::copy(b.begin(),b.end(),x.begin()+12);return x;}
+void write_network_address(Writer& w,const NetworkAddress&a){w.u64(a.services);std::array<std::uint8_t,16>x{};if(a.address.is_v4())x=ipv4_mapped(a.address);else if(a.address.is_v6())x=a.address.to_v6().to_bytes();else throw std::invalid_argument("invalid address");w.fixed16(x); // port is network byte order
+ auto p=a.port; w.u8(static_cast<std::uint8_t>(p>>8)); w.u8(static_cast<std::uint8_t>(p));}
+NetworkAddress read_network_address(Reader&r){NetworkAddress a;a.services=r.u64();auto x=r.fixed16();a.port=static_cast<std::uint16_t>(r.u8())<<8;a.port|=r.u8();bool mapped=true;for(int i=0;i<10;++i)if(x[i]!=0)mapped=false;if(x[10]!=0xff||x[11]!=0xff)mapped=false;if(mapped){boost::asio::ip::address_v4::bytes_type b{};std::copy_n(x.begin()+12,4,b.begin());a.address=boost::asio::ip::address_v4(b);}else{boost::asio::ip::address_v6::bytes_type b{};std::copy(x.begin(),x.end(),b.begin());a.address=boost::asio::ip::address_v6(b);}return a;}
+VersionMessage make_version(const NetworkAddress&recv,const NetworkAddress&from,std::int32_t height){VersionMessage v;v.version=bsty::PROTOCOL_VERSION;v.services=0;v.timestamp=std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now().time_since_epoch()).count();v.addr_recv=recv;v.addr_from=from;v.nonce=std::chrono::steady_clock::now().time_since_epoch().count();v.user_agent="/BSTYFastSeed:0.1/";v.start_height=height;v.relay=true;return v;}
+std::vector<std::uint8_t> encode_version(const VersionMessage&v){Writer w;w.i32(v.version);w.u64(v.services);w.u64(static_cast<std::uint64_t>(v.timestamp));write_network_address(w,v.addr_recv);write_network_address(w,v.addr_from);w.u64(v.nonce);w.string(v.user_agent);w.i32(v.start_height);w.u8(v.relay?1:0);return w.data();}
+VersionMessage decode_version(std::span<const std::uint8_t>b){Reader r(b);VersionMessage v;v.version=r.i32();v.services=r.u64();v.timestamp=static_cast<std::int64_t>(r.u64());v.addr_recv=read_network_address(r);v.addr_from=read_network_address(r);v.nonce=r.u64();if(r.remaining()<1)throw std::runtime_error("missing user agent");auto marker=r.u8();std::size_t n=marker;if(marker==253){if(r.remaining()<2)throw std::runtime_error("truncated varstr");n=static_cast<std::size_t>(r.u8())|(static_cast<std::size_t>(r.u8())<<8);}else if(marker==254){if(r.remaining()<4)throw std::runtime_error("truncated varstr");n=r.u32();}else if(marker==255){if(r.remaining()<8)throw std::runtime_error("truncated varstr");auto nn=r.u64();if(nn>static_cast<std::uint64_t>(SIZE_MAX))throw std::runtime_error("invalid varstr");n=static_cast<std::size_t>(nn);}if(n>limits::max_user_agent_size||r.remaining()<n)throw std::runtime_error("invalid user agent");v.user_agent=r.string(n);v.start_height=r.i32();if(r.remaining())v.relay=r.u8()!=0;else v.relay=true;return v;}
+}

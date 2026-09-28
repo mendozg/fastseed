@@ -1,0 +1,36 @@
+groups:
+  - name: bsty-fastseed-exploration-alerts
+    interval: 30s
+    rules:
+      - alert: FastSeedExplorationStarvation
+        expr: fastseed:exploration_starvation_rate > 0.1
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "BSTY FastSeed exploration starvation"
+          description: "A transport has repeatedly had eligible exploration work without a selected probe."
+      - alert: FastSeedExplorationImbalance
+        expr: (max by () (fastseed:exploration_transport_share) - min by () (fastseed:exploration_transport_share)) > 0.60
+        for: 30m
+        labels:
+          severity: warning
+        annotations:
+          summary: "BSTY FastSeed exploration imbalance"
+          description: "Exploration share differs substantially between transports."
+      - alert: FastSeedExplorationBudgetUnderuse
+        expr: fastseed:exploration_selection_ratio < 0.25
+        for: 15m
+        labels:
+          severity: warning
+        annotations:
+          summary: "BSTY FastSeed exploration budget underused"
+          description: "Less than 25% of allocated exploration slots are being selected."
+      - alert: FastSeedExplorationAdmissionRejections
+        expr: sum(rate(fastseed_exploration_rejected_total[10m])) > 1
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "BSTY FastSeed exploration admission pressure"
+          description: "Exploration candidates are frequently rejected by transport admission limits."

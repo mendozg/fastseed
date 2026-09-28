@@ -1,0 +1,21 @@
+# BSTY-FastSeed Phase 10.10 adaptive scheduling
+[crawler.scheduler]
+max_batch = 256
+minimum_refresh_seconds = 60
+maximum_refresh_seconds = 3600
+high_availability = 0.90
+low_availability = 0.50
+high_latency_ms = 250
+low_latency_ms = 1500
+
+[crawler.scheduler.direct_tcp]
+max_inflight = 192
+max_batch = 192
+
+[crawler.scheduler.tor_socks5]
+max_inflight = 32
+max_batch = 32
+
+[crawler.scheduler.i2p_sam]
+max_inflight = 32
+max_batch = 32

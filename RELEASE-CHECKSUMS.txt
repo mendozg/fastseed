@@ -1,0 +1,2 @@
+BSTY-FastSeed v1.0.0 release artifact
+3c0ffdfe2b0d7c771c038d93eabe7e8db42f6ec0213d63abd2e0572b67776566  bin/bsty-fastseed

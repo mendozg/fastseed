@@ -1,0 +1,12 @@
+groups:
+  - name: bsty-fastseed-exploration-recording
+    interval: 30s
+    rules:
+      - record: fastseed:exploration_selection_ratio
+        expr: sum(rate(fastseed_exploration_selected_total[5m])) / clamp_min(sum(rate(fastseed_exploration_budget_allocated_total[5m])), 1e-9)
+      - record: fastseed:exploration_starvation_rate
+        expr: sum(rate(fastseed_exploration_starvation_windows_total[10m])) by (transport)
+      - record: fastseed:exploration_rejection_rate
+        expr: sum(rate(fastseed_exploration_rejected_total[10m])) by (transport)
+      - record: fastseed:exploration_transport_share
+        expr: sum(rate(fastseed_exploration_selected_total[10m])) by (transport) / clamp_min(sum(rate(fastseed_exploration_selected_total[10m])), 1e-9)

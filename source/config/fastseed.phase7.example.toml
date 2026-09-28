@@ -1,0 +1,13 @@
+# Phase 7 distributed seeder mesh
+[federation]
+enabled = false
+seeder_id = "seeder-a"
+shared_secret = "CHANGE-ME"
+clock_skew_seconds = 120
+replay_window_seconds = 300
+max_peers_per_message = 256
+max_message_size = 65536
+
+[federation.peer]
+# Future network transport configuration is intentionally not enabled in Phase 7.
+# Federation records must be re-probed locally before DNS eligibility.
