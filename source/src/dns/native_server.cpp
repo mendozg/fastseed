@@ -23,8 +23,8 @@ private:
                 const auto remote=self->socket_.remote_endpoint(ec3);
                 if(ec3) return;
                 if(!self->limiter_.allow(remote.address().to_string())) return;
-                auto response=std::make_shared<std::vector<std::uint8_t>>(self->engine_.build_response(self->query_));
-                if(response->size()>65535) return;
+                auto response=std::make_shared<std::vector<std::uint8_t>>(self->engine_.build_response(self->query_, true));
+                if(response->empty() || response->size()>65535) return;
                 self->length_[0]=static_cast<std::uint8_t>(response->size()>>8);
                 self->length_[1]=static_cast<std::uint8_t>(response->size());
                 self->response_=std::move(response);

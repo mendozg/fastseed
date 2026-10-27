@@ -10,6 +10,7 @@
 #include <functional>
 #include <memory>
 #include <string>
+#include <utility>
 #include <vector>
 #include "fastseed/crawler/adaptive_feedback.hpp"
 
@@ -30,6 +31,8 @@ struct CrawlerConfig {
     transport::TorSocks5Transport::Config tor_transport{};
     transport::I2pSamTransport::Config i2p_transport{};
     transport::I2pSamTransport::DestinationResolver i2p_destination_resolver{};
+    AdaptiveSchedulerConfig scheduler{};
+    FeedbackConfig feedback{};
 };
 
 struct CrawlerStats {
@@ -118,6 +121,8 @@ public:
     CrawlerStats stats() const noexcept;
     std::size_t transport_capacity(transport::TransportKind kind) const noexcept;
     std::vector<PeerCandidate> snapshot() const;
+    std::vector<std::pair<transport::TransportKind, PersistedTransportState>> scheduler_state() const;
+    void restore_scheduler_state(const std::vector<std::pair<transport::TransportKind, PersistedTransportState>>& records);
     void set_validated_callback(ValidatedCallback cb) { validated_callback_ = std::move(cb); }
 
 private:

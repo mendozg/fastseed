@@ -25,6 +25,51 @@ std::vector<std::uint8_t> make_empty_message(std::string_view command) {
     h.checksum = checksum({});
     return encode_header(h);
 }
+// Keep wire bytes alive until Boost.Asio completes an asynchronous write.
+template<class Handler>
+void write_owned(std::shared_ptr<boost::asio::ip::tcp::socket> socket,
+                 std::vector<std::uint8_t> bytes, Handler handler) {
+    auto owned=std::make_shared<std::vector<std::uint8_t>>(std::move(bytes));
+    boost::asio::async_write(*socket,boost::asio::buffer(*owned),
+        [owned,handler=std::move(handler)](boost::system::error_code ec,std::size_t n) mutable {
+            handler(ec,n);
+        });
+}
+
+// BIP155/BIP339 capabilities may precede verack. Never qualify a peer before
+// a real empty verack with the correct network magic and checksum arrives.
+class VerackReader : public std::enable_shared_from_this<VerackReader> {
+public:
+    std::shared_ptr<boost::asio::ip::tcp::socket> socket;
+    std::function<bool()> stopped;
+    std::function<void(ProbeStatus,std::string)> done;
+    std::array<std::uint8_t,24> header{};
+    std::size_t messages{0};
+
+    void read() {
+        if(stopped()) return;
+        if(++messages>16) { done(ProbeStatus::InvalidMessage,"too many messages before verack"); return; }
+        auto self=shared_from_this();
+        boost::asio::async_read(*socket,boost::asio::buffer(header),[self](auto ec,auto){
+            if(self->stopped()) return;
+            if(ec) { self->done(ProbeStatus::HandshakeFailed,ec.message()); return; }
+            try {
+                const auto h=decode_header(self->header);
+                if(h.magic!=bsty::MAINNET_MAGIC) { self->done(ProbeStatus::InvalidMagic,"wrong magic before verack"); return; }
+                const auto command=command_string(h);
+                const bool capability=command=="sendaddrv2" || command=="wtxidrelay";
+                if((command!="verack" && !capability) || h.payload_size!=0) {
+                    self->done(ProbeStatus::InvalidMessage,"expected empty verack or handshake capability; received "+command+" ("+std::to_string(h.payload_size)+" bytes)");
+                    return;
+                }
+                if(h.checksum!=checksum({})) { self->done(ProbeStatus::InvalidChecksum,"bad checksum before verack"); return; }
+                if(command=="verack") self->done(ProbeStatus::Success,{});
+                else self->read();
+            } catch(const std::exception& e) { self->done(ProbeStatus::InvalidMessage,e.what()); }
+        });
+    }
+};
+
 }
 
 void PeerProbe::run(const std::string& host, std::uint16_t port,
@@ -117,7 +162,7 @@ void PeerProbe::run(const std::string& host, std::uint16_t port,
             auto out = encode_header(h);
             out.insert(out.end(), vm.begin(), vm.end());
             auto self = shared_from_this();
-            boost::asio::async_write(*sock, boost::asio::buffer(out),
+            write_owned(sock, std::move(out),
                 [self](auto ec, auto) {
                     if (ec) {
                         self->finish(ProbeStatus::HandshakeFailed, ec.message());
@@ -144,6 +189,9 @@ void PeerProbe::run(const std::string& host, std::uint16_t port,
                         if (command_string(h) != "version") {
                             self->finish(ProbeStatus::InvalidMessage, "expected version");
                             return;
+                        }
+                        if(h.payload_size>limits::max_version_payload) {
+                            self->finish(ProbeStatus::InvalidMessage,"version payload too large"); return;
                         }
                         self->payload.resize(h.payload_size);
                         boost::asio::async_read(*self->sock, boost::asio::buffer(self->payload),
@@ -181,7 +229,7 @@ void PeerProbe::run(const std::string& host, std::uint16_t port,
         void send_sendaddrv2() {
             auto out = make_empty_message("sendaddrv2");
             auto self = shared_from_this();
-            boost::asio::async_write(*sock, boost::asio::buffer(out),
+            write_owned(sock, std::move(out),
                 [self](auto ec, auto) {
                     if (ec) {
                         self->finish(ProbeStatus::HandshakeFailed, ec.message());
@@ -194,7 +242,7 @@ void PeerProbe::run(const std::string& host, std::uint16_t port,
         void send_verack() {
             auto out = make_empty_message("verack");
             auto self = shared_from_this();
-            boost::asio::async_write(*sock, boost::asio::buffer(out),
+            write_owned(sock, std::move(out),
                 [self](auto ec, auto) {
                     if (ec) {
                         self->finish(ProbeStatus::HandshakeFailed, ec.message());
@@ -205,41 +253,23 @@ void PeerProbe::run(const std::string& host, std::uint16_t port,
         }
 
         void read_verack() {
-            auto self = shared_from_this();
-            auto buf = std::make_shared<std::array<std::uint8_t, 24>>();
-            boost::asio::async_read(*sock, boost::asio::buffer(*buf),
-                [self, buf](auto ec, auto) {
-                    if (ec) {
-                        self->finish(ProbeStatus::HandshakeFailed, ec.message());
-                        return;
-                    }
-                    try {
-                        auto h = decode_header(*buf);
-                        if (h.magic != bsty::MAINNET_MAGIC) {
-                            self->finish(ProbeStatus::InvalidMagic, "wrong magic");
-                            return;
-                        }
-                        if (command_string(h) != "verack" || h.payload_size != 0) {
-                            self->finish(ProbeStatus::InvalidMessage, "expected empty verack");
-                            return;
-                        }
-                        if (h.checksum != checksum({})) {
-                            self->finish(ProbeStatus::InvalidChecksum, "bad checksum");
-                            return;
-                        }
-                        self->r.handshake_time = std::chrono::duration_cast<std::chrono::milliseconds>(
-                            std::chrono::steady_clock::now() - self->started);
-                        self->send_getaddr();
-                    } catch (const std::exception& e) {
-                        self->finish(ProbeStatus::HandshakeFailed, e.what());
-                    }
-                });
+            auto self=shared_from_this();
+            auto reader=std::make_shared<VerackReader>();
+            reader->socket=sock;
+            reader->stopped=[self]{return self->finished;};
+            reader->done=[self](ProbeStatus status,std::string error){
+                if(self->finished) return;
+                if(status!=ProbeStatus::Success) { self->finish(status,std::move(error)); return; }
+                self->r.handshake_time=std::chrono::duration_cast<std::chrono::milliseconds>(
+                    std::chrono::steady_clock::now()-self->started);
+                self->send_getaddr();
+            };
+            reader->read();
         }
-
         void send_getaddr() {
             auto out = make_empty_message("getaddr");
             auto self = shared_from_this();
-            boost::asio::async_write(*sock, boost::asio::buffer(out),
+            write_owned(sock, std::move(out),
                 [self](auto ec, auto) {
                     if (ec) {
                         // Handshake itself succeeded; an inability to request peer exchange
@@ -337,7 +367,11 @@ void PeerProbe::run_connected(std::shared_ptr<boost::asio::ip::tcp::socket> sock
                        std::string ep, std::function<void(ProbeResult)> d)
             : sock(std::move(s)), timer(io), done(std::move(d)) { r.endpoint=std::move(ep); }
         void finish(ProbeStatus st, std::string e={}) {
-            if(finished) return; finished=true; boost::system::error_code x; timer.cancel(x);
+            if (finished) return;
+            finished = true;
+            boost::system::error_code x;
+            timer.cancel(x);
+            if(sock) sock->cancel(x);
             r.status=st; r.error=std::move(e); if(done){auto cb=std::move(done); cb(std::move(r));}
         }
         void arm(std::chrono::milliseconds d){auto self=shared_from_this(); timer.expires_after(d); timer.async_wait([self](auto ec){if(ec||self->finished)return; if(self->exchange_wait) self->finish(ProbeStatus::Success); else self->finish(ProbeStatus::Timeout,"operation timeout");});}
@@ -346,13 +380,26 @@ void PeerProbe::run_connected(std::shared_ptr<boost::asio::ip::tcp::socket> sock
         void send_version(){
             NetworkAddress recv{0,sock->remote_endpoint().address(),sock->remote_endpoint().port()}; NetworkAddress from{0,sock->local_endpoint().address(),sock->local_endpoint().port()};
             auto vm=encode_version(make_version(recv,from)); MessageHeader h;h.magic=bsty::MAINNET_MAGIC;std::string c="version";std::copy(c.begin(),c.end(),h.command.begin());h.payload_size=static_cast<std::uint32_t>(vm.size());h.checksum=checksum(vm);auto out=encode_header(h);out.insert(out.end(),vm.begin(),vm.end());
-            auto self=shared_from_this();boost::asio::async_write(*sock,boost::asio::buffer(out),[self](auto ec,auto){if(ec){self->finish(ProbeStatus::HandshakeFailed,ec.message());return;}self->read_version();});
+            auto self=shared_from_this();write_owned(sock,std::move(out),[self](auto ec,auto){if(ec){self->finish(ProbeStatus::HandshakeFailed,ec.message());return;}self->read_version();});
         }
         void read_version(){auto self=shared_from_this();boost::asio::async_read(*sock,boost::asio::buffer(hb),[self](auto ec,auto){if(ec){self->finish(ProbeStatus::HandshakeFailed,ec.message());return;}try{auto h=decode_header(self->hb);if(h.magic!=bsty::MAINNET_MAGIC){self->finish(ProbeStatus::InvalidMagic,"wrong BSTY magic");return;}if(command_string(h)!="version"){self->finish(ProbeStatus::InvalidMessage,"expected version");return;}if(h.payload_size>limits::max_version_payload){self->finish(ProbeStatus::InvalidMessage,"version payload too large");return;}self->payload.resize(h.payload_size);boost::asio::async_read(*self->sock,boost::asio::buffer(self->payload),[self,h](auto ec,auto){if(ec){self->finish(ProbeStatus::HandshakeFailed,ec.message());return;}if(checksum(self->payload)!=h.checksum){self->finish(ProbeStatus::InvalidChecksum,"bad checksum");return;}try{auto v=decode_version(self->payload);if(v.version<bsty::MIN_PEER_VERSION){self->finish(ProbeStatus::UnsupportedVersion,"peer protocol too old");return;}self->r.protocol_version=v.version;self->r.services=v.services;self->r.user_agent=v.user_agent;self->send_sendaddrv2();}catch(const std::exception&e){self->finish(ProbeStatus::InvalidMessage,e.what());}});}catch(const std::exception&e){self->finish(ProbeStatus::InvalidMessage,e.what());}});}
-        void send_sendaddrv2(){auto out=empty("sendaddrv2");auto self=shared_from_this();boost::asio::async_write(*sock,boost::asio::buffer(out),[self](auto ec,auto){if(ec){self->finish(ProbeStatus::HandshakeFailed,ec.message());return;}self->send_verack();});}
-        void send_verack(){auto out=empty("verack");auto self=shared_from_this();boost::asio::async_write(*sock,boost::asio::buffer(out),[self](auto ec,auto){if(ec){self->finish(ProbeStatus::HandshakeFailed,ec.message());return;}self->read_verack();});}
-        void read_verack(){auto self=shared_from_this();auto b=std::make_shared<std::array<std::uint8_t,24>>();boost::asio::async_read(*sock,boost::asio::buffer(*b),[self,b](auto ec,auto){if(ec){self->finish(ProbeStatus::HandshakeFailed,ec.message());return;}try{auto h=decode_header(*b);if(h.magic!=bsty::MAINNET_MAGIC){self->finish(ProbeStatus::InvalidMagic,"wrong magic");return;}if(command_string(h)!="verack"||h.payload_size!=0){self->finish(ProbeStatus::InvalidMessage,"expected empty verack");return;}if(h.checksum!=checksum({})){self->finish(ProbeStatus::InvalidChecksum,"bad checksum");return;}self->r.handshake_time=std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now()-self->started);self->send_getaddr();}catch(const std::exception&e){self->finish(ProbeStatus::HandshakeFailed,e.what());}});}
-        void send_getaddr(){auto out=empty("getaddr");auto self=shared_from_this();boost::asio::async_write(*sock,boost::asio::buffer(out),[self](auto ec,auto){if(ec){self->finish(ProbeStatus::Success);return;}self->exchange_wait=true;self->arm(self->addr_exchange_timeout);self->read_exchange();});}
+        void send_sendaddrv2(){auto out=empty("sendaddrv2");auto self=shared_from_this();write_owned(sock,std::move(out),[self](auto ec,auto){if(ec){self->finish(ProbeStatus::HandshakeFailed,ec.message());return;}self->send_verack();});}
+        void send_verack(){auto out=empty("verack");auto self=shared_from_this();write_owned(sock,std::move(out),[self](auto ec,auto){if(ec){self->finish(ProbeStatus::HandshakeFailed,ec.message());return;}self->read_verack();});}
+        void read_verack() {
+            auto self=shared_from_this();
+            auto reader=std::make_shared<VerackReader>();
+            reader->socket=sock;
+            reader->stopped=[self]{return self->finished;};
+            reader->done=[self](ProbeStatus status,std::string error){
+                if(self->finished) return;
+                if(status!=ProbeStatus::Success) { self->finish(status,std::move(error)); return; }
+                self->r.handshake_time=std::chrono::duration_cast<std::chrono::milliseconds>(
+                    std::chrono::steady_clock::now()-self->started);
+                self->send_getaddr();
+            };
+            reader->read();
+        }
+        void send_getaddr(){auto out=empty("getaddr");auto self=shared_from_this();write_owned(sock,std::move(out),[self](auto ec,auto){if(ec){self->finish(ProbeStatus::Success);return;}self->exchange_wait=true;self->arm(self->addr_exchange_timeout);self->read_exchange();});}
         void read_exchange(){auto self=shared_from_this();auto b=std::make_shared<std::array<std::uint8_t,24>>();boost::asio::async_read(*sock,boost::asio::buffer(*b),[self,b](auto ec,auto){if(self->finished)return;if(ec){self->finish(ProbeStatus::Success);return;}try{auto h=decode_header(*b);if(h.magic!=bsty::MAINNET_MAGIC){self->finish(ProbeStatus::ProtocolError,"invalid magic during peer exchange");return;}if(h.payload_size>limits::max_message_size){self->finish(ProbeStatus::ProtocolError,"exchange message too large");return;}auto p=std::make_shared<std::vector<std::uint8_t>>(h.payload_size);boost::asio::async_read(*self->sock,boost::asio::buffer(*p),[self,h,p](auto ec,auto){if(self->finished)return;if(ec){self->finish(ProbeStatus::Success);return;}if(checksum(*p)!=h.checksum){self->finish(ProbeStatus::ProtocolError,"bad checksum during peer exchange");return;}try{if(command_string(h)=="addrv2"){auto entries=decode_addrv2(*p);self->r.discovered_addrv2.insert(self->r.discovered_addrv2.end(),std::make_move_iterator(entries.begin()),std::make_move_iterator(entries.end()));}self->read_exchange();}catch(const std::exception&e){self->finish(ProbeStatus::ProtocolError,e.what());}});}catch(const std::exception&e){self->finish(ProbeStatus::ProtocolError,e.what());}});}
     };
     if(!socket){ProbeResult r;r.status=ProbeStatus::ConnectionFailed;r.endpoint=std::move(endpoint);r.error="null transport socket";boost::asio::post(io_,[done=std::move(done),r=std::move(r)]()mutable{done(std::move(r));});return;}

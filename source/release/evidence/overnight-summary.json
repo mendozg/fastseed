@@ -1,0 +1,18 @@
+{
+  "samples": 144,
+  "first_utc": "2026-10-25T05:34:54+00:00",
+  "last_utc": "2026-10-25T17:29:59+00:00",
+  "span_seconds": 42905,
+  "spacing_seconds": [
+    300.0,
+    301.0
+  ],
+  "dns_successes": 144,
+  "failures_recorded": 0,
+  "answers_each": 11,
+  "automatic_restarts_recorded": 0,
+  "memory_first_bytes": 2158592,
+  "memory_last_bytes": 2211840,
+  "memory_min_bytes": 2158592,
+  "memory_peak_bytes": 2338816
+}

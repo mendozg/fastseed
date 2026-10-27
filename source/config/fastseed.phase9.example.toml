@@ -1,5 +1,9 @@
 # BSTY-FastSeed Phase 9 production baseline
 [dns]
+# Empty names use the zone apex and hostmaster.<zone>. Publish NS address/glue at your DNS provider.
+nameserver = ""
+soa_mailbox = ""
+soa_serial = 1
 zone = "seed.globalboost.info"
 listen_address = "0.0.0.0"
 listen_port = 53

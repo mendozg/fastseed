@@ -85,7 +85,12 @@ public:
 
 private:
     FeedbackConfig config_;
-    struct State { TransportFeedbackStats stats; std::size_t capacity{}; std::chrono::system_clock::time_point last_adjustment{}; } direct_, tor_, i2p_;
+    struct State {
+        TransportFeedbackStats stats;
+        std::size_t capacity{};
+        std::chrono::system_clock::time_point last_adjustment{};
+        std::chrono::system_clock::time_point evidence_updated{};
+    } direct_, tor_, i2p_;
     State& state(transport::TransportKind kind) noexcept;
     const State& state(transport::TransportKind kind) const noexcept;
     TransportCapacity limits(transport::TransportKind kind) const noexcept;

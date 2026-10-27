@@ -1,0 +1,6 @@
+Original FastSeed logo restored without alteration.
+Source: BSTY-FastSeed-Phase13-v1.0.0-logo/docs/assets/fastseed-logo.png
+Package path: source/docs/assets/fastseed-logo.png
+Bytes: 991424
+SHA-256: 580925593ecfc245b8c3a1f0bf0356c011e39615955750a75aea52e066969eda
+No runtime code, tests or operational configuration changed by branding restoration.

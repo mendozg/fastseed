@@ -1,0 +1,13 @@
+{
+  "method": "Tree-sitter Bash 0.25.0 grammar with tree-sitter 0.25.2; Python 3.12 AST",
+  "shell_files": [
+    "deploy-fastseed.sh",
+    "scripts/install-systemd.sh",
+    "scripts/rc-gate.sh",
+    "scripts/release-gate.sh",
+    "scripts/sanitizer-gate.sh",
+    "scripts/verify-gatefix.sh"
+  ],
+  "shell_errors": 0,
+  "scope": "Static syntax parsing only; no scripts, C++ build or deployment executed."
+}

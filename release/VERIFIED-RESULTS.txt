@@ -1,0 +1,13 @@
+BSTY-FastSeed v1.0.0 verification overview
+
+The complete verification record is source/release/VERIFIED-RESULTS.txt.
+Original operator evidence is source/release/evidence/.
+
+Operator logs: 50/50 normal CTest suites, 50/50 ASan/UBSan suites, repeated
+federation/handshake tests, independent DNS checks, public DNS/live peers,
+and 144 successful overnight samples with bounded memory and no recorded
+automatic restarts. Sampled observations are not continuous-availability proof.
+
+Reboot recovery was not tested. Final version-label and release-script changes
+were not rebuilt/executed in Ubuntu locally. No prebuilt binary is supplied.
+Run scripts/release-gate.sh and scripts/sanitizer-gate.sh on the target host.

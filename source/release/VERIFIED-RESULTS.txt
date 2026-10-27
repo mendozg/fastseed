@@ -1,0 +1,110 @@
+BSTY-FastSeed v1.0.0 — verification record
+Packaged: 2026-10-26 (America/Guatemala)
+
+OVERALL SCOPE
+The corrected runtime passed the functional, sanitizer and operational checks
+shown in the operator-provided evidence. Final source/package integrity and
+metadata consistency were checked locally. Reboot recovery was not tested.
+
+IMPORTANT PROVENANCE DISTINCTION
+The logs were supplied by the operator and reviewed here; these latest C++ tests
+were not run by this agent. They show the fixed interim runtime labeled 1.0.1.
+The final package normalizes its version/help/startup strings, CMake version and
+version assertions to 1.0.0, consolidates release scripts and documents, and keeps
+all other runtime implementation and public-header content unchanged.
+The exact final-labeled source has NOT been rebuilt/retested locally: Windows
+sandbox execution denies Ubuntu/WSL access. Local network permission did not
+resolve that denial. Do not describe historical results as a new final binary run.
+Run scripts/release-gate.sh and scripts/sanitizer-gate.sh on the target host to
+produce exact-final-package results before distributing a compiled binary.
+
+VERIFIED OPERATOR EVIDENCE
+1. Release configuration/build completed; all 50 CTest suites passed.
+   Recorded total CTest time: 1.80 seconds.
+   Federation phase8_tests: 20 additional successful repeats.
+   Handshake phase101_probe_tests: 20 additional successful repeats.
+   Combined repeated-suite time: 25.12 seconds.
+   Config check passed. Independent decoder: 20 UDP/TCP/type/EDNS combinations.
+   Eight dig smoke queries passed: EDNS, no-EDNS, TCP, AAAA, SOA, NS, BADVERS,
+   and a 512-byte advertised EDNS query. The application fixture has an empty
+   cache; this last small reply does not itself demonstrate live truncation.
+   The focused DNS suite also contains complete-RRset truncation checks.
+   Evidence: evidence/operator-release-verification.log.
+
+2. Full ASan/UBSan Debug build with GCC 11.4.0, Boost 1.74, OpenSSL 3.0.2,
+   SQLite 3.37.2. All 50 CTest suites passed in 7.15 seconds.
+   ASAN_OPTIONS=detect_leaks=1:halt_on_error=1
+   UBSAN_OPTIONS=halt_on_error=1:print_stacktrace=1
+   No sanitizer diagnostic was reported in the supplied output.
+   One existing non-fatal misleading-indentation warning in federation.cpp was
+   retained; this is not a warning-free build claim. ASan/UBSan do not establish
+   absence of data races or all possible leaks in sustained production operation.
+   Evidence: evidence/operator-sanitizer-verification.log.
+
+3. Public DNS evidence: matching authoritative NS nsseed.globalboost.info;
+   trace followed root -> .info -> globalboost.info parent -> FastSeed at
+   142.54.191.210, which returned 11 A answers. Recursive resolver 1.1.1.1
+   returned 11 A answers in the supplied earlier trace.
+   Evidence: evidence/operator-public-dns-trace.log.
+   Additional chat-supplied outputs showed public UDP/TCP answers, Google DNS
+   8.8.8.8 returning 11 A answers, and two successful live BSTY probes against
+   69.197.161.154:8226 and 207.231.106.156:8226. These are historical observations,
+   not fresh tests run during packaging. A later local path failure to 1.1.1.1
+   did not also affect direct FastSeed or Google queries.
+
+4. Service restart: operator output showed active/running with 11 immediate A
+   answers and startup enabled. This is consistent with persisted data but does
+   not alone prove the origin of every answer. No full-server reboot was done.
+
+5. Overnight availability/memory observation:
+   First sample: 2026-10-25T05:34:54+00:00
+   Last sample:  2026-10-25T17:29:59+00:00
+   144 samples; recorded span 11h 55m 05s; spacing 300-301 seconds.
+   144/144 authoritative NOERROR replies, 11 A records in every sample.
+   Service active/running in every sample; NRestarts=0 throughout.
+   No recorded DNS timeouts or failures.
+   MemoryCurrent: first 2158592 bytes (2.06 MiB),
+   last 2211840 bytes (2.11 MiB),
+   peak 2338816 bytes (2.23 MiB).
+   Memory stayed bounded in this observation; this is not a general no-leak claim.
+   Samples do not prove uninterrupted availability or fresh peer validation
+   between samples. NRestarts is an automatic-restart counter, not proof against
+   every possible manual process replacement.
+   Evidence: evidence/operator-overnight.log, overnight-samples.csv and summary JSON.
+
+LOCAL FINAL-PACKAGE CHECKS
+- Runtime source-equivalence check: all functional implementation content and
+  public headers match the corrected source; two runtime files change version
+  strings only. See evidence/final-source-equivalence.json.
+- All six release/deployment shell files statically parsed with Tree-sitter's
+  Bash grammar; Python files parsed with Python 3.12 AST. This is syntax checking,
+  not bash -n execution or deployment validation. See local-static-validation.json.
+- Four original operator evidence files are preserved byte-for-byte and hashed.
+- Source and package file manifests generated; both ZIP and tar.gz decompressed
+  and compared byte-for-byte with staged files. Source-integrity script executed
+  against both extracted archives. See PACKAGE-VALIDATION.txt accompanying outputs.
+
+NOT TESTED / NOT CLAIMED
+- Reboot recovery was not tested, at the operator's request.
+- Actual installation/upgrade/rollback with the final packaging helper changes.
+- A new C++ build/test or newly compiled 1.0.0 binary on this packaging host.
+- Public IPv6 DNS reachability or availability of eligible IPv6 peers.
+- Sustained high-load capacity, DDoS resilience or exhaustive security review.
+- Live optional Tor/I2P deployment; deterministic component tests are not a
+  production Tor/I2P-network validation.
+- A full-node consensus or blockchain-validation function; FastSeed is a seeder.
+
+REPRODUCE EXACT FINAL SOURCE
+From source/ on Ubuntu 22.04 with the README dependencies:
+ python3 scripts/verify-source.py
+ bash scripts/release-gate.sh
+ bash scripts/sanitizer-gate.sh
+Expected version: BSTY-FastSeed 1.0.0 (Production)
+No source package includes a prebuilt executable. Do not install sanitizer binaries.
+
+BRANDING RESTORATION
+The original FastSeed logo is restored byte-for-byte from the earlier local
+release and displayed in both READMEs. Asset hash/provenance is recorded in
+ASSET-PROVENANCE.txt. This changes documentation/assets only; runtime source,
+tests, scripts, configuration and original evidence files match the prior final
+package. Archives and manifests were regenerated and extraction checks rerun.

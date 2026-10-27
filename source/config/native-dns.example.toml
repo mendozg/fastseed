@@ -1,4 +1,8 @@
 [dns]
+# Empty names use the zone apex and hostmaster.<zone>. Publish NS address/glue at your DNS provider.
+nameserver = ""
+soa_mailbox = ""
+soa_serial = 1
 zone = "seed.globalboost.info"
 listen_port = 53
 max_answers = 32

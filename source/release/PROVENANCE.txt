@@ -1,0 +1,22 @@
+BSTY-FastSeed v1.0.0 final source provenance
+
+Original source archive: BSTY-FastSeed-v1.0.0-RC1-EasyDeploy-DNS-Docs.zip
+Original archive SHA-256: afaf4c186f8668268ee23cc1f77766f521d4d30e3e6a6e3b64555d51ca0cbdf5
+Archive originally supplied from D:/W11/latest/; 180738 bytes.
+Final runtime derives from the corrected HandshakeFix R2 tree in this chat,
+including all GateFix2, DNS and peer-handshake fixes. No code was reconstructed
+from the bounded original-chat preview. Intermediate 1.0.1 identifiers are
+normalized to the operator-requested 1.0.0 final release.
+
+Only src/main.cpp and src/config/runtime_config.cpp differ in the final runtime
+from the validated corrective tree, solely in version/help/startup strings.
+Public headers and every other runtime implementation file are unchanged.
+Version assertions and CMake metadata match 1.0.0. Release/deployment scripts and
+documents were consolidated after validation and statically syntax-parsed.
+Those script and label changes were not executed/recompiled in Ubuntu locally.
+
+The four operator evidence files are copied verbatim. Their hashes are listed
+in EVIDENCE-SHA256SUMS.txt. They retain original paths, timestamps and version
+labels. No source or binary hash from the operator host was supplied, so those
+logs are operator evidence for the described revision, not a cryptographic
+attestation of this final package. Package integrity is separately verified.

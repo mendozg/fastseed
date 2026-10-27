@@ -1,0 +1,106 @@
+dig +norecurse @142.54.191.210 seeder.globalboost.info NS
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.7-Ubuntu <<>> +norecurse @142.54.191.210 seeder.globalboost.info NS
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 32914
+;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      NS
+
+;; ANSWER SECTION:
+seeder.globalboost.info. 60     IN      NS      nsseed.globalboost.info.
+
+;; Query time: 4 msec
+;; SERVER: 142.54.191.210#53(142.54.191.210) (UDP)
+;; WHEN: Fri Oct 23 05:08:38 UTC 2026
+;; MSG SIZE  rcvd: 89
+
+customer@s204505:~$ dig -4 +trace seeder.globalboost.info A
+dig @1.1.1.1 seeder.globalboost.info A
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.7-Ubuntu <<>> -4 +trace seeder.globalboost.info A
+;; global options: +cmd
+.                       6122    IN      NS      e.root-servers.net.
+.                       6122    IN      NS      a.root-servers.net.
+.                       6122    IN      NS      i.root-servers.net.
+.                       6122    IN      NS      f.root-servers.net.
+.                       6122    IN      NS      l.root-servers.net.
+.                       6122    IN      NS      j.root-servers.net.
+.                       6122    IN      NS      k.root-servers.net.
+.                       6122    IN      NS      g.root-servers.net.
+.                       6122    IN      NS      m.root-servers.net.
+.                       6122    IN      NS      c.root-servers.net.
+.                       6122    IN      NS      b.root-servers.net.
+.                       6122    IN      NS      d.root-servers.net.
+.                       6122    IN      NS      h.root-servers.net.
+;; Received 239 bytes from 127.0.0.53#53(127.0.0.53) in 0 ms
+
+info.                   172800  IN      NS      d0.info.afilias-nst.org.
+info.                   172800  IN      NS      a0.info.afilias-nst.info.
+info.                   172800  IN      NS      a2.info.afilias-nst.info.
+info.                   172800  IN      NS      b0.info.afilias-nst.org.
+info.                   172800  IN      NS      b2.info.afilias-nst.org.
+info.                   172800  IN      NS      c0.info.afilias-nst.info.
+info.                   86400   IN      DS      9986 8 2 8D61A24555B582725E925161677B74D76A164EE760D507F49308F318 7068CB3C
+info.                   86400   IN      RRSIG   DS 8 1 86400 20261104220000 20261022210000 8763 . ay1O6ekOWoVEINjQY9E8kPEV24KcV/zQSByKiGiiMJl6cwjA/twhNVpo 1fk9i/D8EZ4/UTbwS77O2xiBEKqrgx9d8dg6tSU8nPMroqXtp/uQelzE B71QIAkvp/0W0LDT/nc9n5QDwzYHi2E1L4ZfY1pbRHaXVUORQNt0wRak rV3soylzN1QznUlCjkqRX4C82bFrtdVd+eojevtvAkRENs6cPRob3EGe WS3hpoUrqQw76ZIBoI8WVZ2ntIyLnV2QRUybZi4HnQet0DKEUJTY9NFo SWQV6n3reIzqW3yg6xYUMtU9OEFZdGrS0Qf2ZgIpMvbnRWroD6gm1QY/ LWnXgg==
+;; Received 818 bytes from 192.33.4.12#53(c.root-servers.net) in 16 ms
+
+globalboost.info.       3600    IN      NS      ns01.domaincontrol.com.
+globalboost.info.       3600    IN      NS      ns02.domaincontrol.com.
+59nqod813jr9to57j8mi905tvngsq3vg.info. 3600 IN NSEC3 1 1 0 - 59NS6LAE1SQKBMQDG1JI6J7DSMMHV036 NS SOA RRSIG DNSKEY NSEC3PARAM
+oihrn8uid85c2vm4v98hg3bbcf1qig7m.info. 3600 IN NSEC3 1 1 0 - OIHTHQHFB7F4LE3O9VP3VHILTUJURLJS NS DS RRSIG
+59nqod813jr9to57j8mi905tvngsq3vg.info. 3600 IN RRSIG NSEC3 8 2 3600 20261112170059 20261022153059 54891 info. nmV3UfSWQJ3jNUayI6o+hXyrRNtNZZflvyD02AkrfM7aBSaP50z6xH79 PgeZmdqwG73FYNS5sP7qFiWpvEUT6LIvbaLhBIa4QXW5w4h48duV1Klx ZOX9PZTLvCjiD8zQDwYkamJdyq9CV0n6iHPLnmsvcJsTRwRsCon+xJNt s1g=
+oihrn8uid85c2vm4v98hg3bbcf1qig7m.info. 3600 IN RRSIG NSEC3 8 2 3600 20261112170059 20261022153059 54891 info. k4aCRZKmIWqik298jqNVuBtNxuOe/WIeAIwwf/cN/Ef2VJMOofiZNpTi wvL/+zbw1FGteBEb8lruVZChD3v8wVptG5wogZaP9qIQ7EvNz5fe3+Np li7QoxnEjP/Z0jn/41hf4NTaJHWpUE2lBlgrkapnhJ453w6pv08m5Xvj DIg=
+;; Received 594 bytes from 199.249.113.1#53(a2.info.afilias-nst.info) in 20 ms
+
+seeder.globalboost.info. 600    IN      NS      nsseed.globalboost.info.
+;; Received 89 bytes from 97.74.100.1#53(ns01.domaincontrol.com) in 28 ms
+
+seeder.globalboost.info. 60     IN      A       185.32.162.191
+seeder.globalboost.info. 60     IN      A       185.118.76.77
+seeder.globalboost.info. 60     IN      A       141.95.45.92
+seeder.globalboost.info. 60     IN      A       51.178.179.75
+seeder.globalboost.info. 60     IN      A       51.15.18.10
+seeder.globalboost.info. 60     IN      A       80.253.252.69
+seeder.globalboost.info. 60     IN      A       167.88.46.144
+seeder.globalboost.info. 60     IN      A       207.231.106.156
+seeder.globalboost.info. 60     IN      A       137.220.62.20
+seeder.globalboost.info. 60     IN      A       142.54.191.210
+seeder.globalboost.info. 60     IN      A       69.197.161.154
+;; Received 228 bytes from 142.54.191.210#53(nsseed.globalboost.info) in 0 ms
+
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.7-Ubuntu <<>> @1.1.1.1 seeder.globalboost.info A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 1492
+;; flags: qr rd ra; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      A
+
+;; ANSWER SECTION:
+seeder.globalboost.info. 60     IN      A       185.32.162.191
+seeder.globalboost.info. 60     IN      A       185.118.76.77
+seeder.globalboost.info. 60     IN      A       141.95.45.92
+seeder.globalboost.info. 60     IN      A       51.178.179.75
+seeder.globalboost.info. 60     IN      A       51.15.18.10
+seeder.globalboost.info. 60     IN      A       80.253.252.69
+seeder.globalboost.info. 60     IN      A       167.88.46.144
+seeder.globalboost.info. 60     IN      A       207.231.106.156
+seeder.globalboost.info. 60     IN      A       137.220.62.20
+seeder.globalboost.info. 60     IN      A       142.54.191.210
+seeder.globalboost.info. 60     IN      A       69.197.161.154
+
+;; Query time: 792 msec
+;; SERVER: 1.1.1.1#53(1.1.1.1) (UDP)
+;; WHEN: Fri Oct 23 05:09:07 UTC 2026
+;; MSG SIZE  rcvd: 228

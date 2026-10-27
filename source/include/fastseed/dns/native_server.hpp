@@ -1,4 +1,5 @@
 #pragma once
+#include <utility>
 #include "fastseed/dns/dns_engine.hpp"
 #include <boost/asio.hpp>
 #include <memory>

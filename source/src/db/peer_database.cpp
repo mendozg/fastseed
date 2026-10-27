@@ -230,6 +230,8 @@ CREATE TABLE IF NOT EXISTS scheduler_state (
         exec("UPDATE peers SET transport_kind=CASE network WHEN 4 THEN 1 WHEN 5 THEN 2 ELSE 0 END WHERE transport_kind=0;");
         exec("UPDATE schema_version SET version=3;");
     }
+    // scheduler_state is created above for both new and upgraded databases.
+    if (version < 4) exec("UPDATE schema_version SET version=4;");
 }
 
 std::int64_t PeerDatabase::to_ms(std::chrono::system_clock::time_point value) {

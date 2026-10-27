@@ -32,16 +32,18 @@ int main() {
     assert(scheduler.recommended_refresh(bad) == minutes(5));
 
     auto due = scheduler.select_due({good, bad, tor}, {}, now);
-    assert(due.size() == 2);
+    assert(due.size() == 3);
     assert(due[0].candidate.network == crawler::CandidateNetwork::IPv4);
-    assert(due[1].candidate.network == crawler::CandidateNetwork::TorV3);
+    assert(due[1].candidate.network == crawler::CandidateNetwork::IPv4);
+    assert(due[2].candidate.network == crawler::CandidateNetwork::TorV3);
 
     auto capped = scheduler.select_due({good, bad, tor}, {2, 0, 0}, now);
     assert(capped.size() == 1);
     assert(capped[0].candidate.network == crawler::CandidateNetwork::TorV3);
 
     auto tor_capped = scheduler.select_due({good, bad, tor}, {0, 1, 0}, now);
-    assert(tor_capped.size() == 1);
+    assert(tor_capped.size() == 2);
+    assert(tor_capped[1].candidate.network == crawler::CandidateNetwork::IPv4);
     assert(tor_capped[0].candidate.network == crawler::CandidateNetwork::IPv4);
     return 0;
 }

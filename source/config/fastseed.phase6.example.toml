@@ -2,6 +2,10 @@
 p2p_port = 8226
 
 [dns]
+# Empty names use the zone apex and hostmaster.<zone>. Publish NS address/glue at your DNS provider.
+nameserver = ""
+soa_mailbox = ""
+soa_serial = 1
 zone = "seed.globalboost.info"
 listen_port = 53
 ttl_seconds = 60

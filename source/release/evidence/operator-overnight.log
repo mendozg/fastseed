@@ -1,0 +1,3456 @@
+2026-10-25T05:34:54+00:00
+NRestarts=0
+MemoryCurrent=2158592
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 23883
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T05:39:54+00:00
+NRestarts=0
+MemoryCurrent=2158592
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 45198
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T05:44:54+00:00
+NRestarts=0
+MemoryCurrent=2158592
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 36929
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T05:49:54+00:00
+NRestarts=0
+MemoryCurrent=2158592
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 62305
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T05:54:54+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 25828
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T05:59:54+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 15539
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T06:04:54+00:00
+NRestarts=0
+MemoryCurrent=2293760
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 35852
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T06:09:54+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 9881
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T06:14:54+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 10619
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T06:19:54+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 47295
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T06:24:54+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 58430
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T06:29:54+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 19290
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T06:34:54+00:00
+NRestarts=0
+MemoryCurrent=2293760
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 62062
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T06:39:54+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 26612
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T06:44:54+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 32073
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T06:49:54+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 51188
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T06:54:55+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 14488
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T06:59:55+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 3181
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T07:04:55+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 11609
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T07:09:55+00:00
+NRestarts=0
+MemoryCurrent=2170880
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 14264
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T07:14:55+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 34097
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T07:19:55+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 54475
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T07:24:55+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 18816
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T07:29:55+00:00
+NRestarts=0
+MemoryCurrent=2162688
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 50434
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T07:34:55+00:00
+NRestarts=0
+MemoryCurrent=2174976
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 6019
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T07:39:55+00:00
+NRestarts=0
+MemoryCurrent=2174976
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 21204
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T07:44:55+00:00
+NRestarts=0
+MemoryCurrent=2174976
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 8099
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T07:49:55+00:00
+NRestarts=0
+MemoryCurrent=2174976
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 50939
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T07:54:55+00:00
+NRestarts=0
+MemoryCurrent=2179072
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 4316
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T07:59:55+00:00
+NRestarts=0
+MemoryCurrent=2179072
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43237
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T08:04:55+00:00
+NRestarts=0
+MemoryCurrent=2179072
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 34468
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T08:09:55+00:00
+NRestarts=0
+MemoryCurrent=2179072
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 22842
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T08:14:55+00:00
+NRestarts=0
+MemoryCurrent=2310144
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 60381
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T08:19:55+00:00
+NRestarts=0
+MemoryCurrent=2179072
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 25989
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T08:24:55+00:00
+NRestarts=0
+MemoryCurrent=2183168
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 48737
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T08:29:55+00:00
+NRestarts=0
+MemoryCurrent=2179072
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 27573
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T08:34:55+00:00
+NRestarts=0
+MemoryCurrent=2310144
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 49277
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T08:39:55+00:00
+NRestarts=0
+MemoryCurrent=2183168
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 54052
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T08:44:55+00:00
+NRestarts=0
+MemoryCurrent=2183168
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 32320
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T08:49:55+00:00
+NRestarts=0
+MemoryCurrent=2183168
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 48308
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T08:54:55+00:00
+NRestarts=0
+MemoryCurrent=2187264
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 2743
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T08:59:55+00:00
+NRestarts=0
+MemoryCurrent=2183168
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 39654
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T09:04:56+00:00
+NRestarts=0
+MemoryCurrent=2183168
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 49607
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T09:09:56+00:00
+NRestarts=0
+MemoryCurrent=2314240
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 58709
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T09:14:56+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 8290
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T09:19:56+00:00
+NRestarts=0
+MemoryCurrent=2187264
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 59455
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T09:24:56+00:00
+NRestarts=0
+MemoryCurrent=2187264
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 3372
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T09:29:56+00:00
+NRestarts=0
+MemoryCurrent=2187264
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 46752
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T09:34:56+00:00
+NRestarts=0
+MemoryCurrent=2187264
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 17276
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T09:39:56+00:00
+NRestarts=0
+MemoryCurrent=2191360
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 3289
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T09:44:56+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 55500
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T09:49:56+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 1656
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T09:54:56+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 18613
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T09:59:56+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 48977
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T10:04:56+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 52629
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T10:09:56+00:00
+NRestarts=0
+MemoryCurrent=2191360
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 41564
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T10:14:56+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43689
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T10:19:56+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 14219
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T10:24:56+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 4760
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T10:29:56+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 52557
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T10:34:56+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 60968
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T10:39:56+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 32731
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T10:44:56+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 16681
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T10:49:56+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 41335
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T10:54:56+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 55396
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T10:59:56+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 59628
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T11:04:56+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 54932
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T11:09:57+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 64566
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T11:14:57+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 56293
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T11:19:57+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 39625
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T11:24:57+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 52487
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T11:29:57+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 46200
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T11:34:57+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 58809
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T11:39:57+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 35237
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T11:44:57+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 44606
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T11:49:57+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 6321
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T11:54:57+00:00
+NRestarts=0
+MemoryCurrent=2195456
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 39212
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T11:59:57+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 55252
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T12:04:57+00:00
+NRestarts=0
+MemoryCurrent=2207744
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 29396
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T12:09:57+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 52734
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T12:14:57+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 12132
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T12:19:57+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 10985
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T12:24:57+00:00
+NRestarts=0
+MemoryCurrent=2207744
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 27081
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T12:29:57+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 31083
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T12:34:57+00:00
+NRestarts=0
+MemoryCurrent=2277376
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 15652
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T12:39:57+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 10744
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T12:44:57+00:00
+NRestarts=0
+MemoryCurrent=2211840
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 64611
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+
+2026-10-25T12:49:57+00:00
+NRestarts=0
+MemoryCurrent=2330624
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 25017
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T12:54:57+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 56330
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+
+2026-10-25T12:59:57+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 9687
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T13:04:57+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 20290
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+
+2026-10-25T13:09:57+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 21630
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T13:14:57+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 60844
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+
+2026-10-25T13:19:58+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43579
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T13:24:58+00:00
+NRestarts=0
+MemoryCurrent=2338816
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 60083
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+
+2026-10-25T13:29:58+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 46435
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T13:34:58+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 49520
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+
+2026-10-25T13:39:58+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 7811
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T13:44:58+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 4852
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+
+2026-10-25T13:49:58+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43811
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T13:54:58+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 52383
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+
+2026-10-25T13:59:58+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 26949
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T14:04:58+00:00
+NRestarts=0
+MemoryCurrent=2207744
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 2290
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+
+2026-10-25T14:09:58+00:00
+NRestarts=0
+MemoryCurrent=2199552
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 24397
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T14:14:58+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 14832
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+
+2026-10-25T14:19:58+00:00
+NRestarts=0
+MemoryCurrent=2207744
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 18325
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T14:24:58+00:00
+NRestarts=0
+MemoryCurrent=2277376
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 13332
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+
+2026-10-25T14:29:58+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 49023
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T14:34:58+00:00
+NRestarts=0
+MemoryCurrent=2207744
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 45031
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+
+2026-10-25T14:39:58+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 53352
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T14:44:58+00:00
+NRestarts=0
+MemoryCurrent=2334720
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 12360
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+
+2026-10-25T14:49:58+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 46697
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T14:54:58+00:00
+NRestarts=0
+MemoryCurrent=2207744
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 36575
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+
+2026-10-25T14:59:58+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 3805
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T15:04:58+00:00
+NRestarts=0
+MemoryCurrent=2207744
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 894
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+
+2026-10-25T15:09:58+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 39328
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T15:14:58+00:00
+NRestarts=0
+MemoryCurrent=2207744
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 59815
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T15:19:58+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 9077
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T15:24:59+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 50260
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T15:29:59+00:00
+NRestarts=0
+MemoryCurrent=2334720
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 40769
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T15:34:59+00:00
+NRestarts=0
+MemoryCurrent=2207744
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 3159
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T15:39:59+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 46637
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T15:44:59+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 20391
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T15:49:59+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 50391
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T15:54:59+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 25744
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T15:59:59+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 42921
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T16:04:59+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 26873
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T16:09:59+00:00
+NRestarts=0
+MemoryCurrent=2207744
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 46497
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T16:14:59+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 55761
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T16:19:59+00:00
+NRestarts=0
+MemoryCurrent=2207744
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 38349
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T16:24:59+00:00
+NRestarts=0
+MemoryCurrent=2207744
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 44785
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T16:29:59+00:00
+NRestarts=0
+MemoryCurrent=2207744
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 38554
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T16:34:59+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 51850
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T16:39:59+00:00
+NRestarts=0
+MemoryCurrent=2211840
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 53313
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T16:44:59+00:00
+NRestarts=0
+MemoryCurrent=2207744
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 53864
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T16:49:59+00:00
+NRestarts=0
+MemoryCurrent=2211840
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 50994
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T16:54:59+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 54305
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T16:59:59+00:00
+NRestarts=0
+MemoryCurrent=2211840
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 59942
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+
+2026-10-25T17:04:59+00:00
+NRestarts=0
+MemoryCurrent=2203648
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43270
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T17:09:59+00:00
+NRestarts=0
+MemoryCurrent=2211840
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 42843
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+
+2026-10-25T17:14:59+00:00
+NRestarts=0
+MemoryCurrent=2211840
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 6654
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T17:19:59+00:00
+NRestarts=0
+MemoryCurrent=2215936
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 17630
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+
+2026-10-25T17:24:59+00:00
+NRestarts=0
+MemoryCurrent=2207744
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 63206
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+
+2026-10-25T17:29:59+00:00
+NRestarts=0
+MemoryCurrent=2211840
+ActiveState=active
+SubState=running
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 30961
+;; flags: qr aa; QUERY: 1, ANSWER: 11, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; ANSWER SECTION:
+seeder.globalboost.info. 60	IN	A	51.15.18.10
+seeder.globalboost.info. 60	IN	A	80.253.252.69
+seeder.globalboost.info. 60	IN	A	167.88.46.144
+seeder.globalboost.info. 60	IN	A	207.231.106.156
+seeder.globalboost.info. 60	IN	A	137.220.62.20
+seeder.globalboost.info. 60	IN	A	142.54.191.210
+seeder.globalboost.info. 60	IN	A	69.197.161.154
+seeder.globalboost.info. 60	IN	A	185.32.162.191
+seeder.globalboost.info. 60	IN	A	185.118.76.77
+seeder.globalboost.info. 60	IN	A	141.95.45.92
+seeder.globalboost.info. 60	IN	A	51.178.179.75
+

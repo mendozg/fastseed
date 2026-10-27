@@ -1,5 +1,15 @@
+[network]
+network = "mainnet"
+p2p_port = 8226
+protocol_version = 70016
+min_peer_version = 31800
+
 # BSTY FastSeed v1.0.0 production baseline
 [dns]
+# Empty names use the zone apex and hostmaster.<zone>. Publish NS address/glue at your DNS provider.
+nameserver = ""
+soa_mailbox = ""
+soa_serial = 1
 zone = "seed.globalboost.info"
 listen_port = 53
 max_answers = 32
@@ -12,12 +22,23 @@ per_source_per_second = 100
 global_per_second = 5000
 max_sources = 4096
 
+[bootstrap]
+dns_seeds = [
+  "seeder.globalboost.info",
+  "seeder2.globalboost.info",
+  "seeder3.globalboost.info",
+  "dnsseed.globalboost.cc",
+]
+
 [crawler]
 max_concurrent_probes = 256
 max_open_connections = 2048
 max_candidates = 100000
 connect_timeout_ms = 1500
 handshake_timeout_ms = 2500
+addr_exchange_timeout_ms = 750
+enable_tor_transport = false
+enable_i2p_transport = false
 
 [cache]
 hot_ipv4 = 1000
@@ -37,6 +58,11 @@ stale_after_days = 30
 failed_after_days = 14
 busy_timeout_ms = 2500
 
+[database.persistence]
+max_items = 10000
+batch_size = 128
+flush_interval_ms = 500
+
 [network_intelligence]
 enabled = true
 learning_half_life_seconds = 21600
@@ -45,3 +71,43 @@ reliability_weight = 0.40
 latency_weight = 0.25
 freshness_weight = 0.15
 diversity_weight = 0.20
+
+[scheduler]
+max_batch = 256
+stale_refresh_seconds = 300
+cold_refresh_seconds = 900
+warm_refresh_seconds = 300
+hot_refresh_seconds = 300
+minimum_refresh_seconds = 60
+maximum_refresh_seconds = 3600
+exploration_fraction = 0.20
+minimum_exploration = 1
+maximum_exploration = 32
+low_confidence_threshold = 0.50
+exploration_rotation_seconds = 60
+high_availability = 0.90
+low_availability = 0.50
+high_latency_ms = 250
+low_latency_ms = 1500
+
+[scheduler.direct_tcp]
+max_inflight = 192
+max_batch = 192
+
+[scheduler.tor_socks5]
+max_inflight = 32
+max_batch = 32
+
+[scheduler.i2p_sam]
+max_inflight = 32
+max_batch = 32
+
+[transport.tor]
+proxy_host = "127.0.0.1"
+proxy_port = 9050
+
+[transport.i2p]
+sam_host = "127.0.0.1"
+sam_port = 7656
+session_id = "bsty-fastseed"
+local_nick = "fastseed"

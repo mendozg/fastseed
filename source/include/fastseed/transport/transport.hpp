@@ -1,4 +1,5 @@
 #pragma once
+#include <utility>
 
 #include "fastseed/crawler/candidate.hpp"
 #include <boost/asio.hpp>

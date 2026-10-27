@@ -23,6 +23,9 @@ int main() {
 
     const double stale = c.confidence(k, now + std::chrono::hours(1));
     assert(stale < c0);
+    const double half = c.effective_observations(k, now + std::chrono::hours(1));
+    assert(std::fabs(half - n0 / 2.0) < 0.001); // Same time units, exact half-life.
+    assert(c.snapshot(k).updated_at_ms > 0); // Evidence persists even at capacity ceiling.
 
     crawler::AdaptiveCapacityController mixed(cfg);
     for (int i = 0; i < 8; ++i)

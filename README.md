@@ -1,38 +1,67 @@
 <p align="center">
-  <img src="docs/assets/fastseed-logo.png" alt="BSTY FastSeed" width="520">
+  <img src="docs/assets/fastseed-logo.png" alt="BSTY FastSeed — Faster Peers, Stronger Network" width="520">
 </p>
 
-# BSTY FastSeed — Phase 10.1
+# BSTY-FastSeed v1.0.0
 
-FastSeed is a standalone high-performance peer discovery and DNS seeder for GlobalBoost-Y (BSTY).
+Standalone GlobalBoost-Y peer discovery and authoritative DNS seeder. The final
+release consolidates DNS/EDNS, modern peer-handshake, persistence, feedback-aging
+and federation fixes. The original logo is retained unchanged.
 
-Phase 10.1 adds `sendaddrv2` capability signaling to the BSTY P2P probe path as part of the FastSeed v1.0.0 ADDRv2 release plan.
+## Build and verify
 
-## Commands
+The canonical source and release evidence live in **source/**. No current prebuilt
+binary is shipped: build the final source for the destination Ubuntu host.
 
 ```bash
-bsty-fastseed --version
-bsty-fastseed --help
-bsty-fastseed --self-test
-bsty-fastseed --check-config /etc/bsty-fastseed/fastseed.toml
-bsty-fastseed probe <host>[:port]
+sudo apt-get update
+sudo apt-get install -y build-essential cmake libboost-dev libssl-dev libsqlite3-dev python3 dnsutils
+python3 source/scripts/verify-source.py
+bash scripts/release-gate.sh
+bash scripts/sanitizer-gate.sh
 ```
 
-## Protocol
+Release binary: `source/build-release/bsty-fastseed`.
+Expected version: `BSTY-FastSeed 1.0.0 (Production)`.
+The gates do not install or restart a service. Test assertions stay active in Release.
 
-- BSTY mainnet P2P: 8226
-- BSTY magic: `A2 B2 E2 F2`
-- Protocol version: 70016
-- `sendaddrv2` is sent after a valid peer `version` and before `verack`.
+## Deploy and upgrade
 
-Full BIP155 ADDRv2 network support is implemented in subsequent Phase 10.x work; Phase 10.1 establishes the negotiation mechanism without adding Tor/I2P transport dependencies.
+Read [deployment instructions](docs/DEPLOYMENT.md). Fresh-install example:
 
-## Phase 10.7
+```bash
+sudo bash deploy-fastseed.sh seeder.globalboost.info nsseed.globalboost.info
+```
 
-Phase 10.7 connects the Phase 10.6 transport layer to the peer crawler. The crawler now routes candidates by ADDRv2 network type and hands established transport sockets to the normal BSTY protocol probe. Direct IPv4/IPv6 probing remains enabled by default; Tor v3 and I2P transports are optional. Unsupported optional transports remain `AwaitingTransport` and are never exposed through DNS A/AAAA records.
+The fresh helper refuses an existing configuration or occupied DNS port. For a
+working installation, use the documented manual upgrade/rollback procedure to
+preserve config, database and service capabilities. There is no need to reboot
+the server to install this release.
 
-Phase 10.17: confidence-aware scheduling is implemented; confidence influences ordering only and never bypasses concurrency limits.
+Parent DNS must delegate the configured seed zone to a stable nameserver whose
+address points to the DNS host. Do not use dynamic peer-answer IPs as nameserver
+identity. See the deployment document for the `nsseed.globalboost.info` example.
 
-## Phase 10.18
+## Verification status
 
-Phase 10.18 adds confidence-aware exploration budgeting. Low-confidence transports receive a bounded portion of each scheduling batch, while established transports receive the remaining capacity first. If no established work is available, otherwise-idle capacity may still be used for exploration.
+Operator evidence records 50/50 normal suites, 50/50 ASan/UBSan suites, 20 repeats
+each of federation/handshake tests, independent DNS checks, successful public
+UDP/TCP/recursive DNS and live BSTY handshakes. The overnight log has 144 successful
+samples with bounded MemoryCurrent (2.06–2.23 MiB) and no recorded automatic restarts.
+
+**Reboot recovery was not tested.** Final version-label, script and documentation
+normalization occurred after the supplied runtime test runs; an exact-final-label
+C++ rebuild was not run on the packaging host. Run the included gates on the
+host that will build your release binary. The source-only package does not claim
+that the removed older prebuilt binary contains these fixes.
+
+- [Detailed README](source/README.md)
+- [Changelog](CHANGELOG.md)
+- [Configuration](docs/CONFIGURATION.md)
+- [Verified results and limitations](source/release/VERIFIED-RESULTS.txt)
+- [Original evidence](source/release/evidence/)
+- [Release notes](source/release/RELEASE-NOTES.md)
+
+Root config/doc copies are distribution conveniences. `source/` is the canonical
+build tree; its own source hash manifest verifies the packaged release bytes.
+`RELEASE-CHECKSUMS.txt` covers repository distribution files (excluding itself).

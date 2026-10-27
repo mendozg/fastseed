@@ -28,6 +28,7 @@ int main() {
     std::error_code ec; std::filesystem::remove(path, ec); std::filesystem::remove(path.string()+"-wal", ec); std::filesystem::remove(path.string()+"-shm", ec);
     db::PeerDatabase db({path.string(), 250000, std::chrono::hours(24*30), std::chrono::hours(24*14), 2500});
     db.open();
+    assert(db.migrate() == 0); // open() completes all current schema migrations.
     auto tor = make_peer(crawler::CandidateNetwork::TorV3, "onion:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", transport::TransportKind::TorSocks5);
     auto i2p = make_peer(crawler::CandidateNetwork::I2P, "i2p:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", transport::TransportKind::I2pSam);
     db.save_batch({tor, i2p});
@@ -35,9 +36,10 @@ int main() {
 
     sqlite3* raw = nullptr; assert(sqlite3_open(path.c_str(), &raw) == SQLITE_OK);
     sqlite3_stmt* st = nullptr; assert(sqlite3_prepare_v2(raw, "SELECT MAX(version) FROM schema_version", -1, &st, nullptr) == SQLITE_OK);
-    assert(sqlite3_step(st) == SQLITE_ROW && sqlite3_column_int(st,0) == 3); sqlite3_finalize(st); sqlite3_close(raw);
+    assert(sqlite3_step(st) == SQLITE_ROW && sqlite3_column_int(st,0) == 4); sqlite3_finalize(st); sqlite3_close(raw);
 
     db.open();
+    assert(db.migrate() == 0); // open() completes all current schema migrations.
     auto loaded = db.load_health(); assert(loaded.size() == 2);
     bool saw_tor=false, saw_i2p=false;
     for (const auto& p : loaded) {
@@ -52,7 +54,7 @@ int main() {
     db.close();
     std::filesystem::remove(path, ec); std::filesystem::remove(path.string()+"-wal", ec); std::filesystem::remove(path.string()+"-shm", ec);
 
-    // Exercise automatic v2 -> v3 migration on an existing-style database.
+    // Exercise automatic v2 -> current v4 migration on an existing-style database.
     const auto legacy = std::filesystem::temp_directory_path() / "bsty_fastseed_phase108_v2.sqlite3";
     std::filesystem::remove(legacy, ec);
     sqlite3* olddb = nullptr; assert(sqlite3_open(legacy.c_str(), &olddb) == SQLITE_OK);
@@ -74,6 +76,7 @@ CREATE TABLE peers(
     char* errmsg=nullptr; assert(sqlite3_exec(olddb, schema, nullptr, nullptr, &errmsg) == SQLITE_OK); if(errmsg) sqlite3_free(errmsg); sqlite3_close(olddb);
     db::PeerDatabase migrated({legacy.string(), 250000, std::chrono::hours(24*30), std::chrono::hours(24*14), 2500});
     migrated.open();
+    assert(migrated.migrate() == 0); // Legacy databases also reach current schema.
     auto migrated_peer = make_peer(crawler::CandidateNetwork::TorV3, "onion:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc", transport::TransportKind::TorSocks5);
     migrated.save(migrated_peer);
     auto migrated_loaded = migrated.load_health(); assert(migrated_loaded.size() == 1);

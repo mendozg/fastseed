@@ -5,6 +5,7 @@
 #include <array>
 #include <cstdint>
 #include <span>
+#include <mutex>
 #include <string>
 #include <string_view>
 #include <unordered_map>
@@ -68,6 +69,7 @@ public:
 private:
     struct Entry { std::uint64_t sequence{}; std::int64_t timestamp{}; };
     std::size_t max_entries_;
+    std::mutex mutex_;
     std::unordered_map<std::string, Entry> entries_;
 };
 

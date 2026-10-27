@@ -21,7 +21,9 @@ int main() {
     boost::asio::io_context io;
     auto runner = std::make_unique<ImmediateRunner>();
     auto* raw = runner.get();
-    crawler::PeerCrawler c(io, {}, std::move(runner));
+    crawler::CrawlerConfig cfg;
+    cfg.feedback.direct_tcp.maximum = 256; // Leave room for the increase under test.
+    crawler::PeerCrawler c(io, cfg, std::move(runner));
     const auto before = c.transport_capacity(transport::TransportKind::DirectTcp);
     c.add_candidate("127.0.0.1", 8226, crawler::CandidateSource::Manual);
     c.add_candidate("127.0.0.2", 8226, crawler::CandidateSource::Manual);

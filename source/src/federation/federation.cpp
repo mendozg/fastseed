@@ -36,8 +36,8 @@ FederationMessage decode(std::span<const std::uint8_t>w,std::string_view secret,
  auto wn=u16(w,p);if(wn>c.max_peers_per_message)throw std::runtime_error("too many withdrawals");for(unsigned i=0;i<wn;++i)m.withdrawals.push_back(str(w,p,1024));
  if(p+32!=w.size())throw std::runtime_error("trailing federation data");std::array<std::uint8_t,32> got{};std::copy(w.begin()+p,w.end(),got.begin());auto expected=mac(w.first(p),secret);if(!std::equal(got.begin(),got.end(),expected.begin()))throw std::runtime_error("authentication failed");m.auth_tag=got;return m;
 }
-bool ReplayGuard::accept(std::string_view sender,std::uint64_t seq,std::int64_t ts,std::int64_t now,std::chrono::seconds win){if(sender.empty()||seq==0)return false;auto it=entries_.find(std::string(sender));if(std::llabs(now-ts)>win.count())return false;if(it!=entries_.end()&&seq<=it->second.sequence)return false;if(entries_.size()>=max_entries_&&it==entries_.end())entries_.erase(entries_.begin());entries_[std::string(sender)]={seq,ts};return true;}
-void ReplayGuard::clear(){entries_.clear();}
+bool ReplayGuard::accept(std::string_view sender,std::uint64_t seq,std::int64_t ts,std::int64_t now,std::chrono::seconds win){std::lock_guard lock(mutex_);if(sender.empty()||seq==0)return false;auto it=entries_.find(std::string(sender));if(std::llabs(now-ts)>win.count())return false;if(it!=entries_.end()&&seq<=it->second.sequence)return false;if(entries_.size()>=max_entries_&&it==entries_.end())entries_.erase(entries_.begin());entries_[std::string(sender)]={seq,ts};return true;}
+void ReplayGuard::clear(){std::lock_guard lock(mutex_);entries_.clear();}
 FederatedPeerStore::FederatedPeerStore(std::string local_seeder)
     : local_seeder_(std::move(local_seeder)) {}
 

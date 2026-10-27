@@ -1,0 +1,5 @@
+# Canonical text endings; preserve the exact original evidence and release hashes.
+* text=auto eol=lf
+*.png binary
+/source/release/evidence/** -text
+/source/release/VERSION -text

@@ -58,7 +58,9 @@ int main() {
         many.push_back(p);
     }
     auto budgeted = budget_scheduler.select_due(many, controller, {}, std::chrono::system_clock::now());
-    assert(budgeted.size() == 10);
+    // Direct capacity is four, even when the batch has room for ten.
+    assert(budgeted.size() == 4);
+    assert(budgeted.size() <= controller.capacity(transport::TransportKind::DirectTcp));
     // With no evidence, all are exploration candidates, but the batch still obeys max_batch.
     assert(budgeted.size() <= budget_cfg.max_batch);
 

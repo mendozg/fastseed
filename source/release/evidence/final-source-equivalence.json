@@ -1,0 +1,11 @@
+{
+  "comparison": "Final source vs corrected HandshakeFix R2 source retained in this workspace",
+  "runtime_cpp_changes": [
+    "src/config/runtime_config.cpp",
+    "src/main.cpp"
+  ],
+  "runtime_change_scope": "Version/help/startup string normalization only; all other runtime source and public headers unchanged",
+  "version_before": "1.0.1 (DNS compatibility hotfix)",
+  "version_after": "1.0.0 (Production)",
+  "final_cpp_build_run_locally": false
+}

@@ -1,26 +1,12 @@
-BSTY-FastSeed v1.0.0
-Production Release
+BSTY-FastSeed v1.0.0 final source release
+Runtime version: BSTY-FastSeed 1.0.0 (Production)
+Mainnet P2P: 8226; magic A2 B2 E2 F2; protocol 70016; minimum 31800.
+Native authoritative UDP/TCP DNS; default 53; default UDP cap 1232.
+Source only; no prebuilt binary, no consensus/blockchain/wallet/mining component.
 
-Network: GlobalBoost-Y (BSTY) mainnet
-P2P port: 8226
-P2P magic: A2 B2 E2 F2
-Protocol: 70016
-Minimum peer protocol: 31800
-DNS: native authoritative UDP/TCP, default port 53
-DNS zone: seed.globalboost.info
+Contents: source, config examples, systemd assets, deployment/release scripts,
+50 CTest suites, independent DNS smoke checks, docs, operator verification logs,
+source/evidence/package hash manifests and provenance record.
 
-Scope:
-- BSTY P2P peer discovery and validation
-- ADDR/ADDRv2 including bounded Tor v3/I2P representations
-- health/cache and SQLite persistence
-- adaptive scheduler and network intelligence
-- federation support
-- native A/AAAA DNS response engine
-- mainnet canary validation
-
-Non-scope:
-- blockchain synchronization
-- consensus validation
-- transaction/UTXO/mempool processing
-- mining
-- consensus code linkage to globalboostd
+Reboot recovery was not tested. Exact final-label C++ rebuild was not performed
+locally. See VERIFIED-RESULTS.txt before interpreting the verification evidence.

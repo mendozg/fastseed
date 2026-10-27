@@ -81,9 +81,10 @@ struct PeerCrawler::Impl : std::enable_shared_from_this<PeerCrawler::Impl> {
     CrawlerStats stats{};
     ValidatedCallback callback;
     AdaptiveCapacityController capacity_controller;
+    AdaptiveProbeScheduler scheduler;
 
     Impl(boost::asio::io_context& i, CrawlerConfig c, std::unique_ptr<ProbeRunner> r)
-        : io(i), resolver(i), cfg(std::move(c)), runner(std::move(r)), capacity_controller() {}
+        : io(i), resolver(i), cfg(std::move(c)), runner(std::move(r)), capacity_controller(cfg.feedback), scheduler(cfg.scheduler) {}
 
     static bool is_ipv6(const std::string& host) {
         boost::system::error_code ec;
@@ -352,8 +353,8 @@ void PeerCrawler::add_candidates(const std::vector<PeerCandidate>& cs) {
 }
 std::size_t PeerCrawler::schedule_from_health(const std::vector<health::PeerHealth>& peers,
                                                std::chrono::system_clock::time_point now) {
-    HealthAwareScheduler scheduler;
-    const auto due = scheduler.select_due(peers, now);
+    const auto active = ActiveProbeCounts{impl_->active_for(transport::TransportKind::DirectTcp), impl_->active_for(transport::TransportKind::TorSocks5), impl_->active_for(transport::TransportKind::I2pSam)};
+    const auto due = impl_->scheduler.select_due(peers, impl_->capacity_controller, active, now);
     std::size_t added = 0;
     for (const auto& item : due) {
         auto c = item.candidate;
@@ -390,4 +391,18 @@ CrawlerStats PeerCrawler::stats() const noexcept { return impl_->stats; }
 std::size_t PeerCrawler::transport_capacity(transport::TransportKind kind) const noexcept { return impl_->capacity_controller.capacity(kind); }
 std::vector<PeerCandidate> PeerCrawler::snapshot() const { std::vector<PeerCandidate> out; out.reserve(impl_->candidates.size()); for(const auto& [k,c]:impl_->candidates) out.push_back(c); return out; }
 
+} // namespace fastseed::crawler
+
+// Scheduler state persistence is intentionally exposed as a small value-only API so
+// the crawler does not depend on the SQLite layer.
+namespace fastseed::crawler {
+std::vector<std::pair<transport::TransportKind, PersistedTransportState>> PeerCrawler::scheduler_state() const {
+    std::vector<std::pair<transport::TransportKind, PersistedTransportState>> out;
+    for (auto kind : {transport::TransportKind::DirectTcp, transport::TransportKind::TorSocks5, transport::TransportKind::I2pSam})
+        out.emplace_back(kind, impl_->capacity_controller.snapshot(kind));
+    return out;
+}
+void PeerCrawler::restore_scheduler_state(const std::vector<std::pair<transport::TransportKind, PersistedTransportState>>& records) {
+    for (const auto& [kind, state] : records) impl_->capacity_controller.restore(kind, state);
+}
 } // namespace fastseed::crawler

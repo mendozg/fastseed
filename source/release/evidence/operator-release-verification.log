@@ -1,0 +1,495 @@
+bash scripts/verify-gatefix.sh
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/customer/fastseed/source/build-gatefix
+Consolidate compiler generated dependencies of target fastseed
+[ 21%] Built target fastseed
+Consolidate compiler generated dependencies of target phase1_tests
+Consolidate compiler generated dependencies of target bsty-fastseed
+[ 22%] Built target phase1_tests
+[ 23%] Built target bsty-fastseed
+Consolidate compiler generated dependencies of target phase11_tests
+Consolidate compiler generated dependencies of target phase12_tests
+[ 24%] Built target phase11_tests
+[ 25%] Built target phase12_tests
+Consolidate compiler generated dependencies of target phase13_tests
+[ 27%] Built target phase13_tests
+Consolidate compiler generated dependencies of target phase13_interop_tests
+Consolidate compiler generated dependencies of target phase2_tests
+[ 29%] Built target phase13_interop_tests
+[ 31%] Built target phase2_tests
+Consolidate compiler generated dependencies of target phase3_tests
+Consolidate compiler generated dependencies of target phase4_tests
+[ 32%] Built target phase3_tests
+[ 34%] Built target phase4_tests
+Consolidate compiler generated dependencies of target phase5_tests
+Consolidate compiler generated dependencies of target phase6_tests
+[ 35%] Built target phase5_tests
+[ 37%] Built target phase6_tests
+Consolidate compiler generated dependencies of target phase7_tests
+Consolidate compiler generated dependencies of target phase8_tests
+[ 38%] Built target phase7_tests
+[ 40%] Built target phase8_tests
+Consolidate compiler generated dependencies of target phase9_tests
+Consolidate compiler generated dependencies of target phase101_tests
+[ 42%] Built target phase101_tests
+[ 44%] Built target phase9_tests
+Consolidate compiler generated dependencies of target phase102_tests
+Consolidate compiler generated dependencies of target phase101_probe_tests
+[ 46%] Built target phase102_tests
+[ 47%] Built target phase101_probe_tests
+Consolidate compiler generated dependencies of target phase103_tests
+Consolidate compiler generated dependencies of target phase104_addrv2_exchange_tests
+[ 48%] Built target phase103_tests
+[ 50%] Built target phase104_addrv2_exchange_tests
+Consolidate compiler generated dependencies of target phase105_persistence_tests
+Consolidate compiler generated dependencies of target phase106_transport_tests
+[ 51%] Built target phase105_persistence_tests
+[ 52%] Built target phase106_transport_tests
+Consolidate compiler generated dependencies of target phase106_socks_tests
+Consolidate compiler generated dependencies of target phase106_sam_tests
+[ 54%] Built target phase106_socks_tests
+[ 55%] Built target phase106_sam_tests
+Consolidate compiler generated dependencies of target phase106_router_tests
+Consolidate compiler generated dependencies of target phase107_transport_crawler_tests
+[ 57%] Built target phase106_router_tests
+[ 58%] Built target phase107_transport_crawler_tests
+Consolidate compiler generated dependencies of target phase107_router_tests
+Consolidate compiler generated dependencies of target phase108_health_transport_tests
+[ 60%] Built target phase107_router_tests
+[ 62%] Built target phase108_health_transport_tests
+Consolidate compiler generated dependencies of target phase108_db_transport_tests
+Consolidate compiler generated dependencies of target phase109_scheduler_tests
+[ 64%] Built target phase108_db_transport_tests
+[ 65%] Built target phase109_scheduler_tests
+Consolidate compiler generated dependencies of target phase1011_feedback_tests
+Consolidate compiler generated dependencies of target phase1010_adaptive_scheduler_tests
+[ 66%] Built target phase1011_feedback_tests
+[ 68%] Built target phase1010_adaptive_scheduler_tests
+Consolidate compiler generated dependencies of target phase1012_crawler_feedback_tests
+Consolidate compiler generated dependencies of target phase1014_integrity_tests
+[ 70%] Built target phase1012_crawler_feedback_tests
+[ 71%] Built target phase1014_integrity_tests
+Consolidate compiler generated dependencies of target phase1015_decay_tests
+Consolidate compiler generated dependencies of target phase1016_confidence_tests
+[ 73%] Built target phase1015_decay_tests
+[ 74%] Built target phase1016_confidence_tests
+Consolidate compiler generated dependencies of target phase1017_confidence_scheduler_tests
+Consolidate compiler generated dependencies of target phase1018_exploration_tests
+[ 76%] Built target phase1017_confidence_scheduler_tests
+[ 77%] Built target phase1018_exploration_tests
+Consolidate compiler generated dependencies of target phase1019_fairness_tests
+Consolidate compiler generated dependencies of target phase1020_exploration_telemetry_tests
+[ 79%] Built target phase1019_fairness_tests
+[ 81%] Built target phase1020_exploration_telemetry_tests
+Consolidate compiler generated dependencies of target phase1022_observability_tests
+Consolidate compiler generated dependencies of target phase1023_integration_gate_tests
+[ 82%] Built target phase1022_observability_tests
+[ 84%] Built target phase1023_integration_gate_tests
+Consolidate compiler generated dependencies of target phase1024_longrun_tests
+Consolidate compiler generated dependencies of target phase1025_failure_injection_tests
+[ 85%] Built target phase1024_longrun_tests
+[ 87%] Built target phase1025_failure_injection_tests
+Consolidate compiler generated dependencies of target phase1026_security_tests
+Consolidate compiler generated dependencies of target phase1028_federation_tests
+[ 88%] Built target phase1026_security_tests
+[ 90%] Built target phase1028_federation_tests
+Consolidate compiler generated dependencies of target fastseed_canary
+Consolidate compiler generated dependencies of target phase11_native_dns_tests
+[ 91%] Built target fastseed_canary
+[ 93%] Built target phase11_native_dns_tests
+Consolidate compiler generated dependencies of target phase12_intelligence_tests
+Consolidate compiler generated dependencies of target phase13_release_tests
+[ 95%] Built target phase12_intelligence_tests
+[ 96%] Built target phase13_release_tests
+Consolidate compiler generated dependencies of target config_tests
+Consolidate compiler generated dependencies of target dns_compat_tests
+[ 98%] Built target config_tests
+[ 99%] Built target dns_compat_tests
+Consolidate compiler generated dependencies of target phase1029_mainnet_canary_tests
+[100%] Built target phase1029_mainnet_canary_tests
+Internal ctest changing into directory: /home/customer/fastseed/source/build-gatefix
+Test project /home/customer/fastseed/source/build-gatefix
+      Start  1: phase1_tests
+ 1/50 Test  #1: phase1_tests ............................   Passed    0.01 sec
+      Start  2: phase11_tests
+ 2/50 Test  #2: phase11_tests ...........................   Passed    0.01 sec
+      Start  3: phase12_tests
+ 3/50 Test  #3: phase12_tests ...........................   Passed    0.00 sec
+      Start  4: phase13_tests
+ 4/50 Test  #4: phase13_tests ...........................   Passed    0.01 sec
+      Start  5: phase13_interop_tests
+ 5/50 Test  #5: phase13_interop_tests ...................   Passed    0.01 sec
+      Start  6: phase2_tests
+ 6/50 Test  #6: phase2_tests ............................   Passed    0.00 sec
+      Start  7: phase3_tests
+ 7/50 Test  #7: phase3_tests ............................   Passed    0.00 sec
+      Start  8: phase4_tests
+ 8/50 Test  #8: phase4_tests ............................   Passed    0.03 sec
+      Start  9: phase5_tests
+ 9/50 Test  #9: phase5_tests ............................   Passed    0.00 sec
+      Start 10: phase6_tests
+10/50 Test #10: phase6_tests ............................   Passed    0.00 sec
+      Start 11: phase7_tests
+11/50 Test #11: phase7_tests ............................   Passed    0.01 sec
+      Start 12: phase8_tests
+12/50 Test #12: phase8_tests ............................   Passed    0.01 sec
+      Start 13: phase9_tests
+13/50 Test #13: phase9_tests ............................   Passed    0.00 sec
+      Start 14: phase101_tests
+14/50 Test #14: phase101_tests ..........................   Passed    0.00 sec
+      Start 15: phase101_probe_tests
+15/50 Test #15: phase101_probe_tests ....................   Passed    1.24 sec
+      Start 16: phase102_tests
+16/50 Test #16: phase102_tests ..........................   Passed    0.00 sec
+      Start 17: phase103_tests
+17/50 Test #17: phase103_tests ..........................   Passed    0.00 sec
+      Start 18: phase104_addrv2_exchange_tests
+18/50 Test #18: phase104_addrv2_exchange_tests ..........   Passed    0.15 sec
+      Start 19: phase105_persistence_tests
+19/50 Test #19: phase105_persistence_tests ..............   Passed    0.04 sec
+      Start 20: phase106_transport_tests
+20/50 Test #20: phase106_transport_tests ................   Passed    0.01 sec
+      Start 21: phase106_socks_tests
+21/50 Test #21: phase106_socks_tests ....................   Passed    0.01 sec
+      Start 22: phase106_sam_tests
+22/50 Test #22: phase106_sam_tests ......................   Passed    0.00 sec
+      Start 23: phase106_router_tests
+23/50 Test #23: phase106_router_tests ...................   Passed    0.00 sec
+      Start 24: phase107_transport_crawler_tests
+24/50 Test #24: phase107_transport_crawler_tests ........   Passed    0.00 sec
+      Start 25: phase107_router_tests
+25/50 Test #25: phase107_router_tests ...................   Passed    0.00 sec
+      Start 26: phase108_health_transport_tests
+26/50 Test #26: phase108_health_transport_tests .........   Passed    0.00 sec
+      Start 27: phase108_db_transport_tests
+27/50 Test #27: phase108_db_transport_tests .............   Passed    0.06 sec
+      Start 28: phase109_scheduler_tests
+28/50 Test #28: phase109_scheduler_tests ................   Passed    0.00 sec
+      Start 29: phase1011_feedback_tests
+29/50 Test #29: phase1011_feedback_tests ................   Passed    0.00 sec
+      Start 30: phase1010_adaptive_scheduler_tests
+30/50 Test #30: phase1010_adaptive_scheduler_tests ......   Passed    0.00 sec
+      Start 31: phase1012_crawler_feedback_tests
+31/50 Test #31: phase1012_crawler_feedback_tests ........   Passed    0.00 sec
+      Start 32: phase1014_integrity_tests
+32/50 Test #32: phase1014_integrity_tests ...............   Passed    0.02 sec
+      Start 33: phase1015_decay_tests
+33/50 Test #33: phase1015_decay_tests ...................   Passed    0.00 sec
+      Start 34: phase1016_confidence_tests
+34/50 Test #34: phase1016_confidence_tests ..............   Passed    0.00 sec
+      Start 35: phase1017_confidence_scheduler_tests
+35/50 Test #35: phase1017_confidence_scheduler_tests ....   Passed    0.00 sec
+      Start 36: phase1018_exploration_tests
+36/50 Test #36: phase1018_exploration_tests .............   Passed    0.00 sec
+      Start 37: phase1019_fairness_tests
+37/50 Test #37: phase1019_fairness_tests ................   Passed    0.00 sec
+      Start 38: phase1020_exploration_telemetry_tests
+38/50 Test #38: phase1020_exploration_telemetry_tests ...   Passed    0.00 sec
+      Start 39: phase1022_observability_tests
+39/50 Test #39: phase1022_observability_tests ...........   Passed    0.00 sec
+      Start 40: phase1023_integration_gate_tests
+40/50 Test #40: phase1023_integration_gate_tests ........   Passed    0.00 sec
+      Start 41: phase1024_longrun_tests
+41/50 Test #41: phase1024_longrun_tests .................   Passed    0.06 sec
+      Start 42: phase1025_failure_injection_tests
+42/50 Test #42: phase1025_failure_injection_tests .......   Passed    0.00 sec
+      Start 43: phase1026_security_tests
+43/50 Test #43: phase1026_security_tests ................   Passed    0.00 sec
+      Start 44: phase1028_federation_tests
+44/50 Test #44: phase1028_federation_tests ..............   Passed    0.01 sec
+      Start 45: phase1029_mainnet_canary_tests
+45/50 Test #45: phase1029_mainnet_canary_tests ..........   Passed    0.00 sec
+      Start 46: phase11_native_dns_tests
+46/50 Test #46: phase11_native_dns_tests ................   Passed    0.00 sec
+      Start 47: phase12_intelligence_tests
+47/50 Test #47: phase12_intelligence_tests ..............   Passed    0.00 sec
+      Start 48: phase13_release_tests
+48/50 Test #48: phase13_release_tests ...................   Passed    0.00 sec
+      Start 49: config_tests
+49/50 Test #49: config_tests ............................   Passed    0.00 sec
+      Start 50: dns_compat_tests
+50/50 Test #50: dns_compat_tests ........................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 50
+
+Total Test time (real) =   1.80 sec
+Internal ctest changing into directory: /home/customer/fastseed/source/build-gatefix
+Test project /home/customer/fastseed/source/build-gatefix
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.02 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.02 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 12: phase8_tests
+1/2 Test #12: phase8_tests .....................   Passed    0.01 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.25 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.26 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.24 sec
+    Start 15: phase101_probe_tests
+2/2 Test #15: phase101_probe_tests .............   Passed    1.25 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =  25.12 sec
+BSTY-FastSeed 1.0.1 (DNS compatibility hotfix)
+config OK: /home/customer/fastseed/source/config/fastseed.production.toml
+config OK: /tmp/fastseed-dns-rz67yoqt/test.toml
+Independent wire decoder: 20 UDP/TCP type/EDNS combinations PASS
+DIG A PASS
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.7-Ubuntu <<>> @127.0.0.1 -p 40965 seeder.globalboost.info +time=2 +tries=1 A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 44553
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      A
+
+;; AUTHORITY SECTION:
+seeder.globalboost.info. 60     IN      SOA     ns1.example.org. hostmaster.example.org. 2026102201 3600 600 86400 60
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#40965(127.0.0.1) (UDP)
+;; WHEN: Fri Oct 23 05:16:20 UTC 2026
+;; MSG SIZE  rcvd: 148
+
+
+DIG +noedns A PASS
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.7-Ubuntu <<>> @127.0.0.1 -p 40965 seeder.globalboost.info +time=2 +tries=1 +noedns A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 60044
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0
+;; WARNING: recursion requested but not available
+
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      A
+
+;; AUTHORITY SECTION:
+seeder.globalboost.info. 60     IN      SOA     ns1.example.org. hostmaster.example.org. 2026102201 3600 600 86400 60
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#40965(127.0.0.1) (UDP)
+;; WHEN: Fri Oct 23 05:16:20 UTC 2026
+;; MSG SIZE  rcvd: 137
+
+
+DIG +tcp A PASS
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.7-Ubuntu <<>> @127.0.0.1 -p 40965 seeder.globalboost.info +time=2 +tries=1 +tcp A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 27729
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      A
+
+;; AUTHORITY SECTION:
+seeder.globalboost.info. 60     IN      SOA     ns1.example.org. hostmaster.example.org. 2026102201 3600 600 86400 60
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#40965(127.0.0.1) (TCP)
+;; WHEN: Fri Oct 23 05:16:20 UTC 2026
+;; MSG SIZE  rcvd: 148
+
+
+DIG AAAA PASS
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.7-Ubuntu <<>> @127.0.0.1 -p 40965 seeder.globalboost.info +time=2 +tries=1 AAAA
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 51204
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      AAAA
+
+;; AUTHORITY SECTION:
+seeder.globalboost.info. 60     IN      SOA     ns1.example.org. hostmaster.example.org. 2026102201 3600 600 86400 60
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#40965(127.0.0.1) (UDP)
+;; WHEN: Fri Oct 23 05:16:20 UTC 2026
+;; MSG SIZE  rcvd: 148
+
+
+DIG SOA PASS
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.7-Ubuntu <<>> @127.0.0.1 -p 40965 seeder.globalboost.info +time=2 +tries=1 SOA
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 62452
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      SOA
+
+;; ANSWER SECTION:
+seeder.globalboost.info. 60     IN      SOA     ns1.example.org. hostmaster.example.org. 2026102201 3600 600 86400 60
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#40965(127.0.0.1) (UDP)
+;; WHEN: Fri Oct 23 05:16:20 UTC 2026
+;; MSG SIZE  rcvd: 125
+
+
+DIG NS PASS
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.7-Ubuntu <<>> @127.0.0.1 -p 40965 seeder.globalboost.info +time=2 +tries=1 NS
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 61978
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      NS
+
+;; ANSWER SECTION:
+seeder.globalboost.info. 60     IN      NS      ns1.example.org.
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#40965(127.0.0.1) (UDP)
+;; WHEN: Fri Oct 23 05:16:20 UTC 2026
+;; MSG SIZE  rcvd: 81
+
+
+DIG +edns=1 +noednsnegotiation A PASS
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.7-Ubuntu <<>> @127.0.0.1 -p 40965 seeder.globalboost.info +time=2 +tries=1 +edns=1 +noednsnegotiation A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: BADVERS, id: 43962
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      A
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#40965(127.0.0.1) (UDP)
+;; WHEN: Fri Oct 23 05:16:20 UTC 2026
+;; MSG SIZE  rcvd: 52
+
+
+DIG +bufsize=512 +ignore AAAA PASS
+
+; <<>> DiG 9.18.39-0ubuntu0.22.04.7-Ubuntu <<>> @127.0.0.1 -p 40965 seeder.globalboost.info +time=2 +tries=1 +bufsize=512 +ignore AAAA
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 22098
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      AAAA
+
+;; AUTHORITY SECTION:
+seeder.globalboost.info. 60     IN      SOA     ns1.example.org. hostmaster.example.org. 2026102201 3600 600 86400 60
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#40965(127.0.0.1) (UDP)
+;; WHEN: Fri Oct 23 05:16:20 UTC 2026
+;; MSG SIZE  rcvd: 148
+
+
+Black-box application smoke: PASS
+Full suite, repeated federation/handshake tests and DNS smoke: PASS

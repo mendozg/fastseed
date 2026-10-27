@@ -1,34 +1,97 @@
-# BSTY FastSeed â€” Phase 10.1
+# BSTY-FastSeed v1.0.0
 
-FastSeed is a standalone high-performance peer discovery and DNS seeder for GlobalBoost-Y (BSTY).
+<p align="center">
+  <img src="docs/assets/fastseed-logo.png" alt="BSTY FastSeed — Faster Peers, Stronger Network" width="420">
+</p>
 
-Phase 10.1 adds `sendaddrv2` capability signaling to the BSTY P2P probe path as part of the FastSeed v1.0.0 ADDRv2 release plan.
+Standalone GlobalBoost-Y peer discovery and authoritative DNS seeder. This final
+source package consolidates the RC1 EasyDeploy baseline, DNS compatibility fixes,
+release-gate corrections, and modern peer-handshake fixes developed and exercised
+before the v1.0.0 final release. Intermediate packages were labeled v1.0.1 during
+validation; they were not the final release numbering.
+
+## Included functionality
+
+- BSTY mainnet probing (port 8226, protocol 70016), peer health/cache and SQLite persistence.
+- ADDRv2 discovery with IPv4/IPv6 and optional Tor v3/I2P transport components.
+- Native authoritative UDP/TCP DNS with A/AAAA, NS/SOA, EDNS(0), BADVERS,
+  bounded parsing, rate limits, negotiated UDP limits and correct truncation.
+- Adaptive scheduling, feedback/confidence, intelligence, federation and metrics components.
+- Correct pre-verack capability handling and owned asynchronous write buffers.
+
+Not a full node: no blockchain synchronization, consensus, wallet or mining.
+Only eligible, fresh IPv4/IPv6 peers are exposed through A/AAAA answers. Empty-cache
+NOERROR/NODATA with SOA is expected until eligible peers are available.
+
+## Build and verify (Ubuntu 22.04 / GCC 11)
+
+```bash
+sudo apt-get update
+sudo apt-get install -y build-essential cmake libboost-dev libssl-dev libsqlite3-dev python3 dnsutils
+python3 scripts/verify-source.py
+bash scripts/release-gate.sh
+```
+
+The gate builds all targets, runs all 50 CTest suites with assertions active,
+repeats the federation and handshake suites 20 times each, checks version/configs,
+and performs independent wire-decoder and dig checks. It does not install or
+restart the service. Logs: `verification-results/release.log`.
+
+```bash
+bash scripts/sanitizer-gate.sh
+```
+
+This builds and runs the complete suite with ASan/UBSan and leak detection.
+Logs: `verification-results/sanitizers.log`. Do not install sanitizer binaries.
+Compatibility aliases `verify-gatefix.sh` and `rc-gate.sh` invoke the final release gate.
+
+## Deploy or upgrade
+
+Read [deployment instructions](docs/DEPLOYMENT.md) before changing a live service.
+Fresh-install example (after the release gate passes):
+
+```bash
+sudo bash deploy-fastseed.sh seeder.globalboost.info nsseed.globalboost.info
+```
+
+The helper refuses an existing configuration or an occupied port 53. Existing
+installations should follow the documented upgrade/rollback procedure, preserving
+configuration and database. There is no need to reboot the server to install.
+
+Publish the parent NS delegation and a stable nameserver A record. For the example,
+`nsseed.globalboost.info` must resolve to the DNS host, and `seeder.globalboost.info`
+must be delegated to it. An A record alone is not delegation.
 
 ## Commands
 
 ```bash
-bsty-fastseed --version
-bsty-fastseed --help
-bsty-fastseed --self-test
-bsty-fastseed --check-config /etc/bsty-fastseed/fastseed.toml
-bsty-fastseed probe <host>[:port]
+./build-release/bsty-fastseed --version
+./build-release/bsty-fastseed --help
+./build-release/bsty-fastseed --check-config config/fastseed.production.toml
+./build-release/bsty-fastseed probe 69.197.161.154:8226
+./build-release/bsty-fastseed run --config /etc/bsty-fastseed/fastseed.toml
 ```
 
-## Protocol
+`--self-test` is a legacy CLI acknowledgment; the release gate, CTest and independent
+smoke checks are the actual validation. Probe status 0 means success. A standalone
+probe does not populate the running service's cache.
 
-- BSTY mainnet P2P: 8226
-- BSTY magic: `A2 B2 E2 F2`
-- Protocol version: 70016
-- `sendaddrv2` is sent after a valid peer `version` and before `verack`.
+## Verification and limits
 
-Full BIP155 ADDRv2 network support is implemented in subsequent Phase 10.x work; Phase 10.1 establishes the negotiation mechanism without adding Tor/I2P transport dependencies.
+The operator supplied logs showing 50/50 normal tests, 50/50 sanitizer tests,
+20 repeats each of federation/handshake tests, independent DNS smoke checks,
+working public UDP/TCP and recursive resolution, successful live BSTY handshakes,
+and a 144-sample overnight run. Original evidence is bundled under
+`release/evidence/`. See [verified results](release/VERIFIED-RESULTS.txt) for exact
+scope and provenance. Evidence logs retain their original intermediate version.
 
-## Phase 10.7
+**Reboot recovery was not tested.** Service restart and enabled startup were
+observed; they do not establish full-server reboot recovery.
 
-Phase 10.7 connects the Phase 10.6 transport layer to the peer crawler. The crawler now routes candidates by ADDRv2 network type and hands established transport sockets to the normal BSTY protocol probe. Direct IPv4/IPv6 probing remains enabled by default; Tor v3 and I2P transports are optional. Unsupported optional transports remain `AwaitingTransport` and are never exposed through DNS A/AAAA records.
+The final version identifiers, release scripts and documents were consolidated
+after those runs. Local Ubuntu execution is blocked, so a fresh compile/test of
+the exact final-labeled package has not been run here. Run the included gates on
+the target host. No prebuilt executable is included.
 
-Phase 10.17: confidence-aware scheduling is implemented; confidence influences ordering only and never bypasses concurrency limits.
-
-## Phase 10.18
-
-Phase 10.18 adds confidence-aware exploration budgeting. Low-confidence transports receive a bounded portion of each scheduling batch, while established transports receive the remaining capacity first. If no established work is available, otherwise-idle capacity may still be used for exploration.
+See [configuration](docs/CONFIGURATION.md), [changelog](CHANGELOG.md),
+[release notes](release/RELEASE-NOTES.md), and historical phase documents in docs/.

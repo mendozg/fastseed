@@ -2,6 +2,7 @@
 
 #include "fastseed/health/peer_health.hpp"
 #include "fastseed/dns/rate_limiter.hpp"
+#include <utility>
 #include <boost/asio.hpp>
 #include <cstdint>
 #include <atomic>
@@ -16,7 +17,7 @@ constexpr std::uint16_t TYPE_A = 1;
 constexpr std::uint16_t TYPE_AAAA = 28;
 constexpr std::uint16_t CLASS_IN = 1;
 
-enum class QueryResult { Answered, NoData, Refused, Malformed };
+enum class QueryResult { Answered, NoData, Refused, Malformed, NotImplemented, BadVersion, NameError };
 
 struct DnsConfig {
     std::string zone{"seed.globalboost.info"};
@@ -25,6 +26,9 @@ struct DnsConfig {
     std::size_t max_answers{32};
     bool include_warm{true};
     std::size_t max_response_size{1232};
+    std::string nameserver{}; // Empty means the zone apex; publish its A/AAAA externally.
+    std::string soa_mailbox{}; // Empty means hostmaster.<zone> (DNS name format).
+    std::uint32_t soa_serial{1};
     RateLimiter::Config rate_limit{};
 };
 
@@ -38,13 +42,18 @@ public:
     void publish(std::shared_ptr<const DnsSnapshot> snapshot) noexcept;
     std::shared_ptr<const DnsSnapshot> load() const noexcept;
 private:
-    std::atomic<std::shared_ptr<const DnsSnapshot>> snapshot_;
+    std::shared_ptr<const DnsSnapshot> snapshot_;
 };
 
 struct DnsQuestion {
     std::string name;
     std::uint16_t type{};
     std::uint16_t klass{};
+    bool valid{false};
+    bool edns{false};
+    bool dnssec_ok{false};
+    std::uint16_t udp_size{512};
+    std::uint8_t edns_version{0};
 };
 
 struct DnsAnswer {
@@ -62,7 +71,7 @@ public:
                             std::uint64_t generation = 0);
     std::shared_ptr<const DnsSnapshot> snapshot() const noexcept;
 
-    std::vector<std::uint8_t> build_response(std::span<const std::uint8_t> query) const;
+    std::vector<std::uint8_t> build_response(std::span<const std::uint8_t> query, bool tcp = false) const;
     QueryResult parse_question(std::span<const std::uint8_t> query,
                                DnsQuestion& question) const;
     std::vector<DnsAnswer> select_answers(const DnsQuestion& question,
