@@ -1,0 +1,913 @@
+bash scripts/release-gate.sh &&
+bash scripts/sanitizer-gate.sh
+-- Configuring done (0.1s)
+-- Generating done (0.3s)
+-- Build files have been written to: /home/gabriel/fastseed/source/build-release
+[  0%] Building CXX object CMakeFiles/fastseed.dir/src/crawler/crawler.cpp.o
+[  1%] Building CXX object CMakeFiles/fastseed.dir/src/crawler/scheduler.cpp.o
+[  2%] Building CXX object CMakeFiles/fastseed.dir/src/crawler/adaptive_feedback.cpp.o
+[  3%] Building CXX object CMakeFiles/fastseed.dir/src/health/peer_health.cpp.o
+[  4%] Building CXX object CMakeFiles/fastseed.dir/src/db/peer_database.cpp.o
+[  4%] Building CXX object CMakeFiles/fastseed.dir/src/db/persistence_queue.cpp.o
+[  5%] Building CXX object CMakeFiles/fastseed.dir/src/dns/dns_engine.cpp.o
+/home/gabriel/fastseed/source/src/dns/dns_engine.cpp: In member function ‘void fastseed::dns::SnapshotStore::publish(std::shared_ptr<const fastseed::dns::DnsSnapshot>)’:
+/home/gabriel/fastseed/source/src/dns/dns_engine.cpp:62:102: warning: ‘void std::atomic_store(shared_ptr<_Tp>*, shared_ptr<_Tp>) [with _Tp = const fastseed::dns::DnsSnapshot]’ is deprecated: use 'std::atomic<std::shared_ptr<T>>' instead [-Wdeprecated-declarations]
+   62 | void SnapshotStore::publish(std::shared_ptr<const DnsSnapshot> snapshot) noexcept { std::atomic_store(&snapshot_, std::move(snapshot)); }
+      |                                                                                     ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/15/memory:83,
+                 from /usr/include/boost/asio/detail/memory.hpp:21,
+                 from /usr/include/boost/asio/detail/socket_ops.hpp:21,
+                 from /usr/include/boost/asio/ip/impl/address_v4.ipp:23,
+                 from /usr/include/boost/asio/ip/address_v4.hpp:364,
+                 from /usr/include/boost/asio/ip/address.hpp:25,
+                 from /home/gabriel/fastseed/source/include/fastseed/protocol/network_address.hpp:4,
+                 from /home/gabriel/fastseed/source/include/fastseed/protocol/version_message.hpp:2,
+                 from /home/gabriel/fastseed/source/include/fastseed/protocol/probe.hpp:3,
+                 from /home/gabriel/fastseed/source/include/fastseed/health/peer_health.hpp:4,
+                 from /home/gabriel/fastseed/source/include/fastseed/dns/dns_engine.hpp:3,
+                 from /home/gabriel/fastseed/source/src/dns/dns_engine.cpp:1:
+/usr/include/c++/15/bits/shared_ptr_atomic.h:183:5: note: declared here
+  183 |     atomic_store(shared_ptr<_Tp>* __p, shared_ptr<_Tp> __r)
+      |     ^~~~~~~~~~~~
+/home/gabriel/fastseed/source/src/dns/dns_engine.cpp: In member function ‘std::shared_ptr<const fastseed::dns::DnsSnapshot> fastseed::dns::SnapshotStore::load()const’:
+/home/gabriel/fastseed/source/src/dns/dns_engine.cpp:63:98: warning: ‘std::shared_ptr<_Tp> std::atomic_load(const shared_ptr<_Tp>*) [with _Tp = const fastseed::dns::DnsSnapshot]’ is deprecated: use 'std::atomic<std::shared_ptr<T>>' instead [-Wdeprecated-declarations]
+   63 | std::shared_ptr<const DnsSnapshot> SnapshotStore::load() const noexcept { return std::atomic_load(&snapshot_); }
+      |                                                                                  ~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/usr/include/c++/15/bits/shared_ptr_atomic.h:142:5: note: declared here
+  142 |     atomic_load(const shared_ptr<_Tp>* __p)
+      |     ^~~~~~~~~~~
+[  6%] Building CXX object CMakeFiles/fastseed.dir/src/dns/native_server.cpp.o
+[  7%] Building CXX object CMakeFiles/fastseed.dir/src/dns/rate_limiter.cpp.o
+[  7%] Building CXX object CMakeFiles/fastseed.dir/src/federation/federation.cpp.o
+[  8%] Building CXX object CMakeFiles/fastseed.dir/src/metrics/metrics.cpp.o
+[  9%] Building CXX object CMakeFiles/fastseed.dir/src/metrics/exploration.cpp.o
+/home/gabriel/fastseed/source/src/federation/federation.cpp: In function ‘fastseed::federation::FederationMessage fastseed::federation::decode(std::span<const unsigned char>, std::string_view, const FederationConfig&)’:
+/home/gabriel/fastseed/source/src/federation/federation.cpp:37:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   37 |  if(p+32!=w.size())throw std::runtime_error("trailing federation data");std::array<std::uint8_t,32> got{};std::copy(w.begin()+p,w.end(),got.begin());auto expected=mac(w.first(p),secret);if(!std::equal(got.begin(),got.end(),expected.begin()))throw std::runtime_error("authentication failed");m.auth_tag=got;return m;
+      |  ^~
+/home/gabriel/fastseed/source/src/federation/federation.cpp:37:73: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the‘if’
+   37 |  if(p+32!=w.size())throw std::runtime_error("trailing federation data");std::array<std::uint8_t,32> got{};std::copy(w.begin()+p,w.end(),got.begin());auto expected=mac(w.first(p),secret);if(!std::equal(got.begin(),got.end(),expected.begin()))throw std::runtime_error("authentication failed");m.auth_tag=got;return m;
+      |                                                                         ^~~
+[ 10%] Building CXX object CMakeFiles/fastseed.dir/src/metrics/logger.cpp.o
+[ 10%] Building CXX object CMakeFiles/fastseed.dir/src/config/runtime_config.cpp.o
+[ 11%] Building CXX object CMakeFiles/fastseed.dir/src/transport/transport.cpp.o
+[ 12%] Building CXX object CMakeFiles/fastseed.dir/src/intelligence/network_intelligence.cpp.o
+[ 13%] Linking CXX static library libfastseed.a
+[ 21%] Built target fastseed
+[ 22%] Building CXX object CMakeFiles/phase1_tests.dir/tests/test_phase1.cpp.o
+[ 22%] Building CXX object CMakeFiles/bsty-fastseed.dir/src/main.cpp.o
+[ 22%] Linking CXX executable phase1_tests
+[ 22%] Built target phase1_tests
+[ 22%] Building CXX object CMakeFiles/phase11_tests.dir/tests/protocol/test_phase11.cpp.o
+[ 23%] Linking CXX executable phase11_tests
+[ 23%] Built target phase11_tests
+[ 23%] Building CXX object CMakeFiles/phase12_tests.dir/tests/protocol/test_phase12.cpp.o
+[ 24%] Linking CXX executable phase12_tests
+[ 24%] Built target phase12_tests
+[ 25%] Building CXX object CMakeFiles/phase13_tests.dir/tests/protocol/test_phase13.cpp.o
+[ 26%] Linking CXX executable bsty-fastseed
+[ 27%] Linking CXX executable phase13_tests
+[ 27%] Built target phase13_tests
+[ 28%] Building CXX object CMakeFiles/phase13_interop_tests.dir/tests/integration/test_phase13_interop.cpp.o
+[ 28%] Built target bsty-fastseed
+[ 29%] Building CXX object CMakeFiles/phase2_tests.dir/tests/crawler/test_phase2.cpp.o
+[ 30%] Linking CXX executable phase2_tests
+[ 30%] Built target phase2_tests
+[ 31%] Building CXX object CMakeFiles/phase3_tests.dir/tests/health/test_phase3.cpp.o
+[ 32%] Linking CXX executable phase13_interop_tests
+[ 32%] Built target phase13_interop_tests
+[ 33%] Building CXX object CMakeFiles/phase4_tests.dir/tests/db/test_phase4.cpp.o
+[ 33%] Linking CXX executable phase3_tests
+[ 33%] Built target phase3_tests
+[ 34%] Building CXX object CMakeFiles/phase5_tests.dir/tests/dns/test_phase5.cpp.o
+[ 35%] Linking CXX executable phase4_tests
+[ 35%] Built target phase4_tests
+[ 36%] Building CXX object CMakeFiles/phase6_tests.dir/tests/dns/test_phase6.cpp.o
+[ 36%] Linking CXX executable phase5_tests
+[ 36%] Built target phase5_tests
+[ 37%] Building CXX object CMakeFiles/phase7_tests.dir/tests/federation/test_phase7.cpp.o
+[ 38%] Linking CXX executable phase6_tests
+[ 38%] Built target phase6_tests
+[ 39%] Building CXX object CMakeFiles/phase8_tests.dir/tests/observability/test_phase8.cpp.o
+[ 39%] Linking CXX executable phase7_tests
+[ 39%] Built target phase7_tests
+[ 40%] Building CXX object CMakeFiles/phase9_tests.dir/tests/release/test_phase9.cpp.o
+[ 41%] Linking CXX executable phase8_tests
+[ 41%] Built target phase8_tests
+[ 42%] Building CXX object CMakeFiles/phase101_tests.dir/tests/protocol/test_phase101.cpp.o
+[ 43%] Linking CXX executable phase101_tests
+[ 43%] Built target phase101_tests
+[ 44%] Building CXX object CMakeFiles/phase101_probe_tests.dir/tests/integration/test_phase101_probe.cpp.o
+[ 45%] Linking CXX executable phase9_tests
+[ 45%] Built target phase9_tests
+[ 46%] Building CXX object CMakeFiles/phase102_tests.dir/tests/protocol/test_phase102.cpp.o
+[ 47%] Linking CXX executable phase102_tests
+[ 47%] Built target phase102_tests
+[ 48%] Building CXX object CMakeFiles/phase103_tests.dir/tests/crawler/test_phase103.cpp.o
+[ 48%] Linking CXX executable phase101_probe_tests
+[ 48%] Built target phase101_probe_tests
+[ 49%] Building CXX object CMakeFiles/phase104_addrv2_exchange_tests.dir/tests/integration/test_phase104_addrv2_exchange.cpp.o
+[ 49%] Linking CXX executable phase103_tests
+[ 49%] Built target phase103_tests
+[ 50%] Building CXX object CMakeFiles/phase105_persistence_tests.dir/tests/db/test_phase105_persistence.cpp.o
+[ 50%] Linking CXX executable phase105_persistence_tests
+[ 50%] Built target phase105_persistence_tests
+[ 51%] Building CXX object CMakeFiles/phase106_transport_tests.dir/tests/transport/test_phase106_transport.cpp.o
+[ 52%] Linking CXX executable phase104_addrv2_exchange_tests
+[ 52%] Built target phase104_addrv2_exchange_tests
+[ 53%] Building CXX object CMakeFiles/phase106_socks_tests.dir/tests/transport/test_phase106_socks.cpp.o
+[ 53%] Linking CXX executable phase106_transport_tests
+[ 53%] Built target phase106_transport_tests
+[ 54%] Building CXX object CMakeFiles/phase106_sam_tests.dir/tests/transport/test_phase106_sam.cpp.o
+[ 55%] Linking CXX executable phase106_socks_tests
+[ 55%] Built target phase106_socks_tests
+[ 56%] Building CXX object CMakeFiles/phase106_router_tests.dir/tests/transport/test_phase106_router.cpp.o
+[ 57%] Linking CXX executable phase106_router_tests
+[ 57%] Linking CXX executable phase106_sam_tests
+[ 57%] Built target phase106_sam_tests
+[ 57%] Built target phase106_router_tests
+[ 58%] Building CXX object CMakeFiles/phase107_transport_crawler_tests.dir/tests/crawler/test_phase107_transport_crawler.cpp.o
+[ 59%] Building CXX object CMakeFiles/phase107_router_tests.dir/tests/transport/test_phase107_router.cpp.o
+[ 59%] Linking CXX executable phase107_transport_crawler_tests
+[ 60%] Linking CXX executable phase107_router_tests
+[ 60%] Built target phase107_transport_crawler_tests
+[ 61%] Building CXX object CMakeFiles/phase108_health_transport_tests.dir/tests/health/test_phase108_transport_health.cpp.o
+[ 61%] Built target phase107_router_tests
+[ 62%] Building CXX object CMakeFiles/phase108_db_transport_tests.dir/tests/db/test_phase108_transport_persistence.cpp.o
+[ 63%] Linking CXX executable phase108_health_transport_tests
+[ 63%] Built target phase108_health_transport_tests
+[ 63%] Building CXX object CMakeFiles/phase109_scheduler_tests.dir/tests/crawler/test_phase109_scheduler.cpp.o
+[ 64%] Linking CXX executable phase108_db_transport_tests
+[ 64%] Built target phase108_db_transport_tests
+[ 65%] Building CXX object CMakeFiles/phase1011_feedback_tests.dir/tests/crawler/test_phase1011_feedback.cpp.o
+[ 66%] Linking CXX executable phase109_scheduler_tests
+[ 66%] Built target phase109_scheduler_tests
+[ 67%] Building CXX object CMakeFiles/phase1010_adaptive_scheduler_tests.dir/tests/crawler/test_phase1010_adaptive.cpp.o
+[ 67%] Linking CXX executable phase1011_feedback_tests
+[ 67%] Built target phase1011_feedback_tests
+[ 68%] Building CXX object CMakeFiles/phase1012_crawler_feedback_tests.dir/tests/crawler/test_phase1012_crawler_feedback.cpp.o
+[ 69%] Linking CXX executable phase1010_adaptive_scheduler_tests
+[ 69%] Built target phase1010_adaptive_scheduler_tests
+[ 70%] Building CXX object CMakeFiles/phase1014_integrity_tests.dir/tests/db/test_phase1014_integrity.cpp.o
+[ 71%] Linking CXX executable phase1012_crawler_feedback_tests
+[ 71%] Built target phase1012_crawler_feedback_tests
+[ 72%] Building CXX object CMakeFiles/phase1015_decay_tests.dir/tests/crawler/test_phase1015_decay.cpp.o
+[ 72%] Linking CXX executable phase1014_integrity_tests
+[ 72%] Built target phase1014_integrity_tests
+[ 73%] Building CXX object CMakeFiles/phase1016_confidence_tests.dir/tests/crawler/test_phase1016_confidence.cpp.o
+[ 74%] Linking CXX executable phase1015_decay_tests
+[ 74%] Built target phase1015_decay_tests
+[ 75%] Building CXX object CMakeFiles/phase1017_confidence_scheduler_tests.dir/tests/crawler/test_phase1017_confidence_scheduler.cpp.o
+[ 75%] Linking CXX executable phase1016_confidence_tests
+[ 75%] Built target phase1016_confidence_tests
+[ 76%] Building CXX object CMakeFiles/phase1018_exploration_tests.dir/tests/crawler/test_phase1018_exploration.cpp.o
+[ 77%] Linking CXX executable phase1017_confidence_scheduler_tests
+[ 77%] Built target phase1017_confidence_scheduler_tests
+[ 78%] Building CXX object CMakeFiles/phase1019_fairness_tests.dir/tests/crawler/test_phase1019_fairness.cpp.o
+[ 78%] Linking CXX executable phase1018_exploration_tests
+[ 78%] Built target phase1018_exploration_tests
+[ 79%] Building CXX object CMakeFiles/phase1020_exploration_telemetry_tests.dir/tests/crawler/test_phase1020_exploration_telemetry.cpp.o
+[ 80%] Linking CXX executable phase1019_fairness_tests
+[ 80%] Built target phase1019_fairness_tests
+[ 80%] Building CXX object CMakeFiles/phase1022_observability_tests.dir/tests/observability/test_phase1022_observability.cpp.o
+[ 81%] Linking CXX executable phase1020_exploration_telemetry_tests
+[ 81%] Built target phase1020_exploration_telemetry_tests
+[ 82%] Building CXX object CMakeFiles/phase1023_integration_gate_tests.dir/tests/integration/test_phase1023_integration_gate.cpp.o
+[ 83%] Linking CXX executable phase1022_observability_tests
+[ 83%] Built target phase1022_observability_tests
+[ 83%] Building CXX object CMakeFiles/phase1024_longrun_tests.dir/tests/integration/test_phase1024_longrun.cpp.o
+[ 84%] Linking CXX executable phase1023_integration_gate_tests
+[ 84%] Built target phase1023_integration_gate_tests
+[ 85%] Building CXX object CMakeFiles/phase1025_failure_injection_tests.dir/tests/integration/test_phase1025_failure_injection.cpp.o
+[ 86%] Linking CXX executable phase1024_longrun_tests
+[ 86%] Built target phase1024_longrun_tests
+[ 86%] Building CXX object CMakeFiles/phase1026_security_tests.dir/tests/integration/test_phase1026_security.cpp.o
+[ 87%] Linking CXX executable phase1025_failure_injection_tests
+[ 87%] Built target phase1025_failure_injection_tests
+[ 88%] Building CXX object CMakeFiles/phase1028_federation_tests.dir/tests/federation/test_phase1028.cpp.o
+[ 89%] Linking CXX executable phase1026_security_tests
+[ 89%] Built target phase1026_security_tests
+[ 89%] Building CXX object CMakeFiles/fastseed_canary.dir/src/canary/mainnet_canary.cpp.o
+[ 90%] Linking CXX executable phase1028_federation_tests
+[ 90%] Built target phase1028_federation_tests
+[ 91%] Building CXX object CMakeFiles/phase11_native_dns_tests.dir/tests/dns/test_phase11_native_dns.cpp.o
+[ 92%] Linking CXX static library libfastseed_canary.a
+[ 92%] Built target fastseed_canary
+[ 93%] Building CXX object CMakeFiles/phase12_intelligence_tests.dir/tests/intelligence/test_phase12.cpp.o
+[ 94%] Linking CXX executable phase12_intelligence_tests
+[ 94%] Built target phase12_intelligence_tests
+[ 94%] Building CXX object CMakeFiles/phase13_release_tests.dir/tests/integration/test_phase13_release.cpp.o
+[ 95%] Linking CXX executable phase11_native_dns_tests
+[ 95%] Built target phase11_native_dns_tests
+[ 96%] Building CXX object CMakeFiles/config_tests.dir/tests/config/test_config.cpp.o
+[ 97%] Linking CXX executable phase13_release_tests
+[ 97%] Built target phase13_release_tests
+[ 97%] Building CXX object CMakeFiles/dns_compat_tests.dir/tests/dns/test_v101_compat.cpp.o
+[ 98%] Linking CXX executable config_tests
+[ 98%] Built target config_tests
+[ 98%] Building CXX object CMakeFiles/phase1029_mainnet_canary_tests.dir/tests/integration/test_phase1029_canary.cpp.o
+[ 99%] Linking CXX executable phase1029_mainnet_canary_tests
+[ 99%] Built target phase1029_mainnet_canary_tests
+[100%] Linking CXX executable dns_compat_tests
+[100%] Built target dns_compat_tests
+Test project /home/gabriel/fastseed/source/build-release
+      Start  1: phase1_tests
+ 1/50 Test  #1: phase1_tests ............................   Passed    0.01 sec
+      Start  2: phase11_tests
+ 2/50 Test  #2: phase11_tests ...........................   Passed    0.01 sec
+      Start  3: phase12_tests
+ 3/50 Test  #3: phase12_tests ...........................   Passed    0.01 sec
+      Start  4: phase13_tests
+ 4/50 Test  #4: phase13_tests ...........................   Passed    0.01 sec
+      Start  5: phase13_interop_tests
+ 5/50 Test  #5: phase13_interop_tests ...................   Passed    0.01 sec
+      Start  6: phase2_tests
+ 6/50 Test  #6: phase2_tests ............................   Passed    0.01 sec
+      Start  7: phase3_tests
+ 7/50 Test  #7: phase3_tests ............................   Passed    0.01 sec
+      Start  8: phase4_tests
+ 8/50 Test  #8: phase4_tests ............................   Passed    0.02 sec
+      Start  9: phase5_tests
+ 9/50 Test  #9: phase5_tests ............................   Passed    0.01 sec
+      Start 10: phase6_tests
+10/50 Test #10: phase6_tests ............................   Passed    0.01 sec
+      Start 11: phase7_tests
+11/50 Test #11: phase7_tests ............................   Passed    0.01 sec
+      Start 12: phase8_tests
+12/50 Test #12: phase8_tests ............................   Passed    0.02 sec
+      Start 13: phase9_tests
+13/50 Test #13: phase9_tests ............................   Passed    0.01 sec
+      Start 14: phase101_tests
+14/50 Test #14: phase101_tests ..........................   Passed    0.01 sec
+      Start 15: phase101_probe_tests
+15/50 Test #15: phase101_probe_tests ....................   Passed    1.20 sec
+      Start 16: phase102_tests
+16/50 Test #16: phase102_tests ..........................   Passed    0.01 sec
+      Start 17: phase103_tests
+17/50 Test #17: phase103_tests ..........................   Passed    0.01 sec
+      Start 18: phase104_addrv2_exchange_tests
+18/50 Test #18: phase104_addrv2_exchange_tests ..........   Passed    0.16 sec
+      Start 19: phase105_persistence_tests
+19/50 Test #19: phase105_persistence_tests ..............   Passed    0.01 sec
+      Start 20: phase106_transport_tests
+20/50 Test #20: phase106_transport_tests ................   Passed    0.01 sec
+      Start 21: phase106_socks_tests
+21/50 Test #21: phase106_socks_tests ....................   Passed    0.01 sec
+      Start 22: phase106_sam_tests
+22/50 Test #22: phase106_sam_tests ......................   Passed    0.01 sec
+      Start 23: phase106_router_tests
+23/50 Test #23: phase106_router_tests ...................   Passed    0.01 sec
+      Start 24: phase107_transport_crawler_tests
+24/50 Test #24: phase107_transport_crawler_tests ........   Passed    0.01 sec
+      Start 25: phase107_router_tests
+25/50 Test #25: phase107_router_tests ...................   Passed    0.01 sec
+      Start 26: phase108_health_transport_tests
+26/50 Test #26: phase108_health_transport_tests .........   Passed    0.01 sec
+      Start 27: phase108_db_transport_tests
+27/50 Test #27: phase108_db_transport_tests .............   Passed    0.02 sec
+      Start 28: phase109_scheduler_tests
+28/50 Test #28: phase109_scheduler_tests ................   Passed    0.01 sec
+      Start 29: phase1011_feedback_tests
+29/50 Test #29: phase1011_feedback_tests ................   Passed    0.01 sec
+      Start 30: phase1010_adaptive_scheduler_tests
+30/50 Test #30: phase1010_adaptive_scheduler_tests ......   Passed    0.01 sec
+      Start 31: phase1012_crawler_feedback_tests
+31/50 Test #31: phase1012_crawler_feedback_tests ........   Passed    0.01 sec
+      Start 32: phase1014_integrity_tests
+32/50 Test #32: phase1014_integrity_tests ...............   Passed    0.01 sec
+      Start 33: phase1015_decay_tests
+33/50 Test #33: phase1015_decay_tests ...................   Passed    0.01 sec
+      Start 34: phase1016_confidence_tests
+34/50 Test #34: phase1016_confidence_tests ..............   Passed    0.01 sec
+      Start 35: phase1017_confidence_scheduler_tests
+35/50 Test #35: phase1017_confidence_scheduler_tests ....   Passed    0.01 sec
+      Start 36: phase1018_exploration_tests
+36/50 Test #36: phase1018_exploration_tests .............   Passed    0.01 sec
+      Start 37: phase1019_fairness_tests
+37/50 Test #37: phase1019_fairness_tests ................   Passed    0.01 sec
+      Start 38: phase1020_exploration_telemetry_tests
+38/50 Test #38: phase1020_exploration_telemetry_tests ...   Passed    0.01 sec
+      Start 39: phase1022_observability_tests
+39/50 Test #39: phase1022_observability_tests ...........   Passed    0.01 sec
+      Start 40: phase1023_integration_gate_tests
+40/50 Test #40: phase1023_integration_gate_tests ........   Passed    0.01 sec
+      Start 41: phase1024_longrun_tests
+41/50 Test #41: phase1024_longrun_tests .................   Passed    0.08 sec
+      Start 42: phase1025_failure_injection_tests
+42/50 Test #42: phase1025_failure_injection_tests .......   Passed    0.01 sec
+      Start 43: phase1026_security_tests
+43/50 Test #43: phase1026_security_tests ................   Passed    0.01 sec
+      Start 44: phase1028_federation_tests
+44/50 Test #44: phase1028_federation_tests ..............   Passed    0.01 sec
+      Start 45: phase1029_mainnet_canary_tests
+45/50 Test #45: phase1029_mainnet_canary_tests ..........   Passed    0.01 sec
+      Start 46: phase11_native_dns_tests
+46/50 Test #46: phase11_native_dns_tests ................   Passed    0.01 sec
+      Start 47: phase12_intelligence_tests
+47/50 Test #47: phase12_intelligence_tests ..............   Passed    0.01 sec
+      Start 48: phase13_release_tests
+48/50 Test #48: phase13_release_tests ...................   Passed    0.01 sec
+      Start 49: config_tests
+49/50 Test #49: config_tests ............................   Passed    0.01 sec
+      Start 50: dns_compat_tests
+50/50 Test #50: dns_compat_tests ........................   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 50
+
+Total Test time (real) =   1.94 sec
+Test project /home/gabriel/fastseed/source/build-release
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.02 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.02 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.02 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.02 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.03 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.03 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.02 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.04 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.02 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.02 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.02 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.03 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.02 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.03 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.03 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.03 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.04 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.03 sec
+    Start 12: phase8_tests
+    Test #12: phase8_tests .....................   Passed    0.02 sec
+    Start 12: phase8_tests
+1/2 Test #12: phase8_tests .....................   Passed    0.02 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.20 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.20 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.21 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.20 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.20 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.20 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.20 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.20 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.20 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.20 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.21 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.20 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.19 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.20 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.20 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.20 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.20 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.19 sec
+    Start 15: phase101_probe_tests
+    Test #15: phase101_probe_tests .............   Passed    1.19 sec
+    Start 15: phase101_probe_tests
+2/2 Test #15: phase101_probe_tests .............   Passed    1.20 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =  24.56 sec
+BSTY-FastSeed 1.0.0 (Production)
+config OK: /home/gabriel/fastseed/source/config/fastseed.example.toml
+config OK: /home/gabriel/fastseed/source/config/fastseed.production.toml
+config OK: /tmp/fastseed-dns-v45f2c2p/test.toml
+Independent wire decoder: 20 UDP/TCP type/EDNS combinations PASS
+DIG A PASS
+
+; <<>> DiG 9.20.24-1ubuntu0.4-Ubuntu <<>> @127.0.0.1 -p 46829 seeder.globalboost.info +time=2 +tries=1 A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43243
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      A
+
+;; AUTHORITY SECTION:
+seeder.globalboost.info. 60     IN      SOA     ns1.example.org. hostmaster.example.org. 2026102201 3600 600 86400 60
+
+;; Query time: 1 msec
+;; SERVER: 127.0.0.1#46829(127.0.0.1) (UDP)
+;; WHEN: Fri Oct 30 20:18:37 UTC 2026
+;; MSG SIZE  rcvd: 148
+
+
+DIG +noedns A PASS
+
+; <<>> DiG 9.20.24-1ubuntu0.4-Ubuntu <<>> @127.0.0.1 -p 46829 seeder.globalboost.info +time=2 +tries=1 +noedns A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 52400
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0
+;; WARNING: recursion requested but not available
+
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      A
+
+;; AUTHORITY SECTION:
+seeder.globalboost.info. 60     IN      SOA     ns1.example.org. hostmaster.example.org. 2026102201 3600 600 86400 60
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#46829(127.0.0.1) (UDP)
+;; WHEN: Fri Oct 30 20:18:37 UTC 2026
+;; MSG SIZE  rcvd: 137
+
+
+DIG +tcp A PASS
+
+; <<>> DiG 9.20.24-1ubuntu0.4-Ubuntu <<>> @127.0.0.1 -p 46829 seeder.globalboost.info +time=2 +tries=1 +tcp A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 48361
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      A
+
+;; AUTHORITY SECTION:
+seeder.globalboost.info. 60     IN      SOA     ns1.example.org. hostmaster.example.org. 2026102201 3600 600 86400 60
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#46829(127.0.0.1) (TCP)
+;; WHEN: Fri Oct 30 20:18:37 UTC 2026
+;; MSG SIZE  rcvd: 148
+
+
+DIG AAAA PASS
+
+; <<>> DiG 9.20.24-1ubuntu0.4-Ubuntu <<>> @127.0.0.1 -p 46829 seeder.globalboost.info +time=2 +tries=1 AAAA
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 23318
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      AAAA
+
+;; AUTHORITY SECTION:
+seeder.globalboost.info. 60     IN      SOA     ns1.example.org. hostmaster.example.org. 2026102201 3600 600 86400 60
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#46829(127.0.0.1) (UDP)
+;; WHEN: Fri Oct 30 20:18:37 UTC 2026
+;; MSG SIZE  rcvd: 148
+
+
+DIG SOA PASS
+
+; <<>> DiG 9.20.24-1ubuntu0.4-Ubuntu <<>> @127.0.0.1 -p 46829 seeder.globalboost.info +time=2 +tries=1 SOA
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 12589
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      SOA
+
+;; ANSWER SECTION:
+seeder.globalboost.info. 60     IN      SOA     ns1.example.org. hostmaster.example.org. 2026102201 3600 600 86400 60
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#46829(127.0.0.1) (UDP)
+;; WHEN: Fri Oct 30 20:18:37 UTC 2026
+;; MSG SIZE  rcvd: 125
+
+
+DIG NS PASS
+
+; <<>> DiG 9.20.24-1ubuntu0.4-Ubuntu <<>> @127.0.0.1 -p 46829 seeder.globalboost.info +time=2 +tries=1 NS
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 29790
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      NS
+
+;; ANSWER SECTION:
+seeder.globalboost.info. 60     IN      NS      ns1.example.org.
+
+;; Query time: 1 msec
+;; SERVER: 127.0.0.1#46829(127.0.0.1) (UDP)
+;; WHEN: Fri Oct 30 20:18:37 UTC 2026
+;; MSG SIZE  rcvd: 81
+
+
+DIG +edns=1 +noednsnegotiation A PASS
+
+; <<>> DiG 9.20.24-1ubuntu0.4-Ubuntu <<>> @127.0.0.1 -p 46829 seeder.globalboost.info +time=2 +tries=1 +edns=1 +noednsnegotiation A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: BADVERS, id: 7469
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      A
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#46829(127.0.0.1) (UDP)
+;; WHEN: Fri Oct 30 20:18:37 UTC 2026
+;; MSG SIZE  rcvd: 52
+
+
+DIG +bufsize=512 +ignore AAAA PASS
+
+; <<>> DiG 9.20.24-1ubuntu0.4-Ubuntu <<>> @127.0.0.1 -p 46829 seeder.globalboost.info +time=2 +tries=1 +bufsize=512 +ignore AAAA
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 35293
+;; flags: qr aa rd; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;seeder.globalboost.info.       IN      AAAA
+
+;; AUTHORITY SECTION:
+seeder.globalboost.info. 60     IN      SOA     ns1.example.org. hostmaster.example.org. 2026102201 3600 600 86400 60
+
+;; Query time: 1 msec
+;; SERVER: 127.0.0.1#46829(127.0.0.1) (UDP)
+;; WHEN: Fri Oct 30 20:18:37 UTC 2026
+;; MSG SIZE  rcvd: 148
+
+
+Black-box application smoke: PASS
+BSTY-FastSeed v1.0.0 full release gate: PASS
+-- Configuring done (0.1s)
+-- Generating done (0.3s)
+-- Build files have been written to: /home/gabriel/fastseed/source/build-sanitizers
+[  0%] Building CXX object CMakeFiles/fastseed.dir/src/crawler/crawler.cpp.o
+[  1%] Building CXX object CMakeFiles/fastseed.dir/src/protocol/probe.cpp.o
+[  2%] Building CXX object CMakeFiles/fastseed.dir/src/crawler/scheduler.cpp.o
+[  3%] Building CXX object CMakeFiles/fastseed.dir/src/crawler/adaptive_feedback.cpp.o
+[  4%] Building CXX object CMakeFiles/fastseed.dir/src/health/peer_health.cpp.o
+[  5%] Building CXX object CMakeFiles/fastseed.dir/src/db/peer_database.cpp.o
+[  5%] Building CXX object CMakeFiles/fastseed.dir/src/db/persistence_queue.cpp.o
+[  6%] Building CXX object CMakeFiles/fastseed.dir/src/dns/dns_engine.cpp.o
+/home/gabriel/fastseed/source/src/dns/dns_engine.cpp: In member function ‘void fastseed::dns::SnapshotStore::publish(std::shared_ptr<const fastseed::dns::DnsSnapshot>)’:
+/home/gabriel/fastseed/source/src/dns/dns_engine.cpp:62:102: warning: ‘void std::atomic_store(shared_ptr<_Tp>*, shared_ptr<_Tp>) [with _Tp = const fastseed::dns::DnsSnapshot]’ is deprecated: use 'std::atomic<std::shared_ptr<T>>' instead [-Wdeprecated-declarations]
+   62 | void SnapshotStore::publish(std::shared_ptr<const DnsSnapshot> snapshot) noexcept { std::atomic_store(&snapshot_, std::move(snapshot)); }
+      |                                                                                     ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/15/memory:83,
+                 from /usr/include/boost/asio/detail/memory.hpp:21,
+                 from /usr/include/boost/asio/detail/socket_ops.hpp:21,
+                 from /usr/include/boost/asio/ip/impl/address_v4.ipp:23,
+                 from /usr/include/boost/asio/ip/address_v4.hpp:364,
+                 from /usr/include/boost/asio/ip/address.hpp:25,
+                 from /home/gabriel/fastseed/source/include/fastseed/protocol/network_address.hpp:4,
+                 from /home/gabriel/fastseed/source/include/fastseed/protocol/version_message.hpp:2,
+                 from /home/gabriel/fastseed/source/include/fastseed/protocol/probe.hpp:3,
+                 from /home/gabriel/fastseed/source/include/fastseed/health/peer_health.hpp:4,
+                 from /home/gabriel/fastseed/source/include/fastseed/dns/dns_engine.hpp:3,
+                 from /home/gabriel/fastseed/source/src/dns/dns_engine.cpp:1:
+/usr/include/c++/15/bits/shared_ptr_atomic.h:183:5: note: declared here
+  183 |     atomic_store(shared_ptr<_Tp>* __p, shared_ptr<_Tp> __r)
+      |     ^~~~~~~~~~~~
+/home/gabriel/fastseed/source/src/dns/dns_engine.cpp: In member function ‘std::shared_ptr<const fastseed::dns::DnsSnapshot> fastseed::dns::SnapshotStore::load()const’:
+/home/gabriel/fastseed/source/src/dns/dns_engine.cpp:63:98: warning: ‘std::shared_ptr<_Tp> std::atomic_load(const shared_ptr<_Tp>*) [with _Tp = const fastseed::dns::DnsSnapshot]’ is deprecated: use 'std::atomic<std::shared_ptr<T>>' instead [-Wdeprecated-declarations]
+   63 | std::shared_ptr<const DnsSnapshot> SnapshotStore::load() const noexcept { return std::atomic_load(&snapshot_); }
+      |                                                                                  ~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/usr/include/c++/15/bits/shared_ptr_atomic.h:142:5: note: declared here
+  142 |     atomic_load(const shared_ptr<_Tp>* __p)
+      |     ^~~~~~~~~~~
+[  7%] Building CXX object CMakeFiles/fastseed.dir/src/dns/native_server.cpp.o
+[  8%] Building CXX object CMakeFiles/fastseed.dir/src/dns/rate_limiter.cpp.o
+[  8%] Building CXX object CMakeFiles/fastseed.dir/src/federation/federation.cpp.o
+[  9%] Building CXX object CMakeFiles/fastseed.dir/src/metrics/metrics.cpp.o
+/home/gabriel/fastseed/source/src/federation/federation.cpp: In function ‘fastseed::federation::FederationMessage fastseed::federation::decode(std::span<const unsigned char>, std::string_view, const FederationConfig&)’:
+/home/gabriel/fastseed/source/src/federation/federation.cpp:37:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   37 |  if(p+32!=w.size())throw std::runtime_error("trailing federation data");std::array<std::uint8_t,32> got{};std::copy(w.begin()+p,w.end(),got.begin());auto expected=mac(w.first(p),secret);if(!std::equal(got.begin(),got.end(),expected.begin()))throw std::runtime_error("authentication failed");m.auth_tag=got;return m;
+      |  ^~
+/home/gabriel/fastseed/source/src/federation/federation.cpp:37:73: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the‘if’
+   37 |  if(p+32!=w.size())throw std::runtime_error("trailing federation data");std::array<std::uint8_t,32> got{};std::copy(w.begin()+p,w.end(),got.begin());auto expected=mac(w.first(p),secret);if(!std::equal(got.begin(),got.end(),expected.begin()))throw std::runtime_error("authentication failed");m.auth_tag=got;return m;
+      |                                                                         ^~~
+[ 10%] Building CXX object CMakeFiles/fastseed.dir/src/metrics/exploration.cpp.o
+[ 11%] Building CXX object CMakeFiles/fastseed.dir/src/metrics/logger.cpp.o
+[ 11%] Building CXX object CMakeFiles/fastseed.dir/src/config/runtime_config.cpp.o
+[ 12%] Building CXX object CMakeFiles/fastseed.dir/src/transport/transport.cpp.o
+[ 13%] Building CXX object CMakeFiles/fastseed.dir/src/intelligence/network_intelligence.cpp.o
+[ 14%] Linking CXX static library libfastseed.a
+[ 21%] Built target fastseed
+[ 22%] Building CXX object CMakeFiles/bsty-fastseed.dir/src/main.cpp.o
+[ 22%] Building CXX object CMakeFiles/phase1_tests.dir/tests/test_phase1.cpp.o
+[ 22%] Linking CXX executable phase1_tests
+[ 22%] Built target phase1_tests
+[ 22%] Building CXX object CMakeFiles/phase11_tests.dir/tests/protocol/test_phase11.cpp.o
+[ 23%] Linking CXX executable phase11_tests
+[ 23%] Built target phase11_tests
+[ 23%] Building CXX object CMakeFiles/phase12_tests.dir/tests/protocol/test_phase12.cpp.o
+[ 24%] Linking CXX executable phase12_tests
+[ 24%] Built target phase12_tests
+[ 25%] Building CXX object CMakeFiles/phase13_tests.dir/tests/protocol/test_phase13.cpp.o
+[ 26%] Linking CXX executable phase13_tests
+[ 26%] Built target phase13_tests
+[ 27%] Building CXX object CMakeFiles/phase13_interop_tests.dir/tests/integration/test_phase13_interop.cpp.o
+[ 28%] Linking CXX executable bsty-fastseed
+[ 28%] Built target bsty-fastseed
+[ 29%] Building CXX object CMakeFiles/phase2_tests.dir/tests/crawler/test_phase2.cpp.o
+[ 30%] Linking CXX executable phase13_interop_tests
+[ 30%] Built target phase13_interop_tests
+[ 31%] Building CXX object CMakeFiles/phase3_tests.dir/tests/health/test_phase3.cpp.o
+[ 32%] Linking CXX executable phase2_tests
+[ 32%] Built target phase2_tests
+[ 33%] Building CXX object CMakeFiles/phase4_tests.dir/tests/db/test_phase4.cpp.o
+[ 33%] Linking CXX executable phase3_tests
+[ 33%] Built target phase3_tests
+[ 34%] Building CXX object CMakeFiles/phase5_tests.dir/tests/dns/test_phase5.cpp.o
+[ 35%] Linking CXX executable phase4_tests
+[ 35%] Built target phase4_tests
+[ 36%] Building CXX object CMakeFiles/phase6_tests.dir/tests/dns/test_phase6.cpp.o
+[ 36%] Linking CXX executable phase5_tests
+[ 36%] Built target phase5_tests
+[ 37%] Building CXX object CMakeFiles/phase7_tests.dir/tests/federation/test_phase7.cpp.o
+[ 38%] Linking CXX executable phase6_tests
+[ 38%] Built target phase6_tests
+[ 39%] Building CXX object CMakeFiles/phase8_tests.dir/tests/observability/test_phase8.cpp.o
+[ 39%] Linking CXX executable phase7_tests
+[ 39%] Built target phase7_tests
+[ 40%] Building CXX object CMakeFiles/phase9_tests.dir/tests/release/test_phase9.cpp.o
+[ 41%] Linking CXX executable phase8_tests
+[ 41%] Built target phase8_tests
+[ 42%] Building CXX object CMakeFiles/phase101_tests.dir/tests/protocol/test_phase101.cpp.o
+[ 43%] Linking CXX executable phase9_tests
+[ 43%] Built target phase9_tests
+[ 44%] Building CXX object CMakeFiles/phase101_probe_tests.dir/tests/integration/test_phase101_probe.cpp.o
+[ 45%] Linking CXX executable phase101_tests
+[ 45%] Built target phase101_tests
+[ 46%] Building CXX object CMakeFiles/phase102_tests.dir/tests/protocol/test_phase102.cpp.o
+[ 47%] Linking CXX executable phase102_tests
+[ 47%] Built target phase102_tests
+[ 48%] Building CXX object CMakeFiles/phase103_tests.dir/tests/crawler/test_phase103.cpp.o
+[ 48%] Linking CXX executable phase101_probe_tests
+[ 48%] Built target phase101_probe_tests
+[ 49%] Building CXX object CMakeFiles/phase104_addrv2_exchange_tests.dir/tests/integration/test_phase104_addrv2_exchange.cpp.o
+[ 49%] Linking CXX executable phase103_tests
+[ 49%] Built target phase103_tests
+[ 50%] Building CXX object CMakeFiles/phase105_persistence_tests.dir/tests/db/test_phase105_persistence.cpp.o
+[ 50%] Linking CXX executable phase105_persistence_tests
+[ 50%] Built target phase105_persistence_tests
+[ 51%] Building CXX object CMakeFiles/phase106_transport_tests.dir/tests/transport/test_phase106_transport.cpp.o
+[ 52%] Linking CXX executable phase104_addrv2_exchange_tests
+[ 52%] Built target phase104_addrv2_exchange_tests
+[ 53%] Building CXX object CMakeFiles/phase106_socks_tests.dir/tests/transport/test_phase106_socks.cpp.o
+[ 53%] Linking CXX executable phase106_transport_tests
+[ 53%] Built target phase106_transport_tests
+[ 54%] Building CXX object CMakeFiles/phase106_sam_tests.dir/tests/transport/test_phase106_sam.cpp.o
+[ 55%] Linking CXX executable phase106_socks_tests
+[ 55%] Built target phase106_socks_tests
+[ 56%] Building CXX object CMakeFiles/phase106_router_tests.dir/tests/transport/test_phase106_router.cpp.o
+[ 56%] Linking CXX executable phase106_sam_tests
+[ 56%] Built target phase106_sam_tests
+[ 57%] Building CXX object CMakeFiles/phase107_transport_crawler_tests.dir/tests/crawler/test_phase107_transport_crawler.cpp.o
+[ 58%] Linking CXX executable phase106_router_tests
+[ 58%] Built target phase106_router_tests
+[ 59%] Building CXX object CMakeFiles/phase107_router_tests.dir/tests/transport/test_phase107_router.cpp.o
+[ 59%] Linking CXX executable phase107_transport_crawler_tests
+[ 59%] Built target phase107_transport_crawler_tests
+[ 60%] Building CXX object CMakeFiles/phase108_health_transport_tests.dir/tests/health/test_phase108_transport_health.cpp.o
+[ 61%] Linking CXX executable phase107_router_tests
+[ 61%] Built target phase107_router_tests
+[ 62%] Building CXX object CMakeFiles/phase108_db_transport_tests.dir/tests/db/test_phase108_transport_persistence.cpp.o
+[ 63%] Linking CXX executable phase108_health_transport_tests
+[ 63%] Built target phase108_health_transport_tests
+[ 63%] Building CXX object CMakeFiles/phase109_scheduler_tests.dir/tests/crawler/test_phase109_scheduler.cpp.o
+[ 64%] Linking CXX executable phase108_db_transport_tests
+[ 64%] Built target phase108_db_transport_tests
+[ 65%] Building CXX object CMakeFiles/phase1011_feedback_tests.dir/tests/crawler/test_phase1011_feedback.cpp.o
+[ 66%] Linking CXX executable phase109_scheduler_tests
+[ 66%] Built target phase109_scheduler_tests
+[ 67%] Building CXX object CMakeFiles/phase1010_adaptive_scheduler_tests.dir/tests/crawler/test_phase1010_adaptive.cpp.o
+[ 67%] Linking CXX executable phase1011_feedback_tests
+[ 67%] Built target phase1011_feedback_tests
+[ 68%] Building CXX object CMakeFiles/phase1012_crawler_feedback_tests.dir/tests/crawler/test_phase1012_crawler_feedback.cpp.o
+[ 69%] Linking CXX executable phase1010_adaptive_scheduler_tests
+[ 69%] Built target phase1010_adaptive_scheduler_tests
+[ 70%] Building CXX object CMakeFiles/phase1014_integrity_tests.dir/tests/db/test_phase1014_integrity.cpp.o
+[ 71%] Linking CXX executable phase1012_crawler_feedback_tests
+[ 71%] Built target phase1012_crawler_feedback_tests
+[ 72%] Building CXX object CMakeFiles/phase1015_decay_tests.dir/tests/crawler/test_phase1015_decay.cpp.o
+[ 72%] Linking CXX executable phase1014_integrity_tests
+[ 72%] Built target phase1014_integrity_tests
+[ 73%] Building CXX object CMakeFiles/phase1016_confidence_tests.dir/tests/crawler/test_phase1016_confidence.cpp.o
+[ 74%] Linking CXX executable phase1015_decay_tests
+[ 74%] Built target phase1015_decay_tests
+[ 75%] Building CXX object CMakeFiles/phase1017_confidence_scheduler_tests.dir/tests/crawler/test_phase1017_confidence_scheduler.cpp.o
+[ 75%] Linking CXX executable phase1016_confidence_tests
+[ 75%] Built target phase1016_confidence_tests
+[ 76%] Building CXX object CMakeFiles/phase1018_exploration_tests.dir/tests/crawler/test_phase1018_exploration.cpp.o
+[ 77%] Linking CXX executable phase1017_confidence_scheduler_tests
+[ 77%] Built target phase1017_confidence_scheduler_tests
+[ 78%] Building CXX object CMakeFiles/phase1019_fairness_tests.dir/tests/crawler/test_phase1019_fairness.cpp.o
+[ 78%] Linking CXX executable phase1018_exploration_tests
+[ 78%] Built target phase1018_exploration_tests
+[ 79%] Building CXX object CMakeFiles/phase1020_exploration_telemetry_tests.dir/tests/crawler/test_phase1020_exploration_telemetry.cpp.o
+[ 80%] Linking CXX executable phase1019_fairness_tests
+[ 80%] Built target phase1019_fairness_tests
+[ 80%] Building CXX object CMakeFiles/phase1022_observability_tests.dir/tests/observability/test_phase1022_observability.cpp.o
+[ 81%] Linking CXX executable phase1020_exploration_telemetry_tests
+[ 81%] Built target phase1020_exploration_telemetry_tests
+[ 82%] Building CXX object CMakeFiles/phase1023_integration_gate_tests.dir/tests/integration/test_phase1023_integration_gate.cpp.o
+[ 83%] Linking CXX executable phase1022_observability_tests
+[ 83%] Built target phase1022_observability_tests
+[ 83%] Building CXX object CMakeFiles/phase1024_longrun_tests.dir/tests/integration/test_phase1024_longrun.cpp.o
+[ 84%] Linking CXX executable phase1023_integration_gate_tests
+[ 84%] Built target phase1023_integration_gate_tests
+[ 85%] Building CXX object CMakeFiles/phase1025_failure_injection_tests.dir/tests/integration/test_phase1025_failure_injection.cpp.o
+[ 86%] Linking CXX executable phase1024_longrun_tests
+[ 86%] Built target phase1024_longrun_tests
+[ 86%] Building CXX object CMakeFiles/phase1026_security_tests.dir/tests/integration/test_phase1026_security.cpp.o
+[ 87%] Linking CXX executable phase1025_failure_injection_tests
+[ 87%] Built target phase1025_failure_injection_tests
+[ 88%] Building CXX object CMakeFiles/phase1028_federation_tests.dir/tests/federation/test_phase1028.cpp.o
+[ 89%] Linking CXX executable phase1026_security_tests
+[ 90%] Linking CXX executable phase1028_federation_tests
+[ 90%] Built target phase1026_security_tests
+[ 90%] Building CXX object CMakeFiles/fastseed_canary.dir/src/canary/mainnet_canary.cpp.o
+[ 90%] Built target phase1028_federation_tests
+[ 91%] Building CXX object CMakeFiles/phase11_native_dns_tests.dir/tests/dns/test_phase11_native_dns.cpp.o
+[ 92%] Linking CXX static library libfastseed_canary.a
+[ 92%] Built target fastseed_canary
+[ 93%] Building CXX object CMakeFiles/phase12_intelligence_tests.dir/tests/intelligence/test_phase12.cpp.o
+[ 94%] Linking CXX executable phase11_native_dns_tests
+[ 94%] Built target phase11_native_dns_tests
+[ 94%] Building CXX object CMakeFiles/phase13_release_tests.dir/tests/integration/test_phase13_release.cpp.o
+[ 95%] Linking CXX executable phase12_intelligence_tests
+[ 95%] Built target phase12_intelligence_tests
+[ 96%] Building CXX object CMakeFiles/config_tests.dir/tests/config/test_config.cpp.o
+[ 97%] Linking CXX executable phase13_release_tests
+[ 97%] Built target phase13_release_tests
+[ 97%] Building CXX object CMakeFiles/dns_compat_tests.dir/tests/dns/test_v101_compat.cpp.o
+[ 98%] Linking CXX executable config_tests
+[ 98%] Built target config_tests
+[ 98%] Building CXX object CMakeFiles/phase1029_mainnet_canary_tests.dir/tests/integration/test_phase1029_canary.cpp.o
+[ 99%] Linking CXX executable phase1029_mainnet_canary_tests
+[ 99%] Built target phase1029_mainnet_canary_tests
+[100%] Linking CXX executable dns_compat_tests
+[100%] Built target dns_compat_tests
+Test project /home/gabriel/fastseed/source/build-sanitizers
+      Start  1: phase1_tests
+ 1/50 Test  #1: phase1_tests ............................   Passed    0.09 sec
+      Start  2: phase11_tests
+ 2/50 Test  #2: phase11_tests ...........................   Passed    0.08 sec
+      Start  3: phase12_tests
+ 3/50 Test  #3: phase12_tests ...........................   Passed    0.06 sec
+      Start  4: phase13_tests
+ 4/50 Test  #4: phase13_tests ...........................   Passed    0.08 sec
+      Start  5: phase13_interop_tests
+ 5/50 Test  #5: phase13_interop_tests ...................   Passed    0.08 sec
+      Start  6: phase2_tests
+ 6/50 Test  #6: phase2_tests ............................   Passed    0.10 sec
+      Start  7: phase3_tests
+ 7/50 Test  #7: phase3_tests ............................   Passed    0.05 sec
+      Start  8: phase4_tests
+ 8/50 Test  #8: phase4_tests ............................   Passed    0.11 sec
+      Start  9: phase5_tests
+ 9/50 Test  #9: phase5_tests ............................   Passed    0.06 sec
+      Start 10: phase6_tests
+10/50 Test #10: phase6_tests ............................   Passed    0.08 sec
+      Start 11: phase7_tests
+11/50 Test #11: phase7_tests ............................   Passed    0.08 sec
+      Start 12: phase8_tests
+12/50 Test #12: phase8_tests ............................   Passed    0.16 sec
+      Start 13: phase9_tests
+13/50 Test #13: phase9_tests ............................   Passed    0.07 sec
+      Start 14: phase101_tests
+14/50 Test #14: phase101_tests ..........................   Passed    0.07 sec
+      Start 15: phase101_probe_tests
+15/50 Test #15: phase101_probe_tests ....................   Passed    1.37 sec
+      Start 16: phase102_tests
+16/50 Test #16: phase102_tests ..........................   Passed    0.06 sec
+      Start 17: phase103_tests
+17/50 Test #17: phase103_tests ..........................   Passed    0.10 sec
+      Start 18: phase104_addrv2_exchange_tests
+18/50 Test #18: phase104_addrv2_exchange_tests ..........   Passed    0.27 sec
+      Start 19: phase105_persistence_tests
+19/50 Test #19: phase105_persistence_tests ..............   Passed    0.10 sec
+      Start 20: phase106_transport_tests
+20/50 Test #20: phase106_transport_tests ................   Passed    0.10 sec
+      Start 21: phase106_socks_tests
+21/50 Test #21: phase106_socks_tests ....................   Passed    0.11 sec
+      Start 22: phase106_sam_tests
+22/50 Test #22: phase106_sam_tests ......................   Passed    0.08 sec
+      Start 23: phase106_router_tests
+23/50 Test #23: phase106_router_tests ...................   Passed    0.06 sec
+      Start 24: phase107_transport_crawler_tests
+24/50 Test #24: phase107_transport_crawler_tests ........   Passed    0.10 sec
+      Start 25: phase107_router_tests
+25/50 Test #25: phase107_router_tests ...................   Passed    0.09 sec
+      Start 26: phase108_health_transport_tests
+26/50 Test #26: phase108_health_transport_tests .........   Passed    0.05 sec
+      Start 27: phase108_db_transport_tests
+27/50 Test #27: phase108_db_transport_tests .............   Passed    0.12 sec
+      Start 28: phase109_scheduler_tests
+28/50 Test #28: phase109_scheduler_tests ................   Passed    0.06 sec
+      Start 29: phase1011_feedback_tests
+29/50 Test #29: phase1011_feedback_tests ................   Passed    0.05 sec
+      Start 30: phase1010_adaptive_scheduler_tests
+30/50 Test #30: phase1010_adaptive_scheduler_tests ......   Passed    0.05 sec
+      Start 31: phase1012_crawler_feedback_tests
+31/50 Test #31: phase1012_crawler_feedback_tests ........   Passed    0.09 sec
+      Start 32: phase1014_integrity_tests
+32/50 Test #32: phase1014_integrity_tests ...............   Passed    0.09 sec
+      Start 33: phase1015_decay_tests
+33/50 Test #33: phase1015_decay_tests ...................   Passed    0.04 sec
+      Start 34: phase1016_confidence_tests
+34/50 Test #34: phase1016_confidence_tests ..............   Passed    0.04 sec
+      Start 35: phase1017_confidence_scheduler_tests
+35/50 Test #35: phase1017_confidence_scheduler_tests ....   Passed    0.06 sec
+      Start 36: phase1018_exploration_tests
+36/50 Test #36: phase1018_exploration_tests .............   Passed    0.06 sec
+      Start 37: phase1019_fairness_tests
+37/50 Test #37: phase1019_fairness_tests ................   Passed    0.06 sec
+      Start 38: phase1020_exploration_telemetry_tests
+38/50 Test #38: phase1020_exploration_telemetry_tests ...   Passed    0.06 sec
+      Start 39: phase1022_observability_tests
+39/50 Test #39: phase1022_observability_tests ...........   Passed    0.04 sec
+      Start 40: phase1023_integration_gate_tests
+40/50 Test #40: phase1023_integration_gate_tests ........   Passed    0.06 sec
+      Start 41: phase1024_longrun_tests
+41/50 Test #41: phase1024_longrun_tests .................   Passed    7.77 sec
+      Start 42: phase1025_failure_injection_tests
+42/50 Test #42: phase1025_failure_injection_tests .......   Passed    0.11 sec
+      Start 43: phase1026_security_tests
+43/50 Test #43: phase1026_security_tests ................   Passed    0.10 sec
+      Start 44: phase1028_federation_tests
+44/50 Test #44: phase1028_federation_tests ..............   Passed    0.08 sec
+      Start 45: phase1029_mainnet_canary_tests
+45/50 Test #45: phase1029_mainnet_canary_tests ..........   Passed    0.05 sec
+      Start 46: phase11_native_dns_tests
+46/50 Test #46: phase11_native_dns_tests ................   Passed    0.08 sec
+      Start 47: phase12_intelligence_tests
+47/50 Test #47: phase12_intelligence_tests ..............   Passed    0.05 sec
+      Start 48: phase13_release_tests
+48/50 Test #48: phase13_release_tests ...................   Passed    0.06 sec
+      Start 49: config_tests
+49/50 Test #49: config_tests ............................   Passed    0.09 sec
+      Start 50: dns_compat_tests
+50/50 Test #50: dns_compat_tests ........................   Passed    0.16 sec
+
+100% tests passed, 0 tests failed out of 50
+
+Total Test time (real) =  13.14 sec
+BSTY-FastSeed v1.0.0 full sanitizer gate: PASS

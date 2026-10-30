@@ -139,7 +139,7 @@ struct PeerCrawler::Impl : std::enable_shared_from_this<PeerCrawler::Impl> {
     }
 
     void start() { if (!running) { running = true; pump(); } }
-    void stop() { running = false; queue.clear(); boost::system::error_code ec; resolver.cancel(); for (auto& [key,timer] : cooldown_timers) timer->cancel(ec); cooldown_timers.clear(); }
+    void stop() { running = false; queue.clear(); boost::system::error_code ec; resolver.cancel(); for (auto& [key,timer] : cooldown_timers) try { timer->cancel(); } catch (const boost::system::system_error&) {} cooldown_timers.clear(); }
 
     void resolve_bootstrap(std::string host, std::uint16_t port) {
         if (host.empty() || port == 0) return;

@@ -1,0 +1,85 @@
+/home/gabriel/fastseed/source/src/protocol/probe.cpp: In member function ‘void fastseed::protocol::PeerProbe::run(const std::string&, uint16_t, std::chrono::milliseconds, std::chrono::milliseconds, std::function<void(fastseed::protocol::ProbeResult)>)::State::finish(fastseed::protocol::ProbeStatus, std::string)’:
+/home/gabriel/fastseed/source/src/protocol/probe.cpp:100:25: error: no matching function for call to ‘boost::asio::basic_waitable_timer<std::chrono::_V2::steady_clock>::cancel(boost::system::error_code&)’
+  100 |             timer.cancel(ignored);
+      |             ~~~~~~~~~~~~^~~~~~~~~
+/home/gabriel/fastseed/source/src/protocol/probe.cpp:100:25: note: there is 1 candidate
+In file included from /usr/include/boost/asio/steady_timer.hpp:19,
+                 from /usr/include/boost/asio/basic_socket_streambuf.hpp:30,
+                 from /usr/include/boost/asio/basic_socket_iostream.hpp:24,
+                 from /usr/include/boost/asio.hpp:43,
+                 from /home/gabriel/fastseed/source/include/fastseed/protocol/probe.hpp:5,
+                 from /home/gabriel/fastseed/source/src/protocol/probe.cpp:1:
+/usr/include/boost/asio/basic_waitable_timer.hpp:407:15: note: candidate 1: ‘std::size_t boost::asio::basic_waitable_timer<Clock, WaitTraits, Executor>::cancel() [with Clock = std::chrono::_V2::steady_clock; WaitTraits = boost::asio::wait_traits<std::chrono::_V2::steady_clock>; Executor = boost::asio::any_io_executor; std::size_t = long unsigned int]’
+  407 |   std::size_t cancel()
+      |               ^~~~~~
+/usr/include/boost/asio/basic_waitable_timer.hpp:407:15: note: candidate expects 0 arguments, 1 provided
+[  7%] Building CXX object CMakeFiles/fastseed.dir/src/protocol/conformance.cpp.o
+/home/gabriel/fastseed/source/src/protocol/probe.cpp: In member function ‘void fastseed::protocol::PeerProbe::run_connected(std::shared_ptr<boost::asio::basic_stream_socket<boost::asio::ip::tcp> >, std::string, std::chrono::milliseconds, std::function<void(fastseed::protocol::ProbeResult)>)::ConnectedState::finish(fastseed::protocol::ProbeStatus, std::string)’:
+/home/gabriel/fastseed/source/src/protocol/probe.cpp:373:25: error: no matching function for call to ‘boost::asio::basic_waitable_timer<std::chrono::_V2::steady_clock>::cancel(boost::system::error_code&)’
+  373 |             timer.cancel(x);
+      |             ~~~~~~~~~~~~^~~
+/home/gabriel/fastseed/source/src/protocol/probe.cpp:373:25: note: there is 1 candidate
+/usr/include/boost/asio/basic_waitable_timer.hpp:407:15: note: candidate 1: ‘std::size_t boost::asio::basic_waitable_timer<Clock, WaitTraits, Executor>::cancel() [with Clock = std::chrono::_V2::steady_clock; WaitTraits = boost::asio::wait_traits<std::chrono::_V2::steady_clock>; Executor = boost::asio::any_io_executor; std::size_t = long unsigned int]’
+  407 |   std::size_t cancel()
+      |               ^~~~~~
+/usr/include/boost/asio/basic_waitable_timer.hpp:407:15: note: candidate expects 0 arguments, 1 provided
+[  8%] Building CXX object CMakeFiles/fastseed.dir/src/crawler/candidate.cpp.o
+gmake[2]: *** [CMakeFiles/fastseed.dir/build.make:149: CMakeFiles/fastseed.dir/src/protocol/probe.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:243: CMakeFiles/fastseed.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
+Release verification FAILED at line 10; no installation was performed.
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.90.0/BoostConfig.cmake (found suitable version "1.90.0", minimum required is "1.74")
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.5.5")
+-- Found SQLite3: /usr/lib/x86_64-linux-gnu/libsqlite3.so (found version "3.46.1")
+-- Configuring done (1.3s)
+-- Generating done (0.3s)
+-- Build files have been written to: /home/gabriel/fastseed/source/build-sanitizers
+[  1%] Building CXX object CMakeFiles/fastseed.dir/src/protocol/serializer.cpp.o
+[  2%] Building CXX object CMakeFiles/fastseed.dir/src/protocol/version_message.cpp.o
+[  2%] Building CXX object CMakeFiles/fastseed.dir/src/protocol/message.cpp.o
+[  3%] Building CXX object CMakeFiles/fastseed.dir/src/protocol/parser.cpp.o
+[  4%] Building CXX object CMakeFiles/fastseed.dir/src/protocol/sha256.cpp.o
+[  5%] Building CXX object CMakeFiles/fastseed.dir/src/protocol/probe.cpp.o
+[  5%] Building CXX object CMakeFiles/fastseed.dir/src/protocol/wire_messages.cpp.o
+[  6%] Building CXX object CMakeFiles/fastseed.dir/src/protocol/addrv2.cpp.o
+[  7%] Building CXX object CMakeFiles/fastseed.dir/src/protocol/conformance.cpp.o
+/home/gabriel/fastseed/source/src/protocol/probe.cpp: In member function ‘void fastseed::protocol::PeerProbe::run(const std::string&, uint16_t, std::chrono::milliseconds, std::chrono::milliseconds, std::function<void(fastseed::protocol::ProbeResult)>)::State::finish(fastseed::protocol::ProbeStatus, std::string)’:
+/home/gabriel/fastseed/source/src/protocol/probe.cpp:100:25: error: no matching function for call to ‘boost::asio::basic_waitable_timer<std::chrono::_V2::steady_clock>::cancel(boost::system::error_code&)’
+  100 |             timer.cancel(ignored);
+      |             ~~~~~~~~~~~~^~~~~~~~~
+/home/gabriel/fastseed/source/src/protocol/probe.cpp:100:25: note: there is 1 candidate
+In file included from /usr/include/boost/asio/steady_timer.hpp:19,
+                 from /usr/include/boost/asio/basic_socket_streambuf.hpp:30,
+                 from /usr/include/boost/asio/basic_socket_iostream.hpp:24,
+                 from /usr/include/boost/asio.hpp:43,
+                 from /home/gabriel/fastseed/source/include/fastseed/protocol/probe.hpp:5,
+                 from /home/gabriel/fastseed/source/src/protocol/probe.cpp:1:
+/usr/include/boost/asio/basic_waitable_timer.hpp:407:15: note: candidate 1: ‘std::size_t boost::asio::basic_waitable_timer<Clock, WaitTraits, Executor>::cancel() [with Clock = std::chrono::_V2::steady_clock; WaitTraits = boost::asio::wait_traits<std::chrono::_V2::steady_clock>; Executor = boost::asio::any_io_executor; std::size_t = long unsigned int]’
+  407 |   std::size_t cancel()
+      |               ^~~~~~
+/usr/include/boost/asio/basic_waitable_timer.hpp:407:15: note: candidate expects 0 arguments, 1 provided
+/home/gabriel/fastseed/source/src/protocol/probe.cpp: In member function ‘void fastseed::protocol::PeerProbe::run_connected(std::shared_ptr<boost::asio::basic_stream_socket<boost::asio::ip::tcp> >, std::string, std::chrono::milliseconds, std::function<void(fastseed::protocol::ProbeResult)>)::ConnectedState::finish(fastseed::protocol::ProbeStatus, std::string)’:
+/home/gabriel/fastseed/source/src/protocol/probe.cpp:373:25: error: no matching function for call to ‘boost::asio::basic_waitable_timer<std::chrono::_V2::steady_clock>::cancel(boost::system::error_code&)’
+  373 |             timer.cancel(x);
+      |             ~~~~~~~~~~~~^~~
+/home/gabriel/fastseed/source/src/protocol/probe.cpp:373:25: note: there is 1 candidate
+/usr/include/boost/asio/basic_waitable_timer.hpp:407:15: note: candidate 1: ‘std::size_t boost::asio::basic_waitable_timer<Clock, WaitTraits, Executor>::cancel() [with Clock = std::chrono::_V2::steady_clock; WaitTraits = boost::asio::wait_traits<std::chrono::_V2::steady_clock>; Executor = boost::asio::any_io_executor; std::size_t = long unsigned int]’
+  407 |   std::size_t cancel()
+      |               ^~~~~~
+/usr/include/boost/asio/basic_waitable_timer.hpp:407:15: note: candidate expects 0 arguments, 1 provided
+[  8%] Building CXX object CMakeFiles/fastseed.dir/src/crawler/candidate.cpp.o
+gmake[2]: *** [CMakeFiles/fastseed.dir/build.make:149: CMakeFiles/fastseed.dir/src/protocol/probe.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:243: CMakeFiles/fastseed.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
+Sanitizer verification FAILED at line 10.

@@ -56,7 +56,7 @@ std::vector<std::uint8_t> tor_v3_encoded(std::span<const std::uint8_t> pubkey) {
 void finish(const std::shared_ptr<tcp::socket>& sock, const std::shared_ptr<boost::asio::steady_timer>& timer,
             TransportResult result, TransportCallback cb) {
     boost::system::error_code ec;
-    timer->cancel(ec);
+    try { timer->cancel(); } catch (const boost::system::system_error&) {}
     // A successfully established transport socket is handed to PeerProbe.
     // Do not cancel it here; cancellation would abort the first BSTY handshake read/write.
     if (result.status != TransportStatus::Connected && sock) sock->cancel(ec);

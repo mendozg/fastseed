@@ -1,11 +1,14 @@
 {
-  "comparison": "Final source vs corrected HandshakeFix R2 source retained in this workspace",
-  "runtime_cpp_changes": [
-    "src/config/runtime_config.cpp",
-    "src/main.cpp"
+  "revision": "2026-10-30 Boost update",
+  "previous_record_scope": "2026-10-26 package",
+  "runtime_changes": [
+    "src/protocol/probe.cpp: two timer calls",
+    "src/crawler/crawler.cpp: one timer call",
+    "src/transport/transport.cpp: one timer call"
   ],
-  "runtime_change_scope": "Version/help/startup string normalization only; all other runtime source and public headers unchanged",
-  "version_before": "1.0.1 (DNS compatibility hotfix)",
-  "version_after": "1.0.0 (Production)",
-  "final_cpp_build_run_locally": false
+  "public_headers_changed": false,
+  "local_cpp_tests_run": false,
+  "operator_evidence": "operator-ubuntu2604-verification.log",
+  "reboot_recovery": "NOT TESTED",
+  "live_tor_i2p": "NOT TESTED"
 }

@@ -97,7 +97,7 @@ void PeerProbe::run(const std::string& host, std::uint16_t port,
             if (finished) return;
             finished = true;
             boost::system::error_code ignored;
-            timer.cancel(ignored);
+            try { timer.cancel(); } catch (const boost::system::system_error&) {}
             sock->cancel(ignored);
             r.status = s;
             r.error = std::move(e);
@@ -370,7 +370,7 @@ void PeerProbe::run_connected(std::shared_ptr<boost::asio::ip::tcp::socket> sock
             if (finished) return;
             finished = true;
             boost::system::error_code x;
-            timer.cancel(x);
+            try { timer.cancel(); } catch (const boost::system::system_error&) {}
             if(sock) sock->cancel(x);
             r.status=st; r.error=std::move(e); if(done){auto cb=std::move(done); cb(std::move(r));}
         }
