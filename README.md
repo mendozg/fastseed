@@ -30,6 +30,11 @@ HISTORICAL PRE-BOOST OVERVIEW (superseded where noted above)
 
 # BSTY-FastSeed v1.0.0
 
+GitHub Actions configuration is included for release and sanitizer gates on
+Ubuntu 22.04, 24.04 and 26.04, plus source packaging and draft releases on tags.
+See [CI and release instructions](docs/CI.md). Workflow execution is pending its
+first GitHub run; adding configuration does not establish passed CI results.
+
 Standalone GlobalBoost-Y peer discovery and authoritative DNS seeder. The final
 release consolidates DNS/EDNS, modern peer-handshake, persistence, feedback-aging
 and federation fixes. The original logo is retained unchanged.

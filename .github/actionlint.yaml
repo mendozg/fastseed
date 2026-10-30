@@ -1,0 +1,5 @@
+# GitHub's hosted ubuntu-26.04 label is newer than actionlint's bundled list.
+# This only extends lint validation; the workflow still uses hosted runners.
+self-hosted-runner:
+  labels:
+    - ubuntu-26.04
