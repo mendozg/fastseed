@@ -1,3 +1,25 @@
+## 2.0.0-alpha2 interopfix-r1
+
+Correct the interoperability test's stale `/BSTYFastSeed:0.1/` expectation.
+It now checks the current shared version. Runtime code is unchanged.
+The exact test passed 20 runs each in native Debug, Release and AddressSanitizer.
+Full Ubuntu release/sanitizer gates still require confirmation for this revision.
+
+# 2.0.0-alpha2 — unreleased
+
+- Stage 14.2: bounded readers/writers, canonical CompactSize and explicit port byte order.
+- Share strict command/header checks across direct header parsing and complete frames.
+- Add a bounded incremental frame decoder with partial/coalesced input and latched errors.
+- Reuse one CompactSize implementation in version, addr and addrv2; retain existing version extensions.
+- Expose wtxidrelay in the payload codec and advertise the current FastSeed version.
+- Add nine independently generated wire fixtures and three CTest targets (54 total).
+- Preserve existing config/database schemas and v1 federation; Mesh v2 is still pending.
+
+Current evidence: release/V2-VERIFICATION.txt. Full Ubuntu gates are required for this revision.
+Reboot recovery and live Tor/I2P: NOT TESTED.
+
+## Earlier milestone notes
+
 # BSTY-FastSeed 2.0.0-alpha1 — development milestone
 
 Stage 14.1 starts the 2.0 roadmap from v1.0.0 commit

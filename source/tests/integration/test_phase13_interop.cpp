@@ -1,6 +1,7 @@
 #include "fastseed/protocol/conformance.hpp"
 #include "fastseed/protocol/constants.hpp"
 #include "fastseed/protocol/version_message.hpp"
+#include "fastseed/core/version.hpp"
 #include <boost/asio.hpp>
 #include <cassert>
 #include <iostream>
@@ -30,7 +31,7 @@ int main() {
             assert(checksum(payload) == h.checksum);
             auto v = decode_version(payload);
             assert(v.version == PROTOCOL_VERSION);
-            assert(v.user_agent == "/BSTYFastSeed:0.1/");
+            assert(v.user_agent == "/BSTYFastSeed:" + std::string(fastseed::core::version) + "/");
 
             const auto remote_version = encode_version(make_version(
                 v.addr_recv, v.addr_from));

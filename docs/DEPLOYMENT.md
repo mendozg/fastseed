@@ -1,6 +1,6 @@
 # Alpha deployment status
 
-2.0.0-alpha1 is for isolated development testing. These inherited installation
+2.0.0-alpha2 is for isolated development testing. These inherited installation
 procedures are not a recommendation to upgrade production seeders to this alpha.
 Reboot recovery and live Tor/I2P: NOT TESTED.
 

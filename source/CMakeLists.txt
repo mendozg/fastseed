@@ -17,6 +17,7 @@ add_library(fastseed
   src/protocol/version_message.cpp
   src/protocol/message.cpp
   src/protocol/parser.cpp
+  src/protocol/frame_decoder.cpp
   src/protocol/sha256.cpp
   src/protocol/probe.cpp
   src/protocol/wire_messages.cpp
@@ -261,6 +262,13 @@ if(FASTSEED_ENABLE_SANITIZERS AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
   target_link_options(core_foundation_tests PRIVATE -fsanitize=address,undefined)
 endif()
 add_test(NAME core_foundation_tests COMMAND core_foundation_tests)
+
+foreach(codec IN ITEMS serializer codec wire)
+  add_executable(protocol_${codec}_tests tests/protocol/test_${codec}_v2.cpp)
+  target_link_libraries(protocol_${codec}_tests PRIVATE fastseed)
+  add_test(NAME protocol_${codec}_tests COMMAND protocol_${codec}_tests)
+  set_tests_properties(protocol_${codec}_tests PROPERTIES TIMEOUT 60)
+endforeach()
 
 # Configuration tests read this relative to their build-directory working directory.
 configure_file(config/fastseed.production.toml config/fastseed.production.toml COPYONLY)

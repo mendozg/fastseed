@@ -3,6 +3,7 @@
 #include <cstdint>
 #include <span>
 #include <string>
+#include <string_view>
 #include <vector>
 namespace fastseed::protocol {
 struct MessageHeader {
@@ -16,4 +17,7 @@ std::array<std::uint8_t,4> checksum(std::span<const std::uint8_t> payload);
 std::vector<std::uint8_t> encode_header(const MessageHeader& h);
 MessageHeader decode_header(std::span<const std::uint8_t> bytes);
 std::string command_string(const MessageHeader& h);
+void validate_command(const std::array<char,12>& command);
+std::vector<std::uint8_t> encode_message(std::string_view command, std::span<const std::uint8_t> payload);
+Message decode_message(std::span<const std::uint8_t> wire, bool require_mainnet_magic = true);
 }

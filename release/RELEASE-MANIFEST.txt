@@ -1,4 +1,4 @@
-Historical v1.0.0 manifest; not alpha1 verification.
+Historical v1.0.0 manifest; not verification of v2 alphas.
 See release/V2-VERIFICATION.txt for current results.
 
 ## Boost compatibility update — 2026-10-30

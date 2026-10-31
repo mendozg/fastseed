@@ -4,7 +4,7 @@ p2p_port = 8226
 protocol_version = 70016
 min_peer_version = 31800
 
-# Inherited v1.0.0 production configuration; alpha1 still uses the v1 schema.
+# Inherited v1.0.0 production configuration; v2 alphas retain the v1 schema.
 [dns]
 # Empty names use the zone apex and hostmaster.<zone>. Publish NS address/glue at your DNS provider.
 nameserver = ""

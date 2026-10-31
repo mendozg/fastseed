@@ -1,0 +1,47 @@
+BSTY-FastSeed 2.0.0-alpha1 — Stage 14.1 verification
+Date: 2026-10-30
+Base: mendozg/fastseed commit 7b027ae6acb120532c5342a17d7b8a52c9d993a7
+Status: development milestone; not a production release.
+
+ACTUALLY RUN IN THIS WORKSPACE
+- New core test compiled and executed in Debug (-O0 -g): 15 checks PASS.
+- New core test compiled and executed in Release (-O2 -DNDEBUG): 15 checks PASS.
+- Both used C++20, -Wall -Wextra -Wpedantic -Werror, with no diagnostics.
+- Compiler: LLVM-MinGW 20261020, clang 23.1.4,
+  x86_64-w64-windows-gnu, Windows. These are standalone core-test builds,
+  not a full FastSeed application build and not Ubuntu/GCC11 verification.
+- Version consistency: positive check PASS; five altered-metadata rejection
+  cases PASS (invalid version, root/source disagreement, CMake, header, gate).
+- GitHub workflow actionlint 1.7.12: PASS (shellcheck/pyflakes disabled).
+- Test-gate shell scripts parsed using tree-sitter-bash: PASS. Not executed.
+- Changed/new Python scripts: syntax checks PASS.
+
+PENDING FOR THIS REVISION
+- Full application build and all 51 registered CTest entries on Linux.
+- Ubuntu 22.04/GCC11, Ubuntu 24.04 and Ubuntu 26.04 release/sanitizer CI jobs.
+- Full ASan/UBSan suite, application DNS smoke and live deployment validation.
+- Runtime verification of the private-TMPDIR gate change on Linux.
+
+WSL invocation failed locally with Wsl/E_ACCESSDENIED. Git Bash also failed
+at startup with NtCreateDirectoryObject access denied. Neither was treated
+as a passing Linux build or shell-script execution.
+
+Historical v1.0.0 operator logs remain attached for provenance. Their 50-test
+passes do not establish results for this new source revision.
+
+Reboot recovery: NOT TESTED.
+Live Tor/I2P connections: NOT TESTED.
+Mesh v2, signed identities, config v2 and database v2: NOT IMPLEMENTED in 14.1.
+
+To reproduce the standalone core test with a C++20 compiler from source/:
+  clang++ -std=c++20 -Wall -Wextra -Wpedantic -Werror -O0 -g -I include tests/core/test_foundation.cpp -o core-debug
+  ./core-debug
+  clang++ -std=c++20 -Wall -Wextra -Wpedantic -Werror -O2 -DNDEBUG -I include tests/core/test_foundation.cpp -o core-release
+  ./core-release
+
+For the actual Linux release gates from source/:
+  python3 scripts/verify-source.py
+  bash scripts/release-gate.sh
+  bash scripts/sanitizer-gate.sh
+
+Do not mark this alpha verified until its own full Linux gates pass.

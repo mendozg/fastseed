@@ -1,0 +1,21 @@
+COMMAND: C:\Users\Gabriel\Documents\Codex\2026-10-22\referenced-chatgpt-conversation-this-is-an\work\toolchains\llvm-mingw-20261020-ucrt-x86_64\bin\clang++.exe -std=c++20 -Wall -Wextra -Wpedantic -Werror -O1 -g -fsanitize=address -fno-omit-frame-pointer -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_SYSTEM_NO_DEPRECATED -I C:\Users\Gabriel\Documents\Codex\2026-10-22\referenced-chatgpt-conversation-this-is-an\work\fastseed-v2-alpha2-interopfix\source\include -isystem C:\Users\Gabriel\Documents\Codex\2026-10-22\referenced-chatgpt-conversation-this-is-an\work\alpha2-dependencies\ucrt64\include C:\Users\Gabriel\Documents\Codex\2026-10-22\referenced-chatgpt-conversation-this-is-an\work\fastseed-v2-alpha2-interopfix\source\tests\integration\test_phase13_interop.cpp C:\Users\Gabriel\Documents\Codex\2026-10-22\referenced-chatgpt-conversation-this-is-an\work\alpha2-test-results\ASan\protocol.a C:\Users\Gabriel\Documents\Codex\2026-10-22\referenced-chatgpt-conversation-this-is-an\work\alpha2-dependencies\ucrt64\lib\libcrypto.dll.a -lws2_32 -lmswsock -o C:\Users\Gabriel\Documents\Codex\2026-10-22\referenced-chatgpt-conversation-this-is-an\work\alpha2-interop-fix-results\interop-asan.exe
+Run 1: phase13 interoperability: PASS
+Run 2: phase13 interoperability: PASS
+Run 3: phase13 interoperability: PASS
+Run 4: phase13 interoperability: PASS
+Run 5: phase13 interoperability: PASS
+Run 6: phase13 interoperability: PASS
+Run 7: phase13 interoperability: PASS
+Run 8: phase13 interoperability: PASS
+Run 9: phase13 interoperability: PASS
+Run 10: phase13 interoperability: PASS
+Run 11: phase13 interoperability: PASS
+Run 12: phase13 interoperability: PASS
+Run 13: phase13 interoperability: PASS
+Run 14: phase13 interoperability: PASS
+Run 15: phase13 interoperability: PASS
+Run 16: phase13 interoperability: PASS
+Run 17: phase13 interoperability: PASS
+Run 18: phase13 interoperability: PASS
+Run 19: phase13 interoperability: PASS
+Run 20: phase13 interoperability: PASS

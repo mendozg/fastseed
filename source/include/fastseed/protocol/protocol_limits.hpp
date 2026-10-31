@@ -1,7 +1,8 @@
 #pragma once
 #include <cstddef>
+#include "constants.hpp"
 namespace fastseed::protocol::limits {
-inline constexpr std::size_t max_message_size = 4 * 1024 * 1024;
+inline constexpr std::size_t max_message_size = bsty::MAX_MESSAGE_SIZE;
 inline constexpr std::size_t max_user_agent_size = 256;
 inline constexpr std::size_t max_version_payload = 1024;
 inline constexpr std::size_t max_command_size = 12;

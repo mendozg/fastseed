@@ -38,11 +38,6 @@ private:
     HandshakeState state_{HandshakeState::Disconnected};
 };
 
-std::vector<std::uint8_t> encode_message(std::string_view command,
-                                          std::span<const std::uint8_t> payload);
-Message decode_message(std::span<const std::uint8_t> wire,
-                       bool require_mainnet_magic = true);
-
 std::string_view canonical_command(MessageType type) noexcept;
 
 void require_pong_nonce(std::uint64_t expected,
