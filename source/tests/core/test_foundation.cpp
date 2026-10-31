@@ -46,7 +46,7 @@ int main() {
     ok &= check(error_message(ErrorCode::unsupported_version) == "unsupported version", "version diagnostic");
     ok &= check(bsty_p2p_port.value() == 8226 && bsty_magic[0] == 0xA2 && bsty_magic[3] == 0xF2,
                 "BSTY network constants preserved");
-    ok &= check(version == "2.0.0-alpha1" && version_identity.find("Development") != std::string_view::npos,
+    ok &= check(version == "2.0.0-alpha2" && version_identity.find("Development") != std::string_view::npos,
                 "development identity");
     if (!ok) return 1;
     std::cout << "Core foundation: " << checks << " checks PASS\n";

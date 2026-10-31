@@ -5,7 +5,7 @@
 #include <cassert>
 #include <iostream>
 int main() {
-    assert(fastseed::config::version_string() == "BSTY-FastSeed 2.0.0-alpha1 (Development)");
+    assert(fastseed::config::version_string() == "BSTY-FastSeed 2.0.0-alpha2 (Development)");
     assert(fastseed::bsty::DEFAULT_P2P_PORT == 8226);
     assert(fastseed::bsty::PROTOCOL_VERSION == 70016);
     assert(fastseed::bsty::MIN_PEER_VERSION == 31800);

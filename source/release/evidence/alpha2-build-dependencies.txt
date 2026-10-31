@@ -1,0 +1,4 @@
+Source: https://repo.msys2.org/mingw/ucrt64/
+Compiler: https://github.com/mstorsjo/llvm-mingw/releases/tag/20261020
+mingw-w64-ucrt-x86_64-boost-1.90.0-3-any.pkg.tar.zst 15010582 bytes SHA256 3b31c20d7660cb5700521bd26727ac9951ea10ec0c74c76878b5053d33fc3cf2
+mingw-w64-ucrt-x86_64-openssl-3.5.4-1-any.pkg.tar.zst 8237742 bytes SHA256 f124fda279f00b6789d3fc4eef564ecf37b3c44d31c712a7e77e3e822b498a06

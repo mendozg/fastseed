@@ -1,19 +1,21 @@
-# BSTY-FastSeed 2.0.0-alpha1 — core foundation
+# BSTY-FastSeed 2.0.0-alpha2 — protocol codec
 
-Development milestone Stage 14.1, based on the tested v1.0.0 runtime and CI.
-Adds strongly typed endpoint ports, sequence/timestamp values, peer/seeder ID
-storage, shared BSTY constants, an internal error vocabulary and central version
-identity. The existing DNS/P2P runtime is retained. Mesh v2 negotiation, signed
-identities, the canonical peer codec and configuration v2 are future milestones.
+Development milestone Stage 14.2 builds on alpha1's core foundation. It adds
+bounded serialization, canonical CompactSize, strict shared header validation,
+incremental frame decoding and independent known-byte regression vectors.
+The existing BSTY P2P protocol (70016 / port 8226) and DNS runtime are retained.
 
-Use a development branch and an isolated test deployment. Production seeders
-should remain on the released v1.0.0 build. Current configuration stays v1;
-do not add a config version 2 setting yet. BSTY P2P remains protocol 70016, port 8226.
-The legacy --self-test command is only an acknowledgement; run the test gates.
+Read [the protocol contract](docs/ALPHA2-PROTOCOL.md),
+[the roadmap](docs/V2-ROADMAP.md) and [verification results](release/V2-VERIFICATION.txt).
+Mesh v2, signed identities, config v2 and persistence migration remain future work.
+The new frame decoder is available for the session integration in Stage 14.4.
+
+Use an isolated development deployment. Keep production seeders on v1.0.0 until
+the new revision passes its own Ubuntu CI and integration gates. Existing config
+and database schemas are retained. The legacy --self-test acknowledgement does
+not run the comprehensive tests: use scripts/release-gate.sh and sanitizer-gate.sh.
 
 Reboot recovery and live Tor/I2P connections: **NOT TESTED**.
-
-See docs/V2-ROADMAP.md for milestone scope and verification.
 
 ## Historical v1.0.0 documentation
 

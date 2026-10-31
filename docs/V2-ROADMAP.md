@@ -1,4 +1,4 @@
-# FastSeed 2.0 roadmap and Stage 14.1
+# FastSeed 2.0 roadmap — alpha2
 
 Recovered from the original planning discussion:
 https://chatgpt.com/share/6ae56179-19d0-83e8-b005-35c87254142b
@@ -21,7 +21,7 @@ the 2.0 plan; they are not evidence that its proposed components already exist.
   70016 with mainnet port 8226. Planned Mesh v2 is marked unavailable.
 - A bounded error-code/message vocabulary is available to later modules. Its
   numeric values are internal and do not define a wire format.
-- Version identity is 2.0.0-alpha1 (Development); existing CLI help/startup/version
+- Version identity is 2.0.0-alpha2 (Development); existing CLI help/startup/version
   use the same identity. CMake uses numeric 2.0.0, with the prerelease suffix in
   release/VERSION. verify-version.py checks release metadata consistency.
 
@@ -34,7 +34,7 @@ not become the comprehensive planned v2 self-test.
 
 | Stage | Scope | Status |
 | --- | --- | --- |
-| 14.2 | Framing, reader/writer, codec, messages, known-byte vectors | Pending |
+| 14.2 | Framing, reader/writer, codec, messages, known-byte vectors | Implemented in alpha2; full Ubuntu gates pending |
 | 14.3 | Canonical peers and IDs, health/cache, selection | Pending |
 | 14.4 | P2P session and scheduler integration | Pending |
 | 14.5 | DNS integration with immutable memory snapshots | Pending |
@@ -45,11 +45,9 @@ not become the comprehensive planned v2 self-test.
 | 14.10 | Fuzzing, benchmarks, load tests and sanitizers | Pending |
 | 14.11 | Security review, integration and RC1 | Pending |
 
-Before 14.2, specify wire endianness, message sizes, canonical address encoding,
-authentication boundaries and supported compatibility behavior against the actual
-v1 federation code. Do not invent compatibility with messages v1 never implemented.
-Retain existing IPv4/IPv6 and optional Tor/I2P discovery components. Overlay IDs
-and address representation must be covered when the canonical model is designed.
+Stage 14.2's wire, size, address and authentication boundaries are documented
+in [ALPHA2-PROTOCOL.md](ALPHA2-PROTOCOL.md). Stage 14.3 is next: canonical peers,
+identity derivation and selection integration. Mesh v2 remains Stage 14.6.
 
 DNS remains memory-only at request time. Remote advertisements are candidates
 for local validation, not permission to bypass admission. Keep the independent
@@ -59,7 +57,7 @@ so Ubuntu 22.04/GCC11 remains in CI. Performance targets require measurements.
 ## Verification and release status
 
 The new core contract test is registered with CTest; the complete suite now has
-51 test entries. Test count is not a claim of a completed run. Both test gates
+54 test entries. Test count is not a claim of a completed run. Both test gates
 create a fresh private temporary directory per invocation, including sudo runs,
 and clean it on exit. This avoids cross-user fixed-name SQLite fixtures.
 
@@ -67,6 +65,6 @@ Current milestone results are in release/V2-VERIFICATION.txt. Earlier operator
 logs describe v1.0.0; they are not a test report for this alpha. GitHub must run
 the six Ubuntu release/sanitizer jobs on this revision before it is called verified.
 
-Use feature/v2-core-foundation for review. Push this branch for CI or open a PR;
+Use feature/v2-protocol-codec for review. Push this branch for CI or open a PR;
 keep production seeders on v1.0.0. New alpha tags create draft prereleases after
 the gates pass. Reboot recovery and live Tor/I2P: **NOT TESTED**.

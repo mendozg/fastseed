@@ -17,7 +17,8 @@ enum class MessageType {
     GetAddr,
     Ping,
     Pong,
-    Unknown
+    Unknown,
+    WtxidRelay
 };
 
 struct PeerAddress {
@@ -37,6 +38,7 @@ MessageType message_type(std::string_view command) noexcept;
 
 std::vector<std::uint8_t> encode_verack();
 std::vector<std::uint8_t> encode_sendaddrv2();
+std::vector<std::uint8_t> encode_wtxidrelay();
 std::vector<PeerAddress> decode_addr(std::span<const std::uint8_t> payload);
 std::vector<std::uint8_t> encode_addr(const std::vector<PeerAddress>& entries);
 std::vector<AddrV2Address> decode_addrv2(std::span<const std::uint8_t> payload);

@@ -1,3 +1,13 @@
+# 2.0.0-alpha2 — unreleased
+
+- Stage 14.2: bounded readers/writers, canonical CompactSize and explicit port byte order.
+- Share strict command/header checks across direct header parsing and complete frames.
+- Add a bounded incremental frame decoder with partial/coalesced input and latched errors.
+- Reuse one CompactSize implementation in version, addr and addrv2; retain existing version extensions.
+- Expose wtxidrelay in the payload codec and advertise the current FastSeed version.
+- Add nine independently generated wire fixtures and three CTest targets (54 total).
+- Preserve existing config/database schemas and v1 federation; Mesh v2 is still pending.
+
 # 2.0.0-alpha1 — unreleased
 
 - Stage 14.1 core types, constants, error messages and development version identity.

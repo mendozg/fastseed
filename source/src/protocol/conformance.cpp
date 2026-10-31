@@ -35,36 +35,12 @@ bool HandshakeStateMachine::transition(HandshakeEvent event) noexcept {
     return false;
 }
 
-std::vector<std::uint8_t> encode_message(std::string_view command,
-                                          std::span<const std::uint8_t> payload) {
-    if (command.empty() || command.size() > limits::max_command_size)
-        throw ProtocolError(ProtocolErrorCode::InvalidCommand, "invalid command length");
-    if (std::find(command.begin(), command.end(), '\0') != command.end())
-        throw ProtocolError(ProtocolErrorCode::InvalidCommand, "command contains NUL");
-    if (payload.size() > limits::max_message_size)
-        throw ProtocolError(ProtocolErrorCode::MessageTooLarge, "message too large");
-
-    MessageHeader h;
-    h.magic = bsty::MAINNET_MAGIC;
-    std::copy(command.begin(), command.end(), h.command.begin());
-    h.payload_size = static_cast<std::uint32_t>(payload.size());
-    h.checksum = checksum(payload);
-
-    auto wire = encode_header(h);
-    wire.insert(wire.end(), payload.begin(), payload.end());
-    return wire;
-}
-
-Message decode_message(std::span<const std::uint8_t> wire, bool require_mainnet_magic) {
-    Parser parser(require_mainnet_magic);
-    return parser.parse(wire);
-}
-
 std::string_view canonical_command(MessageType type) noexcept {
     switch (type) {
     case MessageType::Version: return "version";
     case MessageType::Verack: return "verack";
     case MessageType::SendAddrV2: return "sendaddrv2";
+    case MessageType::WtxidRelay: return "wtxidrelay";
     case MessageType::Addr: return "addr";
     case MessageType::AddrV2: return "addrv2";
     case MessageType::GetAddr: return "getaddr";

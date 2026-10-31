@@ -1,0 +1,23 @@
+// Generated independently by generate_vectors.py; see ALPHA2-PROTOCOL.md.
+#pragma once
+#include <string_view>
+namespace vectors {
+inline constexpr std::string_view verack_payload = "";
+inline constexpr std::string_view verack_wire = "a2b2e2f276657261636b000000000000000000005df6e0e2";
+inline constexpr std::string_view sendaddrv2_payload = "";
+inline constexpr std::string_view sendaddrv2_wire = "a2b2e2f273656e646164647276320000000000005df6e0e2";
+inline constexpr std::string_view wtxidrelay_payload = "";
+inline constexpr std::string_view wtxidrelay_wire = "a2b2e2f2777478696472656c61790000000000005df6e0e2";
+inline constexpr std::string_view getaddr_payload = "";
+inline constexpr std::string_view getaddr_wire = "a2b2e2f2676574616464720000000000000000005df6e0e2";
+inline constexpr std::string_view ping_payload = "8877665544332211";
+inline constexpr std::string_view ping_wire = "a2b2e2f270696e670000000000000000080000008d9a66f28877665544332211";
+inline constexpr std::string_view pong_payload = "8877665544332211";
+inline constexpr std::string_view pong_wire = "a2b2e2f2706f6e670000000000000000080000008d9a66f28877665544332211";
+inline constexpr std::string_view version_payload = "80110100010000000000000000f1536500000000010000000000000000000000000000000000ffffcb00710a2022000000000000000020010db800000000000000000000000120228877665544332211092f666978747572652f2a00000000";
+inline constexpr std::string_view version_wire = "a2b2e2f276657273696f6e00000000005f00000043c6be1680110100010000000000000000f1536500000000010000000000000000000000000000000000ffffcb00710a2022000000000000000020010db800000000000000000000000120228877665544332211092f666978747572652f2a00000000";
+inline constexpr std::string_view addr_payload = "0100f15365010000000000000000000000000000000000ffffcb00710a2022";
+inline constexpr std::string_view addr_wire = "a2b2e2f26164647200000000000000001f0000005a78f19a0100f15365010000000000000000000000000000000000ffffcb00710a2022";
+inline constexpr std::string_view addrv2_payload = "0200f15365010104cb00710a202201f1536500021020010db80000000000000000000000012022";
+inline constexpr std::string_view addrv2_wire = "a2b2e2f261646472763200000000000027000000fad7a2d20200f15365010104cb00710a202201f1536500021020010db80000000000000000000000012022";
+}
