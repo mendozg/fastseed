@@ -1,4 +1,5 @@
 #include "fastseed/config/runtime_config.hpp"
+#include "fastseed/core/version.hpp"
 #include <algorithm>
 #include <cctype>
 #include <fstream>
@@ -242,5 +243,5 @@ std::optional<RuntimeConfig> load_file(const std::string& path,std::vector<std::
 }
 
 ValidationResult validate_file(const std::string& path) { std::vector<std::string> errors; auto c=load_file(path,errors); ValidationResult r; r.ok=static_cast<bool>(c); r.errors=std::move(errors); return r; }
-std::string version_string(){return "BSTY-FastSeed 1.0.0 (Production)";}
+std::string version_string(){return std::string(core::version_identity);}
 }

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(BSTYFastSeed VERSION 1.0.0 LANGUAGES CXX)
+project(BSTYFastSeed VERSION 2.0.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 if(POLICY CMP0167)
@@ -252,6 +252,15 @@ add_executable(dns_compat_tests tests/dns/test_v101_compat.cpp)
 target_link_libraries(dns_compat_tests PRIVATE fastseed)
 add_test(NAME dns_compat_tests COMMAND dns_compat_tests)
 set_tests_properties(dns_compat_tests PROPERTIES TIMEOUT 30)
+
+add_executable(core_foundation_tests tests/core/test_foundation.cpp)
+target_include_directories(core_foundation_tests PRIVATE include)
+target_compile_options(core_foundation_tests PRIVATE -Wall -Wextra -Wpedantic)
+if(FASTSEED_ENABLE_SANITIZERS AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+  target_compile_options(core_foundation_tests PRIVATE -fsanitize=address,undefined -fno-omit-frame-pointer)
+  target_link_options(core_foundation_tests PRIVATE -fsanitize=address,undefined)
+endif()
+add_test(NAME core_foundation_tests COMMAND core_foundation_tests)
 
 # Configuration tests read this relative to their build-directory working directory.
 configure_file(config/fastseed.production.toml config/fastseed.production.toml COPYONLY)

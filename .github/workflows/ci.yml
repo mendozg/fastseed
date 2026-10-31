@@ -2,7 +2,7 @@ name: Build, test and package
 
 on:
   push:
-    branches: [main]
+    branches: [main, 'feature/v2-*']
     tags: ['v*']
   pull_request:
   workflow_dispatch:
@@ -111,5 +111,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.ref_name }}
         run: |
+          release_flags=()
+          if [[ "$TAG" == *-* ]]; then release_flags+=(--prerelease); fi
           gh release create "$TAG" dist/* --verify-tag --draft \
-            --title "BSTY-FastSeed $TAG" --notes-file .github/RELEASE-TEMPLATE.md
+            "${release_flags[@]}" --title "BSTY-FastSeed $TAG" --notes-file .github/RELEASE-TEMPLATE.md

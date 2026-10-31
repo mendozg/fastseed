@@ -1,3 +1,13 @@
+# 2.0.0-alpha1 — unreleased
+
+- Stage 14.1 core types, constants, error messages and development version identity.
+- Add core contract tests and build/release metadata consistency checks.
+- Each test gate creates a private temporary directory to isolate SQLite fixtures.
+- Continue Ubuntu 22.04/24.04/26.04 release/sanitizer CI on the v2 feature branch.
+- Later protocol, mesh, migration and resilience stages remain pending.
+
+## Earlier changelog
+
 # Changelog
 
 ## Boost compatibility update — 2026-10-30

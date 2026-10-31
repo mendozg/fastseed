@@ -17,7 +17,7 @@ static bool parse_endpoint(std::string ep,std::string& host,std::uint16_t& port)
  if(ep.size()>=2 && ep.front()=='['){auto close=ep.find(']');if(close==std::string::npos)return false;host=ep.substr(1,close-1);if(close+1<ep.size()){if(ep[close+1]!=':')return false;try{auto p=std::stoul(ep.substr(close+2));if(p>65535)return false;port=static_cast<std::uint16_t>(p);}catch(...){return false;}}return !host.empty();}
  auto first=ep.find(':'), last=ep.rfind(':'); if(first!=std::string::npos && first!=last){host=ep;return true;} if(last!=std::string::npos){host=ep.substr(0,last);try{auto p=std::stoul(ep.substr(last+1));if(p>65535)return false;port=static_cast<std::uint16_t>(p);}catch(...){return false;}}else host=ep;return !host.empty();
 }
-static void usage(){std::cout<<"BSTY FastSeed v1.0.0\nUsage:\n  bsty-fastseed run [--config <file>] [--dns-port <port>]\n  bsty-fastseed probe <host>[:port]\n  bsty-fastseed --version\n  bsty-fastseed --help\n  bsty-fastseed --check-config <file>\n  bsty-fastseed --self-test\n";}
+static void usage(){std::cout<<fastseed::config::version_string()<<"\nUsage:\n  bsty-fastseed run [--config <file>] [--dns-port <port>]\n  bsty-fastseed probe <host>[:port]\n  bsty-fastseed --version\n  bsty-fastseed --help\n  bsty-fastseed --check-config <file>\n  bsty-fastseed --self-test\n";}
 static int run_seed(fastseed::config::RuntimeConfig config, std::optional<std::uint16_t> dns_port_override = std::nullopt){
  if(dns_port_override) { config.dns.server.port=*dns_port_override; config.dns.engine.listen_port=*dns_port_override; }
  boost::asio::io_context io;
@@ -57,7 +57,7 @@ static int run_seed(fastseed::config::RuntimeConfig config, std::optional<std::u
      timer->async_wait([tick](const boost::system::error_code& ec){ if(!ec) (*tick)(); });
  };
  (*tick)();
- std::cout<<"BSTY FastSeed v1.0.0 running; DNS="<<config.dns.server.bind_address.to_string()<<":"<<config.dns.server.port<<" zone="<<dns_cfg.zone<<"\n";
+ std::cout<<fastseed::config::version_string()<<" running; DNS="<<config.dns.server.bind_address.to_string()<<":"<<config.dns.server.port<<" zone="<<dns_cfg.zone<<"\n";
  io.run();
  crawler.stop(); dns_server.stop(); persistence.flush();
  for (const auto& [kind, state] : crawler.scheduler_state()) { try { db.save_scheduler_state(state, kind); } catch (const std::exception& e) { std::cerr<<"scheduler state save error: "<<e.what()<<"\n"; } }
