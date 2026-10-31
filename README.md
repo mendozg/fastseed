@@ -1,3 +1,22 @@
+# BSTY-FastSeed 2.0.0-alpha1 — core foundation
+
+Development milestone Stage 14.1, based on the tested v1.0.0 runtime and CI.
+Adds strongly typed endpoint ports, sequence/timestamp values, peer/seeder ID
+storage, shared BSTY constants, an internal error vocabulary and central version
+identity. The existing DNS/P2P runtime is retained. Mesh v2 negotiation, signed
+identities, the canonical peer codec and configuration v2 are future milestones.
+
+Use a development branch and an isolated test deployment. Production seeders
+should remain on the released v1.0.0 build. Current configuration stays v1;
+do not add a config version 2 setting yet. BSTY P2P remains protocol 70016, port 8226.
+The legacy --self-test command is only an acknowledgement; run the test gates.
+
+Reboot recovery and live Tor/I2P connections: **NOT TESTED**.
+
+See docs/V2-ROADMAP.md for milestone scope and verification.
+
+## Historical v1.0.0 documentation
+
 ## Boost compatibility update — 2026-10-30
 
 Four timer cancellation calls in probe, crawler and transport now use the

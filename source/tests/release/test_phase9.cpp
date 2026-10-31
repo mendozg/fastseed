@@ -24,6 +24,6 @@ int main() {
         size_error |= error.find("dns.max_response_size")!=std::string::npos;
     }
     assert(port_error && size_error); std::remove(bad.c_str());
-    assert(fastseed::config::version_string()=="BSTY-FastSeed 1.0.0 (Production)");
+    assert(fastseed::config::version_string()=="BSTY-FastSeed 2.0.0-alpha1 (Development)");
     std::cout << "phase9_tests PASS\n";
 }

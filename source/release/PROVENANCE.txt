@@ -1,3 +1,6 @@
+Historical v1.0.0 record — not alpha1 verification.
+Current milestone: release/V2-VERIFICATION.txt and docs/V2-ROADMAP.md.
+
 ## Boost compatibility update — 2026-10-30
 
 Four timer cancellation calls in probe, crawler and transport now use the

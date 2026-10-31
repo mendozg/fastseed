@@ -6,6 +6,7 @@ import io
 from pathlib import Path
 import re
 import subprocess
+import sys
 import tarfile
 import zipfile
 
@@ -25,6 +26,9 @@ def main():
     # Run from repository root so subdirectory invocation is safe.
     import os
     os.chdir(root)
+    if subprocess.run(['git', 'diff', '--quiet', 'HEAD', '--']).returncode:
+        raise SystemExit('Commit tracked source changes before packaging HEAD')
+    subprocess.run([sys.executable, 'source/scripts/verify-version.py'], check=True)
     prefix = f'BSTY-FastSeed-v{version}'
     args.output.mkdir(parents=True, exist_ok=True)
     tar_bytes = git('archive', '--format=tar', f'--prefix={prefix}/', 'HEAD')

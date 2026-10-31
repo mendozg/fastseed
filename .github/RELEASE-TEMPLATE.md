@@ -1,3 +1,6 @@
+2.0.0-alpha1 is a core-foundation development milestone. Mesh v2, signed seeder
+identities, configuration v2 and migration are not implemented in this milestone.
+
 Source release built from the tagged commit after release and ASan/UBSan gates
 passed on Ubuntu 22.04, 24.04 and 26.04. See this tag's Actions run for exact
 compiler/library versions and verification logs. Archives contain source only.

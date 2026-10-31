@@ -1,3 +1,6 @@
+Historical v1.0.0 record — not alpha1 verification.
+Current milestone: release/V2-VERIFICATION.txt and docs/V2-ROADMAP.md.
+
 # Final release checklist
 
 - [x] Consolidate RC1 and all DNS, handshake and release-gate fixes.

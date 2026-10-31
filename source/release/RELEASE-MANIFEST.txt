@@ -1,3 +1,6 @@
+Historical v1.0.0 record — not alpha1 verification.
+Current milestone: release/V2-VERIFICATION.txt and docs/V2-ROADMAP.md.
+
 BSTY-FastSeed v1.0.0 final source release
 Runtime version: BSTY-FastSeed 1.0.0 (Production)
 Mainnet P2P: 8226; magic A2 B2 E2 F2; protocol 70016; minimum 31800.
