@@ -1,5 +1,7 @@
 # BSTY-FastSeed 2.0.0-alpha2 — protocol codec
 
+Revision: **interopfix-r1**, correcting the interoperability test version expectation.
+
 Development milestone Stage 14.2 builds on alpha1's core foundation. It adds
 bounded serialization, canonical CompactSize, strict shared header validation,
 incremental frame decoding and independent known-byte regression vectors.

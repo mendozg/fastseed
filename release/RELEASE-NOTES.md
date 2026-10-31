@@ -1,3 +1,10 @@
+## 2.0.0-alpha2 interopfix-r1
+
+Correct the interoperability test's stale `/BSTYFastSeed:0.1/` expectation.
+It now checks the current shared version. Runtime code is unchanged.
+The exact test passed 20 runs each in native Debug, Release and AddressSanitizer.
+Full Ubuntu release/sanitizer gates still require confirmation for this revision.
+
 # 2.0.0-alpha2 — unreleased
 
 - Stage 14.2: bounded readers/writers, canonical CompactSize and explicit port byte order.

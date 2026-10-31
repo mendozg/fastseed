@@ -1,3 +1,39 @@
+BSTY-FastSeed 2.0.0-alpha2 interopfix-r1 — 2026-10-30
+
+Issue: phase13_interop_tests still asserted /BSTYFastSeed:0.1/ after alpha2
+changed the advertised user agent to /BSTYFastSeed:2.0.0-alpha2/.
+The old assertion was reproduced locally on the delivered alpha2 source.
+Fix: include core/version.hpp in the test and derive its expected agent from
+core::version. The test still checks the actual bytes decoded from the socket.
+Runtime code and wire behavior are unchanged by this correction.
+
+ACTUALLY RUN FOR THIS CORRECTION
+- Before fix: reproduced the stale user-agent assertion failure.
+- Fixed phase13_interop_tests: Debug 20/20 PASS.
+- Fixed phase13_interop_tests: Release 20/20 PASS, assertions enabled.
+- Fixed phase13_interop_tests: AddressSanitizer 20/20 PASS, no ASan diagnostics.
+- Native Windows x86_64, Clang 23.1.4, Boost 1.90.0, OpenSSL 3.5.4.
+- Test compiled against the same alpha2 protocol objects used in the earlier runs.
+- Logs: source/release/evidence/alpha2-interopfix-{before,debug,release,asan}.log.
+The first reproduction attempt was blocked by local socket permissions; after
+network access was granted, the original assertion was reproduced as shown.
+
+NOT RUN FOR THIS CORRECTION
+- Full 54-test Ubuntu release gate and full Linux ASan/UBSan gate.
+- Other component suites were not rerun for this test-only correction.
+- Reboot recovery and live Tor/I2P: NOT TESTED.
+Earlier alpha2 results below are prior evidence, not reruns for this correction.
+
+After applying the patch, from repository root on Ubuntu:
+  python3 source/scripts/verify-source.py
+  cmake --build source/build-release --target phase13_interop_tests -j2
+  ctest --test-dir source/build-release -R '^phase13_interop_tests$' --output-on-failure --repeat until-fail:20
+  bash scripts/release-gate.sh
+  bash scripts/sanitizer-gate.sh
+If already inside source/, omit the source/ prefix and use bash scripts/... there.
+
+EARLIER ALPHA2 VERIFICATION
+
 BSTY-FastSeed 2.0.0-alpha2 — Stage 14.2 verification
 Date: 2026-10-30
 Status: development milestone; not a production release.
