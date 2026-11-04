@@ -1,8 +1,10 @@
 # Alpha3 development deployment
 
+For the wallet DNS hotfix, see [servicefilter-r1](DNS-SERVICE-FILTER.md).
+
 2.0.0-alpha3 is an isolated development milestone. First verify the archive
 hashes and source manifest, then run both release and sanitizer gates on the
-destination Ubuntu host. Do not run tests with sudo. Expected CTest count: 57.
+destination Ubuntu host. Do not run tests with sudo. Expected CTest count: 58.
 
 ```bash
 python3 source/scripts/verify-source.py

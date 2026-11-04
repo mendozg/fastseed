@@ -1,63 +1,57 @@
-Documentation revision docs-r1 — 2026-10-31T19:17:06+00:00
-Added Ubuntu port-53 diagnosis, FastSeed stop instructions, systemd-resolved
-stub/upstream configuration, host DNS checks and rollback. Six new Bash examples
-passed syntax parsing; they were NOT executed against a host's resolver.
-Runtime, tests and historical test evidence are unchanged. No C++ build or tests
-were rerun for this documentation-only revision. Existing alpha3 results follow.
-Reboot recovery and live Tor/I2P remain NOT TESTED.
+BSTY-FastSeed v2.0.0-alpha3 servicefilter-r1 — verification, 2026-11-04
 
-BSTY-FastSeed v2.0.0-alpha3 — Stage 14.3 verification
-Recorded UTC: 2026-10-31T18:52:03+00:00
+BASELINE AND SCOPE
+Actual existing alpha3 docs-r1 source, local packaging commit
+d5485e988459b2141712369a8c74c4ddd78cdeb8. This commit is not asserted to exist on GitHub.
+Add x<hex> DNS service filtering and remove the pre-filter snapshot cutoff.
+Retain health eligibility, configuration/database schemas and apex answers.
+Binary identity remains 2.0.0-alpha3 (Development); hashes identify the hotfix.
 
-Actual source baseline: delivered alpha2 interopfix-r1, local packaging commit
-7f1ff5ed5595becd4b34354c25ab2ad99e51e66e. This is not a claim that this commit is on GitHub.
-No repository push, tag, production deployment, service restart or reboot was performed.
-
-EXECUTED LOCALLY BY THE PACKAGING AGENT
-Host: Windows x86_64; LLVM-MinGW 20261020, Clang 23.1.4, C++20.
-Dependencies: Boost 1.90.0, OpenSSL 3.5.4; package hashes recorded in evidence.
-- Native Debug: 53/53 selected executable suites PASS.
-- Native Release (-O2, assertions retained with -UNDEBUG): 53/53 PASS.
-- Native AddressSanitizer (-O1 -g -fsanitize=address): 53/53 PASS.
-- The three new suites assert 56 endpoint/ID, 25 cache and 18 selection checks
-  per profile: 99 new checks. Five independently generated ID/preimage fixtures
-  and two overlay hostname fixtures compare Python and C++ implementations.
-- Existing protocol, health, crawler/scheduler, mock transports, DNS, federation,
-  configuration, security and simulated long-run suites are included. The exact
-  alpha2 interoperability test passes with the alpha3 version identity.
-- Four database test translation units compiled with the native compiler,
-  including the SQLite header. They were NOT LINKED OR EXECUTED.
-- Protocol/peer fixture regeneration checks, version consistency, Python AST,
-  Bash grammar parsing and actionlint: PASS. Bash parsing is not execution.
+EXECUTED LOCALLY
+Windows x86_64, LLVM-MinGW 20261020 / Clang 23.1.4, C++20;
+Boost 1.90.0 and OpenSSL 3.5.4 from the same recorded alpha3 dependency packages.
+- Before-fix Debug reproduction: FAIL as expected at the wallet x9/NXDOMAIN check.
+- Final native Debug: 54/54 selected executable suites PASS.
+- Final native Release (-O2, assertions retained): 54/54 PASS.
+- Final native AddressSanitizer (-O1 -g): 54/54 PASS.
+- New DNS service-filter suite: 95 checks per profile, including all-bits matching,
+  IPv4/IPv6 records, zero/full/high-bit masks, malformed names, authority semantics,
+  cutoff starvation, UDP/EDNS negotiation/truncation and TCP complete responses.
+  18 UDP and 18 persistent-TCP exchanges per profile use actual IPv4 loopback
+  listeners. This is not public-network or IPv6-transport verification.
+- Existing DNS compatibility suite: 72 checks per profile, including sockets.
+- Static Bash/Python checks, version and independent fixture checks, actionlint:
+  PASS. Two new Bash documentation blocks parsed; not run on the deployed server.
+- A preliminary restricted-network attempt timed out in dns_compat_tests; after
+  network access was granted, all final runs above completed. That timeout is
+  retained as diagnostic history and is not counted as a successful run.
 
 LIMITS / NOT RUN
-These are native component builds using 27 library/canary source files. They are
-not a full application build, a CTest run, or a Linux release/sanitizer gate.
-The database implementation uses POSIX locking and was excluded from the native
-library. The four unexecuted CTest suites are phase4_tests,
-phase105_persistence_tests, phase108_db_transport_tests and phase1014_integrity_tests.
-The complete CMake suite contains 57 registered tests.
-Full Ubuntu 22.04/GCC11, Ubuntu 24.04 and Ubuntu 26.04 gates: NOT RUN for alpha3.
-WSL access failed with Wsl/E_ACCESSDENIED. No Ubuntu success is inferred from
-native Windows results or historical v1/alpha2 operator logs.
-Linux ASan/UBSan, complete application/DNS CLI smoke and deployment: NOT RUN.
+These are component builds from 27 non-database library/canary source files,
+not a full application build or CTest/release/sanitizer gate on Ubuntu.
+The complete CMake suite now has 58 registered tests. Four database suites were
+not executed or recompiled for this hotfix: phase4_tests,
+phase105_persistence_tests, phase108_db_transport_tests, phase1014_integrity_tests.
+Native build excludes POSIX database implementation; historical compile-only
+database evidence is not current full-suite validation.
+Ubuntu 22.04/GCC11, 24.04, 26.04 release and ASan/UBSan gates: NOT RUN here.
+End-to-end application/wallet discovery, public DNS deployment, load benchmark
+and fuzz campaign: NOT RUN for this hotfix. No service restart or GitHub push/tag.
 Reboot recovery: NOT TESTED. Live Tor/I2P: NOT TESTED.
-No new live mainnet canary, production load benchmark or fuzz campaign was run.
-Simulated/mock suites do not establish live network or reboot recovery.
 
-EVIDENCE (repository paths)
-source/release/evidence/native-alpha3-{debug,release,asan}.log
-source/release/evidence/native-alpha3-{debug,release,asan}-summary.txt
-source/release/evidence/native-alpha3-inputs.sha256
-source/release/evidence/native-alpha3-*-runner.py (exact local harnesses)
-source/release/evidence/native-alpha3-dependencies.txt and SQLite header provenance
-source/release/evidence/native-alpha3-static-validation.log
-source/release/evidence/native-alpha3-database-compile-only.log
-Harness paths describe this Windows workspace; production verification uses
-scripts/release-gate.sh and scripts/sanitizer-gate.sh on Ubuntu. Historical
-evidence remains unchanged; V2-ALPHA2-VERIFICATION.txt preserves its old report.
+EVIDENCE
+source/release/evidence/native-servicefilter-{debug,release,asan}.log
+source/release/evidence/native-servicefilter-*-summary.txt
+source/release/evidence/native-servicefilter-before-fix-debug.log
+source/release/evidence/native-servicefilter-inputs.sha256
+source/release/evidence/native-servicefilter-*-runner.py
+source/release/evidence/native-servicefilter-static-validation.log
+source/release/evidence/native-alpha3-dependencies.txt (unchanged dependencies)
+source/release/evidence/operator-dns-filter-reproduction.txt (operator report only)
+Previous alpha3/docs-r1 report preserved as V2-ALPHA3-DOCS-R1-VERIFICATION.txt.
 
-REQUIRED BEFORE PROMOTING THIS ALPHA
-Run both root gate scripts on the exact candidate branch, without sudo, and
-review all six Ubuntu CI matrix results. Expect 57 CTest suites in each gate.
-Keep production seeders on the known v1.0.0 deployment during alpha validation.
+DEPLOYMENT GATE
+Run both gate scripts on the destination Ubuntu host as the normal build user;
+expect 58 CTest suites. Upgrade the binary only after those gates pass. Preserve
+the existing configuration/database and verify x9 queries directly and through
+a public resolver. See docs/DNS-SERVICE-FILTER.md and docs/DEPLOYMENT.md.

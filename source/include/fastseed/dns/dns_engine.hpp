@@ -54,6 +54,8 @@ struct DnsQuestion {
     bool dnssec_ok{false};
     std::uint16_t udp_size{512};
     std::uint8_t edns_version{0};
+    std::uint64_t required_services{0}; // x<1..16 hex digits>.<zone>; all bits required.
+    bool service_filter{false};
 };
 
 struct DnsAnswer {

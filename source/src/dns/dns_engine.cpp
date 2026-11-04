@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <cctype>
 #include <cstring>
+#include <limits>
 #include <random>
 #include <stdexcept>
 
@@ -75,7 +76,9 @@ DnsResponseEngine::DnsResponseEngine(DnsConfig config) : config_(std::move(confi
 
 void DnsResponseEngine::publish_from_cache(const health::PeerHealthCache& cache, std::uint64_t generation) {
     auto s = std::make_shared<DnsSnapshot>();
-    s->peers = cache.dns_snapshot(config_.max_answers * 4, config_.include_warm);
+    // Keep every DNS-eligible peer in the bounded health cache. Applying a cap
+    // before the per-query service/family filter can hide all matching peers.
+    s->peers = cache.dns_snapshot(std::numeric_limits<std::size_t>::max(), config_.include_warm);
     s->generation = generation;
     store_.publish(std::move(s));
 }
@@ -125,9 +128,24 @@ QueryResult DnsResponseEngine::parse_question(std::span<const std::uint8_t> quer
     if(question.klass!=CLASS_IN) return QueryResult::Refused;
     if(!name_matches_zone(question.name)) {
         const auto suffix="."+config_.zone;
-        if(question.name.size()>suffix.size() && question.name.compare(question.name.size()-suffix.size(),suffix.size(),suffix)==0)
-            return QueryResult::NameError;
-        return QueryResult::Refused;
+        if(question.name.size()<=suffix.size() || question.name.compare(question.name.size()-suffix.size(),suffix.size(),suffix)!=0)
+            return QueryResult::Refused;
+        const auto label=std::string_view(question.name).substr(0,question.name.size()-suffix.size());
+        // Names were lowercased above. One label, x plus 1..16 hex digits,
+        // bounds the mask to uint64_t and rejects nested names/signs/overflow.
+        if(label.size()<2 || label.size()>17 || label[0]!='x') return QueryResult::NameError;
+        std::uint64_t mask=0;
+        for(const char c:label.substr(1)) {
+            unsigned digit;
+            if(c>='0' && c<='9') digit=static_cast<unsigned>(c-'0');
+            else if(c>='a' && c<='f') digit=static_cast<unsigned>(c-'a'+10);
+            else return QueryResult::NameError;
+            mask=(mask<<4)|digit;
+        }
+        question.required_services=mask;
+        question.service_filter=true;
+        // These are address-selection names, not additional zone apexes.
+        if(question.type!=TYPE_A && question.type!=TYPE_AAAA) return QueryResult::NoData;
     }
     if(question.type!=TYPE_A && question.type!=TYPE_AAAA && question.type!=2 && question.type!=6) return QueryResult::NoData;
     return QueryResult::Answered;
@@ -136,6 +154,7 @@ QueryResult DnsResponseEngine::parse_question(std::span<const std::uint8_t> quer
 std::vector<DnsAnswer> DnsResponseEngine::select_answers(const DnsQuestion& q, const DnsSnapshot& snapshot) const {
     std::vector<DnsAnswer> out;
     for (const auto& p : snapshot.peers) {
+        if ((p.services & q.required_services) != q.required_services) continue;
         const bool match = (q.type == TYPE_A && is_ipv4(p.host)) || (q.type == TYPE_AAAA && is_ipv6(p.host));
         if (!match) continue;
         boost::system::error_code ec; auto a=boost::asio::ip::make_address(p.host,ec); if(ec) continue;
