@@ -93,15 +93,15 @@ struct PeerCrawler::Impl : std::enable_shared_from_this<PeerCrawler::Impl> {
     }
 
     bool add_addrv2(const protocol::AddrV2Address& address, CandidateSource source = CandidateSource::PeerExchange) {
-        if (candidates.size() >= cfg.max_candidates) return false;
+        if (address.port==0 || candidates.size() >= cfg.max_candidates) return false;
         auto c = make_addrv2_candidate(address, source);
+        const auto key = c.key();
+        auto it = candidates.find(key);
+        if (it != candidates.end()) return false;
         if (c.network == CandidateNetwork::TorV3) ++stats.torv3_candidates;
         if (c.network == CandidateNetwork::I2P) ++stats.i2p_candidates;
         if (c.network == CandidateNetwork::IPv4) ++stats.ipv4_candidates;
         if (c.network == CandidateNetwork::IPv6) ++stats.ipv6_candidates;
-        const auto key = c.key();
-        auto it = candidates.find(key);
-        if (it != candidates.end()) return false;
         candidates.emplace(key, std::move(c));
         ++stats.candidates_total;
         auto& inserted = candidates.at(key);
@@ -115,7 +115,11 @@ struct PeerCrawler::Impl : std::enable_shared_from_this<PeerCrawler::Impl> {
 
     bool add(std::string host, std::uint16_t port, CandidateSource source) {
         if (host.empty() || host.size() > protocol::limits::max_host_size || port == 0 || candidates.size() >= cfg.max_candidates) return false;
-        std::string key = host + ":" + std::to_string(port);
+        PeerCandidate c; c.host=std::move(host); c.port=port; c.source=source;
+        c=c.canonicalized();
+        if(c.network==CandidateNetwork::Unknown)c.network=is_ipv6(c.host)?CandidateNetwork::IPv6:CandidateNetwork::IPv4;
+        c.state=c.transport_probe_supported()?CandidateState::Queued:CandidateState::AwaitingTransport;
+        const std::string key=c.key();
         auto it = candidates.find(key);
         if (it != candidates.end()) {
             if (it->second.state == CandidateState::Failed || it->second.state == CandidateState::Cooldown) {
@@ -127,13 +131,13 @@ struct PeerCrawler::Impl : std::enable_shared_from_this<PeerCrawler::Impl> {
             }
             return false;
         }
-        PeerCandidate c; c.host=std::move(host); c.port=port; c.source=source; c.network=is_ipv6(c.host) ? CandidateNetwork::IPv6 : CandidateNetwork::IPv4; c.state=CandidateState::Queued;
         candidates.emplace(key, c);
-        queue.push_back(key);
         ++stats.candidates_total;
-        ++stats.queued;
-        if (candidates.at(key).network == CandidateNetwork::IPv6) ++stats.ipv6_candidates;
-        else ++stats.ipv4_candidates;
+        if(c.state==CandidateState::Queued){queue.push_back(key);++stats.queued;}
+        if(c.network==CandidateNetwork::IPv4)++stats.ipv4_candidates;
+        if(c.network==CandidateNetwork::IPv6)++stats.ipv6_candidates;
+        if(c.network==CandidateNetwork::TorV3)++stats.torv3_candidates;
+        if(c.network==CandidateNetwork::I2P)++stats.i2p_candidates;
         if (running) pump();
         return true;
     }
@@ -320,21 +324,30 @@ bool PeerCrawler::add_candidate(std::string host, std::uint16_t port, CandidateS
     return impl_->add(std::move(host), port, source);
 }
 bool PeerCrawler::add_addrv2_candidate(const protocol::AddrV2Address& address) {
-    if (impl_->candidates.size() >= impl_->cfg.max_candidates) return false;
+    if (address.port==0 || impl_->candidates.size() >= impl_->cfg.max_candidates) return false;
     auto c = make_addrv2_candidate(address);
+    const auto key = c.key();
+    if (impl_->candidates.find(key) != impl_->candidates.end()) return false;
     if (c.network == CandidateNetwork::TorV3) ++impl_->stats.torv3_candidates;
     if (c.network == CandidateNetwork::I2P) ++impl_->stats.i2p_candidates;
     if (c.network == CandidateNetwork::IPv4) ++impl_->stats.ipv4_candidates;
     if (c.network == CandidateNetwork::IPv6) ++impl_->stats.ipv6_candidates;
-    const auto key = c.key();
-    if (impl_->candidates.find(key) != impl_->candidates.end()) return false;
     impl_->candidates.emplace(key, std::move(c));
     ++impl_->stats.candidates_total;
     if (impl_->candidates.at(key).state == CandidateState::Queued) { ++impl_->stats.queued; impl_->queue.push_back(key); }
     return true;
 }
 void PeerCrawler::add_candidates(const std::vector<PeerCandidate>& cs) {
-    for (const auto& c : cs) {
+    for (const auto& input : cs) {
+        auto c=input.canonicalized();
+        if(c.port==0)continue;
+        if(!c.address_bytes.empty() && !c.endpoint()) {
+            // Preserve future ADDRv2 networks without sending them to an IP resolver.
+            if(c.network!=CandidateNetwork::Unknown)continue;
+            c.state=CandidateState::AwaitingTransport;
+            if(impl_->candidates.size()<impl_->cfg.max_candidates && impl_->candidates.emplace(c.key(),c).second)++impl_->stats.candidates_total;
+            continue;
+        }
         if (c.network == CandidateNetwork::IPv4 || c.network == CandidateNetwork::IPv6 || c.network == CandidateNetwork::Unknown) {
             add_candidate(c.host, c.port, c.source);
             continue;
@@ -346,8 +359,7 @@ void PeerCrawler::add_candidates(const std::vector<PeerCandidate>& cs) {
         ++impl_->stats.candidates_total;
         if (c.network == CandidateNetwork::TorV3) ++impl_->stats.torv3_candidates;
         if (c.network == CandidateNetwork::I2P) ++impl_->stats.i2p_candidates;
-        ++impl_->stats.queued;
-        impl_->queue.push_back(key);
+        if(c.state==CandidateState::Queued){++impl_->stats.queued;impl_->queue.push_back(key);}
     }
     if (impl_->running) impl_->pump();
 }

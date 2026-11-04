@@ -23,6 +23,7 @@ add_library(fastseed
   src/protocol/wire_messages.cpp
   src/protocol/addrv2.cpp
   src/protocol/conformance.cpp
+  src/peer/endpoint.cpp
   src/crawler/candidate.cpp
   src/crawler/crawler.cpp
   src/crawler/scheduler.cpp
@@ -268,6 +269,13 @@ foreach(codec IN ITEMS serializer codec wire)
   target_link_libraries(protocol_${codec}_tests PRIVATE fastseed)
   add_test(NAME protocol_${codec}_tests COMMAND protocol_${codec}_tests)
   set_tests_properties(protocol_${codec}_tests PROPERTIES TIMEOUT 60)
+endforeach()
+
+foreach(peer_suite IN ITEMS identity cache selection)
+  add_executable(peer_${peer_suite}_tests tests/peer/test_${peer_suite}.cpp)
+  target_link_libraries(peer_${peer_suite}_tests PRIVATE fastseed)
+  add_test(NAME peer_${peer_suite}_tests COMMAND peer_${peer_suite}_tests)
+  set_tests_properties(peer_${peer_suite}_tests PROPERTIES TIMEOUT 60)
 endforeach()
 
 # Configuration tests read this relative to their build-directory working directory.

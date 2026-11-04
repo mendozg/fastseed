@@ -41,6 +41,8 @@ enable_tor_transport = false
 enable_i2p_transport = false
 
 [cache]
+# Total entries across all health states (1..1000000).
+max_peers = 100000
 hot_ipv4 = 1000
 hot_ipv6 = 500
 warm_max = 10000

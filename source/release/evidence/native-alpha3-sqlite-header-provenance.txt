@@ -1,0 +1,4 @@
+Header only for native compile-only database test checks; SQLite tests were not linked/executed.
+URL: https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-sqlite3-3.54.0-1-any.pkg.tar.zst
+Package SHA256: fc7100490316733bbb96d5633d305a5d6c579200c321969cfa21d5a128055e65
+Header SHA256: c97e75e03cc713586153da3f8d4bda0fe6de6998329392d2160588dd3b795160

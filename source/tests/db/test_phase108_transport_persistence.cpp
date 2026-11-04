@@ -34,7 +34,7 @@ int main() {
     db.save_batch({tor, i2p});
     db.close();
 
-    sqlite3* raw = nullptr; assert(sqlite3_open(path.c_str(), &raw) == SQLITE_OK);
+    sqlite3* raw = nullptr; assert(sqlite3_open(path.string().c_str(), &raw) == SQLITE_OK);
     sqlite3_stmt* st = nullptr; assert(sqlite3_prepare_v2(raw, "SELECT MAX(version) FROM schema_version", -1, &st, nullptr) == SQLITE_OK);
     assert(sqlite3_step(st) == SQLITE_ROW && sqlite3_column_int(st,0) == 4); sqlite3_finalize(st); sqlite3_close(raw);
 
@@ -57,7 +57,7 @@ int main() {
     // Exercise automatic v2 -> current v4 migration on an existing-style database.
     const auto legacy = std::filesystem::temp_directory_path() / "bsty_fastseed_phase108_v2.sqlite3";
     std::filesystem::remove(legacy, ec);
-    sqlite3* olddb = nullptr; assert(sqlite3_open(legacy.c_str(), &olddb) == SQLITE_OK);
+    sqlite3* olddb = nullptr; assert(sqlite3_open(legacy.string().c_str(), &olddb) == SQLITE_OK);
     const char* schema = R"SQL(
 CREATE TABLE schema_version(version INTEGER NOT NULL);
 INSERT INTO schema_version VALUES(2);

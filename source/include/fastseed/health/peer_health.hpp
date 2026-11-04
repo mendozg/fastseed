@@ -9,6 +9,8 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
+#include <map>
+#include <set>
 
 namespace fastseed::health {
 
@@ -39,6 +41,7 @@ struct HealthConfig {
     double cooldown_multiplier{2.0};
     std::size_t quarantine_after_failures{3};
     std::size_t latency_history_size{32};
+    std::size_t max_peers{100000}; // All states, including candidates and quarantine.
 };
 
 struct PeerHealth {
@@ -79,6 +82,8 @@ struct PeerHealth {
     std::string transport_last_error;
 
     std::string key() const;
+    std::optional<peer::Endpoint> endpoint() const;
+    std::optional<core::PeerId> id() const;
     bool fresh(std::chrono::system_clock::time_point now,
                std::chrono::seconds max_age = std::chrono::seconds(1800)) const noexcept;
     double availability() const noexcept;
@@ -98,6 +103,16 @@ struct HealthStats {
     std::uint64_t failed_probes{};
 };
 
+struct SelectionPolicy {
+    std::size_t max_results{1000};
+    bool include_warm{true};
+    std::uint64_t required_services{};
+    bool ipv4{true}, ipv6{true}, tor_v3{false}, i2p{false};
+    std::chrono::seconds freshness{1800};
+    // Optional /16 IPv4, /32 IPv6 group cap. Zero disables this cap.
+    std::size_t max_per_ip_group{};
+};
+
 class PeerHealthCache {
 public:
     explicit PeerHealthCache(HealthConfig config = {});
@@ -112,6 +127,9 @@ public:
 
     bool contains(const std::string& key) const;
     const PeerHealth* find(const std::string& key) const noexcept;
+    const PeerHealth* find(const core::PeerId& id) const noexcept;
+    std::vector<PeerHealth> select_snapshot(const SelectionPolicy& policy,
+        std::chrono::system_clock::time_point now = std::chrono::system_clock::now()) const;
 
     std::vector<PeerHealth> snapshot() const;
     std::vector<PeerHealth> hot_snapshot() const;
@@ -125,10 +143,11 @@ public:
 
 private:
     HealthConfig config_;
-    std::unordered_map<std::string, PeerHealth> peers_;
+    std::map<core::PeerId, PeerHealth> peers_;
+    std::set<core::PeerId> locally_observed_;
 
-    PeerHealth& get_or_create(const crawler::PeerCandidate& candidate,
-                              std::chrono::system_clock::time_point now);
+    PeerHealth* get_or_create(const crawler::PeerCandidate& candidate,
+                              std::chrono::system_clock::time_point now, bool local_probe);
     void trim();
     void recalculate(PeerHealth& peer);
 };
