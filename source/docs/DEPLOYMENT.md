@@ -1,8 +1,32 @@
-# Alpha deployment status
+# Alpha3 development deployment
 
-2.0.0-alpha2 is for isolated development testing. These inherited installation
-procedures are not a recommendation to upgrade production seeders to this alpha.
-Reboot recovery and live Tor/I2P: NOT TESTED.
+2.0.0-alpha3 is an isolated development milestone. First verify the archive
+hashes and source manifest, then run both release and sanitizer gates on the
+destination Ubuntu host. Do not run tests with sudo. Expected CTest count: 57.
+
+```bash
+python3 source/scripts/verify-source.py
+bash scripts/release-gate.sh
+bash scripts/sanitizer-gate.sh
+```
+
+These commands assume the distribution/repository root. If already inside
+`source/`, use `python3 scripts/verify-source.py` for the first command.
+The gates do not install or restart a service. Expected version is
+`BSTY-FastSeed 2.0.0-alpha3 (Development)`.
+
+Use a separate configuration, database and unprivileged DNS port for alpha
+testing. `cache.max_peers` is optional (default 100000, accepted 1..1000000).
+Existing configuration files remain valid. SQLite schema is unchanged; endpoint
+aliases merge only in memory and are not removed from the on-disk database.
+Back up the database before testing and never share it between running processes.
+Keep the known v1.0.0 binary/config/database for rollback.
+
+Review `release/V2-VERIFICATION.txt` for local results; run Ubuntu CI on the exact
+alpha3 branch before deployment. Historical v1 results below do not validate
+this alpha. Reboot recovery and live Tor/I2P: **NOT TESTED**.
+
+## Historical v1 deployment instructions
 
 # Deploying BSTY-FastSeed v1.0.0
 

@@ -49,6 +49,7 @@ struct SeederIdTag {};
 using PeerId = Identifier<PeerIdTag>;
 using SeederId = Identifier<SeederIdTag>;
 // IDs are storage types only. Construction is not identity authentication.
-// Canonical PeerId derivation and signed SeederId verification are later stages.
+// peer::Endpoint derives PeerId from canonical endpoint bytes. SeederId verification
+// remains a later stage; neither type by itself authenticates a remote peer.
 
 } // namespace fastseed::core

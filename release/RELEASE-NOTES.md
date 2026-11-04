@@ -1,3 +1,21 @@
+# 2.0.0-alpha3 — development milestone, Stage 14.3
+
+- Canonical endpoint/PeerId model for IPv4, IPv6, Tor v3 and ordinary I2P base32.
+- Normalize IP aliases, validate Tor checksum/version and I2P padding bits.
+- Key the health cache by endpoint ID; bridge existing textual lookup keys.
+- Preserve local health/quarantine on rediscovery and prefer current local probes
+  over restored aliases. Keep the existing SQLite schema.
+- Bound all cache states with optional `cache.max_peers` (default 100000), retain
+  per-state limits and enforce independent IPv4/IPv6 hot quotas.
+- Add service/freshness/network selection, optional IP prefix diversity and stable
+  ordering; DNS excludes overlay addresses. Saturate counters and bound history.
+- Canonicalize crawler insertion/deduplication and count only inserted addresses.
+- Add three peer suites (57 total), five independent ID vectors and two overlay
+  hostname vectors. Keep the alpha2 interop version repair.
+- Fix two test helper naming conflicts and the existing Windows logger time call; use narrow SQLite fixture paths.
+- See release/V2-VERIFICATION.txt for executed results and pending Ubuntu gates.
+  Reboot recovery and live Tor/I2P remain NOT TESTED.
+
 ## 2.0.0-alpha2 interopfix-r1
 
 Correct the interoperability test's stale `/BSTYFastSeed:0.1/` expectation.

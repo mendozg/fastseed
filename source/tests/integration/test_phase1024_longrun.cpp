@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 
-static fastseed::health::PeerHealth peer(const std::string& host, fastseed::crawler::CandidateNetwork n) {
+static fastseed::health::PeerHealth make_health_peer(const std::string& host, fastseed::crawler::CandidateNetwork n) {
     fastseed::health::PeerHealth p; p.host=host; p.port=8226; p.network=n; p.state=fastseed::health::PeerState::Warm; return p;
 }
 
@@ -20,9 +20,9 @@ int main() {
     fc.learning_half_life=1h;
     crawler::AdaptiveCapacityController controller(fc); crawler::AdaptiveProbeScheduler scheduler(sc);
     std::vector<health::PeerHealth> peers;
-    for(int i=0;i<30;++i) peers.push_back(peer("10.10.0."+std::to_string(i+1), crawler::CandidateNetwork::IPv4));
-    for(int i=0;i<9;++i) peers.push_back(peer("onion:p"+std::to_string(i), crawler::CandidateNetwork::TorV3));
-    for(int i=0;i<9;++i) peers.push_back(peer("i2p:p"+std::to_string(i), crawler::CandidateNetwork::I2P));
+    for(int i=0;i<30;++i) peers.push_back(make_health_peer("10.10.0."+std::to_string(i+1), crawler::CandidateNetwork::IPv4));
+    for(int i=0;i<9;++i) peers.push_back(make_health_peer("onion:p"+std::to_string(i), crawler::CandidateNetwork::TorV3));
+    for(int i=0;i<9;++i) peers.push_back(make_health_peer("i2p:p"+std::to_string(i), crawler::CandidateNetwork::I2P));
     auto now=std::chrono::system_clock::now();
     std::uint64_t previous_cycles=0, previous_used=0;
     // 7 simulated days at 5-minute scheduling intervals.

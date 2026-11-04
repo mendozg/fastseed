@@ -1,105 +1,55 @@
-BSTY-FastSeed 2.0.0-alpha2 interopfix-r1 — 2026-10-30
+BSTY-FastSeed v2.0.0-alpha3 — Stage 14.3 verification
+Recorded UTC: 2026-10-31T18:52:03+00:00
 
-Issue: phase13_interop_tests still asserted /BSTYFastSeed:0.1/ after alpha2
-changed the advertised user agent to /BSTYFastSeed:2.0.0-alpha2/.
-The old assertion was reproduced locally on the delivered alpha2 source.
-Fix: include core/version.hpp in the test and derive its expected agent from
-core::version. The test still checks the actual bytes decoded from the socket.
-Runtime code and wire behavior are unchanged by this correction.
+Actual source baseline: delivered alpha2 interopfix-r1, local packaging commit
+7f1ff5ed5595becd4b34354c25ab2ad99e51e66e. This is not a claim that this commit is on GitHub.
+No repository push, tag, production deployment, service restart or reboot was performed.
 
-ACTUALLY RUN FOR THIS CORRECTION
-- Before fix: reproduced the stale user-agent assertion failure.
-- Fixed phase13_interop_tests: Debug 20/20 PASS.
-- Fixed phase13_interop_tests: Release 20/20 PASS, assertions enabled.
-- Fixed phase13_interop_tests: AddressSanitizer 20/20 PASS, no ASan diagnostics.
-- Native Windows x86_64, Clang 23.1.4, Boost 1.90.0, OpenSSL 3.5.4.
-- Test compiled against the same alpha2 protocol objects used in the earlier runs.
-- Logs: source/release/evidence/alpha2-interopfix-{before,debug,release,asan}.log.
-The first reproduction attempt was blocked by local socket permissions; after
-network access was granted, the original assertion was reproduced as shown.
+EXECUTED LOCALLY BY THE PACKAGING AGENT
+Host: Windows x86_64; LLVM-MinGW 20261020, Clang 23.1.4, C++20.
+Dependencies: Boost 1.90.0, OpenSSL 3.5.4; package hashes recorded in evidence.
+- Native Debug: 53/53 selected executable suites PASS.
+- Native Release (-O2, assertions retained with -UNDEBUG): 53/53 PASS.
+- Native AddressSanitizer (-O1 -g -fsanitize=address): 53/53 PASS.
+- The three new suites assert 56 endpoint/ID, 25 cache and 18 selection checks
+  per profile: 99 new checks. Five independently generated ID/preimage fixtures
+  and two overlay hostname fixtures compare Python and C++ implementations.
+- Existing protocol, health, crawler/scheduler, mock transports, DNS, federation,
+  configuration, security and simulated long-run suites are included. The exact
+  alpha2 interoperability test passes with the alpha3 version identity.
+- Four database test translation units compiled with the native compiler,
+  including the SQLite header. They were NOT LINKED OR EXECUTED.
+- Protocol/peer fixture regeneration checks, version consistency, Python AST,
+  Bash grammar parsing and actionlint: PASS. Bash parsing is not execution.
 
-NOT RUN FOR THIS CORRECTION
-- Full 54-test Ubuntu release gate and full Linux ASan/UBSan gate.
-- Other component suites were not rerun for this test-only correction.
-- Reboot recovery and live Tor/I2P: NOT TESTED.
-Earlier alpha2 results below are prior evidence, not reruns for this correction.
+LIMITS / NOT RUN
+These are native component builds using 27 library/canary source files. They are
+not a full application build, a CTest run, or a Linux release/sanitizer gate.
+The database implementation uses POSIX locking and was excluded from the native
+library. The four unexecuted CTest suites are phase4_tests,
+phase105_persistence_tests, phase108_db_transport_tests and phase1014_integrity_tests.
+The complete CMake suite contains 57 registered tests.
+Full Ubuntu 22.04/GCC11, Ubuntu 24.04 and Ubuntu 26.04 gates: NOT RUN for alpha3.
+WSL access failed with Wsl/E_ACCESSDENIED. No Ubuntu success is inferred from
+native Windows results or historical v1/alpha2 operator logs.
+Linux ASan/UBSan, complete application/DNS CLI smoke and deployment: NOT RUN.
+Reboot recovery: NOT TESTED. Live Tor/I2P: NOT TESTED.
+No new live mainnet canary, production load benchmark or fuzz campaign was run.
+Simulated/mock suites do not establish live network or reboot recovery.
 
-After applying the patch, from repository root on Ubuntu:
-  python3 source/scripts/verify-source.py
-  cmake --build source/build-release --target phase13_interop_tests -j2
-  ctest --test-dir source/build-release -R '^phase13_interop_tests$' --output-on-failure --repeat until-fail:20
-  bash scripts/release-gate.sh
-  bash scripts/sanitizer-gate.sh
-If already inside source/, omit the source/ prefix and use bash scripts/... there.
+EVIDENCE (repository paths)
+source/release/evidence/native-alpha3-{debug,release,asan}.log
+source/release/evidence/native-alpha3-{debug,release,asan}-summary.txt
+source/release/evidence/native-alpha3-inputs.sha256
+source/release/evidence/native-alpha3-*-runner.py (exact local harnesses)
+source/release/evidence/native-alpha3-dependencies.txt and SQLite header provenance
+source/release/evidence/native-alpha3-static-validation.log
+source/release/evidence/native-alpha3-database-compile-only.log
+Harness paths describe this Windows workspace; production verification uses
+scripts/release-gate.sh and scripts/sanitizer-gate.sh on Ubuntu. Historical
+evidence remains unchanged; V2-ALPHA2-VERIFICATION.txt preserves its old report.
 
-EARLIER ALPHA2 VERIFICATION
-
-BSTY-FastSeed 2.0.0-alpha2 — Stage 14.2 verification
-Date: 2026-10-30
-Status: development milestone; not a production release.
-Input: the actual delivered alpha1 source tree 1fbd37503772eead4b0bc6a70f71ae7e70ec428d.
-Original GitHub baseline: 7b027ae6acb120532c5342a17d7b8a52c9d993a7.
-
-ACTUALLY COMPILED AND RUN LOCALLY
-Windows x86_64, LLVM-MinGW 20261020 / Clang 23.1.4, C++20,
-Boost headers 1.90.0, OpenSSL 3.5.4 UCRT dynamic library.
-
-Debug: 11 targeted executable suites PASS.
-Release: the same 11 targeted executable suites PASS; existing assert checks enabled.
-- core foundation: 15 checks per run.
-- alpha2 serializer: 113 checks per run.
-- alpha2 frame codec: 2539 checks per run (includes split/chunk loops).
-- alpha2 payload codec: 207 checks per run.
-- existing phase1, phase11, phase12, phase13, phase101, phase102 protocol suites: PASS.
-- existing probe handshake integration: 26 local direct/connected scenarios PASS.
-
-Native AddressSanitizer: 5 targeted executable suites PASS, no ASan diagnostics.
-- core foundation and all three alpha2 suites above.
-- the 26-scenario local probe handshake integration suite.
-The six older protocol suites were not separately run with ASan.
-OpenSSL is a prebuilt external library, not instrumented by these builds.
-This is Windows ASan testing, not Linux ASan/UBSan or leak-recovery verification.
-
-All changed protocol translation units and the new suites built with
--Wall -Wextra -Wpedantic -Werror. Existing test_phase12.cpp has an unused v6
-helper warning; legacy tests retain warnings without -Werror. The first local
-Debug attempt stopped on that warning under -Werror; the final runs above
-use the corrected harness warning policy. No source change hid the warning.
-
-ADDITIONAL CHECKS ACTUALLY RUN
-- Nine independently generated Python struct/hashlib byte fixtures: PASS.
-- Version consistency script: PASS.
-- actionlint 1.7.12: PASS (shellcheck and pyflakes disabled).
-- Both Linux gate scripts parsed with tree-sitter-bash: PASS; not executed.
-- Python syntax checks for vector generator, metadata and packaging scripts: PASS.
-
-PENDING / NOT RUN FOR THIS REVISION
-- Full application build and complete 54-test CMake/CTest suite.
-- Ubuntu 22.04/GCC11, Ubuntu 24.04, Ubuntu 26.04 release/sanitizer CI jobs.
-- Full Linux ASan/UBSan suite and application DNS smoke gate.
-- Deployment, public-network BSTY handshake and live DNS checks of alpha2.
-- Fuzz campaigns, sustained load tests and performance benchmarks.
-WSL still returns Wsl/E_ACCESSDENIED in this workspace.
-54 is the suite's configured test count, not a claimed completed CTest run.
-
-Reboot recovery: NOT TESTED.
-Live Tor/I2P connections: NOT TESTED. Binary address tests and loopback mock
-handshakes do not establish overlay connectivity.
-Mesh v2, signed seeder identities, config v2 and persistence migration: NOT IMPLEMENTED.
-Existing schema and federation v1 formats are retained.
-
-EVIDENCE
-source/release/evidence/alpha2-native-{debug,release,asan}.log:
-  exact compiler commands and output for core/protocol suites.
-source/release/evidence/alpha2-handshake-{debug,release,asan}.log:
-  exact compiler commands and output for local probe integration.
-source/release/evidence/alpha2-build-dependencies.txt:
-  dependency sources, versions, package sizes and SHA256 hashes.
-Historical v1 operator logs and V2-ALPHA1-VERIFICATION.txt concern older source.
-
-RUN ON UBUNTU FROM source/
-  python3 scripts/verify-source.py
-  bash scripts/release-gate.sh
-  bash scripts/sanitizer-gate.sh
-Push feature/v2-protocol-codec for the existing six-job Ubuntu CI matrix.
-Review that revision's logs before merging or tagging a verified prerelease.
+REQUIRED BEFORE PROMOTING THIS ALPHA
+Run both root gate scripts on the exact candidate branch, without sudo, and
+review all six Ubuntu CI matrix results. Expect 57 CTest suites in each gate.
+Keep production seeders on the known v1.0.0 deployment during alpha validation.

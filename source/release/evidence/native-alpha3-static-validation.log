@@ -1,0 +1,23 @@
+PASS Bash grammar: deploy-fastseed.sh
+PASS Bash grammar: scripts/release-gate.sh
+PASS Bash grammar: scripts/sanitizer-gate.sh
+PASS Bash grammar: scripts/verify-gatefix.sh
+PASS Bash grammar: source/deploy-fastseed.sh
+PASS Bash grammar: source/scripts/install-systemd.sh
+PASS Bash grammar: source/scripts/rc-gate.sh
+PASS Bash grammar: source/scripts/release-gate.sh
+PASS Bash grammar: source/scripts/sanitizer-gate.sh
+PASS Bash grammar: source/scripts/verify-gatefix.sh
+PASS Python AST: .github/scripts/package-source.py
+PASS Python AST: source/scripts/verify-source.py
+PASS Python AST: source/scripts/verify-version.py
+PASS Python AST: source/tests/dns/test_dns_smoke.py
+PASS Python AST: source/tests/peer/generate_vectors.py
+PASS Python AST: source/tests/protocol/generate_vectors.py
+Version consistency PASS: 2.0.0-alpha3
+
+PASS: nine independent protocol fixtures
+
+PASS: five independent endpoint/PeerId vectors and two overlay hostnames
+
+Actionlint 1.7.12: PASS

@@ -1,14 +1,14 @@
-2.0.0-alpha2 implements Stage 14.2 protocol codecs and regression vectors.
-Mesh v2, signed identities, config v2 and persistence migration remain pending.
+2.0.0-alpha3 implements Stage 14.3 canonical endpoints, PeerIds, health/cache
+and policy-based selection. It includes the alpha2 protocol codec and interop fix.
+Mesh v2, signed seeder identities, config v2 and database migration remain pending.
 
-Source release built from the tagged commit after release and ASan/UBSan gates
-passed on Ubuntu 22.04, 24.04 and 26.04. See this tag's Actions run for exact
-compiler/library versions and verification logs. Archives contain source only.
+Required tag gates: Release and ASan/UBSan on Ubuntu 22.04, 24.04 and 26.04.
+See the corresponding Actions run and release/V2-VERIFICATION.txt for actual
+results; historical logs and test counts do not verify this revision.
+Archives contain source only. Production deployment remains manual.
 
-Reboot recovery: NOT TESTED.
-Live Tor/I2P connections: NOT TESTED.
-CI component/mock tests do not establish live overlay connectivity.
-Production deployment remains manual.
+Reboot recovery: NOT TESTED. Live Tor/I2P connections: NOT TESTED.
+Component/mock tests do not establish live overlay connectivity.
 
-Before publishing this draft, add the version-specific changes and review the
-attached archives and SHA256SUMS.txt. Existing releases are never overwritten.
+Before publishing this draft, review its Actions results, changes, attached
+archives and SHA256SUMS.txt. Existing releases are never overwritten.

@@ -36,7 +36,7 @@ int main() {
           << "[dns]\nlisten_address = \"127.0.0.1\"\nlisten_port = 5353\n"
           << "max_answers = 8\nmax_response_size = 1232\n"
           << "[crawler]\nmax_concurrent_probes = 4\nmax_open_connections = 8\nmax_candidates = 100\n"
-          << "[cache]\nhot_ipv4 = 4\n[health]\nfreshness_seconds = 1800\n"
+          << "[cache]\nhot_ipv4 = 4\nmax_peers = 12345\n[health]\nfreshness_seconds = 1800\n"
           << "[database]\npath = \"test.db\"\n";
     }
     errors.clear();
@@ -44,6 +44,7 @@ int main() {
     assert(cfg.has_value());
     assert(cfg->dns.server.bind_address.to_string() == "127.0.0.1");
     assert(cfg->dns.server.port == 5353);
+    assert(cfg->health.max_peers == 12345);
     std::remove(good.c_str());
 
     const std::string bad = "config-test-bad.toml";
@@ -59,5 +60,11 @@ int main() {
     assert(errors.size() >= 4);
     std::remove(bad.c_str());
 
+    for(const char* value:{"0","1000001","-1"}) {
+        {std::ofstream f(bad);f << "[cache]\nmax_peers = " << value << "\n";}
+        errors.clear();cfg=fastseed::config::load_file(bad,errors);
+        assert(!cfg.has_value() && !errors.empty());
+        std::remove(bad.c_str());
+    }
     std::cout << "phase_config_tests: PASS\n";
 }

@@ -1,21 +1,29 @@
-# BSTY-FastSeed 2.0.0-alpha2 — protocol codec
+# BSTY-FastSeed 2.0.0-alpha3 — canonical peers and health
 
-Revision: **interopfix-r1**, correcting the interoperability test version expectation.
+Stage 14.3 adds canonical IPv4/IPv6/Tor v3/I2P endpoints, domain-separated
+PeerIds, a bounded cache keyed by those IDs, and policy-based peer selection.
+Equivalent IP spellings share health history. Rediscovery preserves local
+validation and quarantine. DNS continues to select eligible IPv4/IPv6 peers.
+Alpha2's protocol codec and interoperability version fix are included.
 
-Development milestone Stage 14.2 builds on alpha1's core foundation. It adds
-bounded serialization, canonical CompactSize, strict shared header validation,
-incremental frame decoding and independent known-byte regression vectors.
-The existing BSTY P2P protocol (70016 / port 8226) and DNS runtime are retained.
+Read [the peer contract](docs/ALPHA3-PEERS.md), [the roadmap](docs/V2-ROADMAP.md)
+and [the executed verification results](release/V2-VERIFICATION.txt).
+Existing config files remain valid; `[cache] max_peers` defaults to 100000.
+The SQLite schema and v1 federation format are retained. Mesh v2, signed seeder
+identities, config v2 and persistence migration remain future milestones.
 
-Read [the protocol contract](docs/ALPHA2-PROTOCOL.md),
-[the roadmap](docs/V2-ROADMAP.md) and [verification results](release/V2-VERIFICATION.txt).
-Mesh v2, signed identities, config v2 and persistence migration remain future work.
-The new frame decoder is available for the session integration in Stage 14.4.
+Run the gates from this directory on an isolated Ubuntu development checkout:
 
-Use an isolated development deployment. Keep production seeders on v1.0.0 until
-the new revision passes its own Ubuntu CI and integration gates. Existing config
-and database schemas are retained. The legacy --self-test acknowledgement does
-not run the comprehensive tests: use scripts/release-gate.sh and sanitizer-gate.sh.
+```bash
+bash scripts/release-gate.sh
+bash scripts/sanitizer-gate.sh
+```
+
+Expected identity: `BSTY-FastSeed 2.0.0-alpha3 (Development)`.
+There are 57 registered CTest suites; this count is not a completed-test claim.
+The legacy `--self-test` acknowledgement does not run these gates.
+Use the existing Ubuntu 22.04/24.04/26.04 CI matrix for this exact revision.
+Keep production seeders on v1.0.0 while alpha integration is being validated.
 
 Reboot recovery and live Tor/I2P connections: **NOT TESTED**.
 

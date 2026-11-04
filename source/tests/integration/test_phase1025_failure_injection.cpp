@@ -9,7 +9,7 @@
 using namespace fastseed;
 using namespace std::chrono_literals;
 
-static health::PeerHealth peer(const std::string& host, crawler::CandidateNetwork n) {
+static health::PeerHealth make_health_peer(const std::string& host, crawler::CandidateNetwork n) {
     health::PeerHealth p;
     p.host = host; p.port = 8226; p.network = n; p.state = health::PeerState::Warm;
     return p;
@@ -69,9 +69,9 @@ int main() {
     sc.direct_tcp = {40, 40}; sc.tor_socks5 = {12, 12}; sc.i2p_sam = {12, 12}; sc.exploration_rotation = 60s;
     crawler::AdaptiveProbeScheduler scheduler(sc);
     std::vector<health::PeerHealth> peers;
-    for (int i = 0; i < 50; ++i) peers.push_back(peer("10.25.0." + std::to_string(i + 1), crawler::CandidateNetwork::IPv4));
-    for (int i = 0; i < 15; ++i) peers.push_back(peer("onion:p" + std::to_string(i), crawler::CandidateNetwork::TorV3));
-    for (int i = 0; i < 15; ++i) peers.push_back(peer("i2p:p" + std::to_string(i), crawler::CandidateNetwork::I2P));
+    for (int i = 0; i < 50; ++i) peers.push_back(make_health_peer("10.25.0." + std::to_string(i + 1), crawler::CandidateNetwork::IPv4));
+    for (int i = 0; i < 15; ++i) peers.push_back(make_health_peer("onion:p" + std::to_string(i), crawler::CandidateNetwork::TorV3));
+    for (int i = 0; i < 15; ++i) peers.push_back(make_health_peer("i2p:p" + std::to_string(i), crawler::CandidateNetwork::I2P));
 
     crawler::ActiveProbeCounts active{3, 2, 1};
     auto out = scheduler.select_due(peers, c, active, std::chrono::system_clock::now());

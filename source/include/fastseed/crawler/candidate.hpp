@@ -4,6 +4,7 @@
 #include <string_view>
 #include <vector>
 #include <span>
+#include "fastseed/peer/endpoint.hpp"
 
 namespace fastseed::protocol { struct AddrV2Address; }
 
@@ -33,6 +34,8 @@ struct PeerCandidate {
         return network == CandidateNetwork::IPv4 || network == CandidateNetwork::IPv6;
     }
     std::string key() const;
+    std::optional<peer::Endpoint> endpoint() const;
+    PeerCandidate canonicalized() const;
 };
 
 PeerCandidate make_addrv2_candidate(const protocol::AddrV2Address& address,
