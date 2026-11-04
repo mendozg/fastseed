@@ -255,6 +255,11 @@ target_link_libraries(dns_compat_tests PRIVATE fastseed)
 add_test(NAME dns_compat_tests COMMAND dns_compat_tests)
 set_tests_properties(dns_compat_tests PROPERTIES TIMEOUT 30)
 
+add_executable(dns_service_filter_tests tests/dns/test_service_filter.cpp)
+target_link_libraries(dns_service_filter_tests PRIVATE fastseed)
+add_test(NAME dns_service_filter_tests COMMAND dns_service_filter_tests)
+set_tests_properties(dns_service_filter_tests PROPERTIES TIMEOUT 30)
+
 add_executable(core_foundation_tests tests/core/test_foundation.cpp)
 target_include_directories(core_foundation_tests PRIVATE include)
 target_compile_options(core_foundation_tests PRIVATE -Wall -Wextra -Wpedantic)

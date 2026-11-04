@@ -1,5 +1,29 @@
 # 2.0.0-alpha3 — development milestone, Stage 14.3
 
+## Alpha3 servicefilter-r1 — 2026-11-04
+
+Fix wallet DNS bootstrap queries such as `x9.seeder.globalboost.info`. GlobalBoost
+Core 25.x requests peers by service mask; the previous DNS engine returned
+NXDOMAIN for these names even when the base name returned healthy peers.
+
+- Accept one `x<1..16 hex digits>` label immediately below the configured zone.
+- Require every requested service bit; retain existing health/freshness eligibility.
+- Select from all DNS-eligible cached peers before applying the answer limit.
+- Keep A/AAAA, EDNS, UDP size negotiation/truncation and TCP behavior consistent.
+- Return NOERROR/SOA when a valid filter has no matching address records; reject
+  invalid/nested prefixes with NXDOMAIN and outside-zone queries with REFUSED.
+- Keep NS/SOA answers at the zone apex; filtered names have address records only.
+- Add `dns_service_filter_tests` (58 registered CTest suites in this revision).
+
+This is an alpha3 hotfix artifact revision. The binary version remains
+`2.0.0-alpha3`; use the archive/source hashes to identify this exact revision.
+No configuration, DNS delegation, database schema or peer-handshake changes.
+See [DNS filtering and upgrade checks](../docs/DNS-SERVICE-FILTER.md) and
+`release/V2-VERIFICATION.txt` for executed tests and limitations.
+Reboot recovery and live Tor/I2P remain **NOT TESTED**.
+
+## Earlier alpha3 work
+
 Documentation revision **docs-r1** adds Ubuntu port-53 diagnosis, existing
 FastSeed service handling, systemd-resolved stub configuration, DNS verification
 and rollback instructions. Runtime code and prior test evidence are unchanged.

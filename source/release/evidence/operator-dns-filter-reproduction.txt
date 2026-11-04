@@ -1,0 +1,9 @@
+Operator-supplied evidence, 2026-11-04. Not independently executed by packaging agent.
+Operator identifies installed version as v2.0.0-alpha3; no deployed binary/source hash supplied.
+dig +norecurse @127.0.0.1 seeder.globalboost.info A
+At 06:21:10 UTC: NOERROR; qr aa; ANSWER 12; AUTHORITY 0; ADDITIONAL 1; EDNS 0, UDP 1232.
+dig +norecurse @127.0.0.1 x9.seeder.globalboost.info A
+At 06:21:30 UTC: NXDOMAIN; qr aa; ANSWER 0; AUTHORITY 1; ADDITIONAL 1; EDNS 0, UDP 1232.
+Authority: seeder.globalboost.info. 60 IN SOA nsseed.globalboost.info.
+hostmaster.seeder.globalboost.info. 1 3600 600 86400 60
+This demonstrates the pre-fix deployed behavior, not successful installation of this hotfix.

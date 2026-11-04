@@ -1,4 +1,4 @@
-# FastSeed 2.0 roadmap — alpha3
+# FastSeed 2.0 roadmap â€” alpha3
 
 Recovered from the original planning discussion:
 https://chatgpt.com/share/6ae56179-19d0-83e8-b005-35c87254142b
@@ -58,7 +58,7 @@ so Ubuntu 22.04/GCC11 remains in CI. Performance targets require measurements.
 ## Verification and release status
 
 The new core contract test is registered with CTest; the complete suite now has
-57 test entries. Test count is not a claim of a completed run. Both test gates
+58 test entries with servicefilter-r1. Test count is not a claim of a completed run. Both test gates
 create a fresh private temporary directory per invocation, including sudo runs,
 and clean it on exit. This avoids cross-user fixed-name SQLite fixtures.
 

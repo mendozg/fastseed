@@ -92,7 +92,7 @@ remain Stage 14.4, and federation continues to use the existing v1 format.
 ## Verification
 
 Three new CTest suites cover canonical identities, cache behavior and selection;
-there are 57 registered suites. Both Linux gates check independent protocol
+with servicefilter-r1 there are 58 registered suites. Both Linux gates check independent protocol
 and peer fixtures. See `release/V2-VERIFICATION.txt` for actual executed results.
 Historical v1/alpha2 logs do not verify alpha3. Full Ubuntu gates, reboot recovery
 and live Tor/I2P remain unverified until separately exercised.

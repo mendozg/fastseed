@@ -1,5 +1,9 @@
 # BSTY-FastSeed 2.0.0-alpha3 — canonical peers and health
 
+Servicefilter-r1 fixes the wallet’s `x9.<zone>` DNS lookup. See the
+[filtering contract and upgrade checks](docs/DNS-SERVICE-FILTER.md).
+The version label remains alpha3; archive/source hashes identify this hotfix.
+
 Stage 14.3 adds canonical IPv4/IPv6/Tor v3/I2P endpoints, domain-separated
 PeerIds, a bounded cache keyed by those IDs, and policy-based peer selection.
 Equivalent IP spellings share health history. Rediscovery preserves local
@@ -21,7 +25,7 @@ bash scripts/sanitizer-gate.sh
 ```
 
 Expected identity: `BSTY-FastSeed 2.0.0-alpha3 (Development)`.
-There are 57 registered CTest suites; this count is not a completed-test claim.
+There are 58 registered CTest suites; this count is not a completed-test claim.
 The legacy `--self-test` acknowledgement does not run these gates.
 Use the existing Ubuntu 22.04/24.04/26.04 CI matrix for this exact revision.
 Keep production seeders on v1.0.0 while alpha integration is being validated.

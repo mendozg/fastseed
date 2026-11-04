@@ -1,3 +1,6 @@
+Alpha3 servicefilter-r1 also fixes x<hex> wallet DNS bootstrap queries.
+See docs/DNS-SERVICE-FILTER.md for the response contract and upgrade checks.
+
 2.0.0-alpha3 implements Stage 14.3 canonical endpoints, PeerIds, health/cache
 and policy-based selection. It includes the alpha2 protocol codec and interop fix.
 Mesh v2, signed seeder identities, config v2 and database migration remain pending.
