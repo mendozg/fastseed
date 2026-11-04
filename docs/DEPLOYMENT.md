@@ -26,6 +26,97 @@ Review `release/V2-VERIFICATION.txt` for local results; run Ubuntu CI on the exa
 alpha3 branch before deployment. Historical v1 results below do not validate
 this alpha. Reboot recovery and live Tor/I2P: **NOT TESTED**.
 
+## Freeing port 53 on Ubuntu
+
+First identify the process using TCP or UDP port 53:
+
+```bash
+sudo ss -lntup 'sport = :53'
+```
+
+Use the matching case below. If another process such as `named`, `dnsmasq` or a
+container owns the port, inspect that service before changing it. Do not kill an
+unidentified process. For alpha testing alongside a production seeder, use a
+separate configuration, database and unused unprivileged DNS port.
+
+### Existing FastSeed service
+
+If the listener belongs to the existing `bsty-fastseed` service and you intend
+to replace it, stop the service:
+
+```bash
+sudo systemctl stop bsty-fastseed
+```
+
+This pauses its DNS responses. Stopping it does not remove its configuration or
+database. Follow the existing-installation upgrade procedure below; freeing the
+port alone does not make the fresh-install helper suitable for an upgrade.
+
+### systemd-resolved stub listener
+
+For the usual Ubuntu setup managed by `systemd-resolved`, disable its DNS stub
+listener while keeping the resolver service running. First inspect the current
+resolver configuration and its upstream DNS file:
+
+```bash
+ls -l /etc/resolv.conf
+cat /run/systemd/resolve/resolv.conf
+```
+
+Continue only if the upstream file contains usable `nameserver` entries, not
+the local stub addresses `127.0.0.53` or `127.0.0.54`. If it is missing/empty,
+or another resolver manager owns `/etc/resolv.conf`, resolve that configuration
+before replacing the link. Use the host's existing upstream servers; do not
+assume a particular public resolver is reachable from this network.
+
+If the backup/override paths below already exist, inspect them first so you
+know which configuration rollback will restore. The backup command preserves
+an existing backup.
+
+Save the original resolver file or symlink, create a dedicated override, then
+switch traditional DNS clients to the upstream file before restarting resolved:
+
+```bash
+sudo cp -an /etc/resolv.conf /etc/resolv.conf.before-fastseed
+sudo mkdir -p /etc/systemd/resolved.conf.d
+
+printf '[Resolve]\nDNSStubListener=no\n' |
+  sudo tee /etc/systemd/resolved.conf.d/90-fastseed.conf
+
+sudo ln -sfn /run/systemd/resolve/resolv.conf /etc/resolv.conf
+sudo systemctl restart systemd-resolved
+```
+
+The upstream resolv.conf format cannot preserve per-interface DNS routing;
+hosts using VPN/split DNS need a setup appropriate to that routing.
+
+Verify port availability and host DNS resolution before deployment:
+
+```bash
+sudo ss -lntup 'sport = :53'
+getent hosts github.com
+dig github.com A +time=3 +tries=1
+```
+
+No listener rows means port 53 is free. After starting FastSeed, the same check
+should show FastSeed listening on its configured address. If resolved still
+owns the port, inspect other drop-ins and `DNSStubListenerExtra` settings.
+No server reboot is required for this change. Reboot recovery remains untested.
+
+To undo the resolver changes, first stop any replacement listener using port 53.
+If the saved backup is the original configuration, restore it with:
+
+```bash
+sudo rm -f /etc/systemd/resolved.conf.d/90-fastseed.conf
+sudo cp -a --remove-destination /etc/resolv.conf.before-fastseed /etc/resolv.conf
+sudo systemctl restart systemd-resolved
+getent hosts github.com
+dig github.com A +time=3 +tries=1
+```
+
+References: [DNSStubListener configuration](https://www.freedesktop.org/software/systemd/man/latest/resolved.conf.html)
+and [systemd-resolved resolver-file modes](https://www.freedesktop.org/software/systemd/man/latest/systemd-resolved.service.html).
+
 ## Historical v1 deployment instructions
 
 # Deploying BSTY-FastSeed v1.0.0
@@ -120,8 +211,8 @@ mailbox and other operational defaults. Set a custom mailbox/serial if desired,
 validate the config and restart after editing. The optional NS argument defaults
 to the zone for older invocations; pass a stable explicit NS for production.
 
-If port 53 is occupied, inspect `sudo ss -lntup`. Resolve the specific conflict;
-do not blindly disable or replace the host's resolver. The helper does not reboot.
+If port 53 is occupied, follow [Freeing port 53 on Ubuntu](#freeing-port-53-on-ubuntu).
+The helper does not reboot.
 
 ## Existing installation: preserve config and database
 

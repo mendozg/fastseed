@@ -1,5 +1,9 @@
 # 2.0.0-alpha3 — development milestone, Stage 14.3
 
+Documentation revision **docs-r1** adds Ubuntu port-53 diagnosis, existing
+FastSeed service handling, systemd-resolved stub configuration, DNS verification
+and rollback instructions. Runtime code and prior test evidence are unchanged.
+
 - Canonical endpoint/PeerId model for IPv4, IPv6, Tor v3 and ordinary I2P base32.
 - Normalize IP aliases, validate Tor checksum/version and I2P padding bits.
 - Key the health cache by endpoint ID; bridge existing textual lookup keys.

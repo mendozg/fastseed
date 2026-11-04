@@ -8,6 +8,7 @@ Alpha2's protocol codec and interoperability version fix are included.
 
 Read [the peer contract](docs/ALPHA3-PEERS.md), [the roadmap](docs/V2-ROADMAP.md)
 and [the executed verification results](release/V2-VERIFICATION.txt).
+For DNS port conflicts, see [Freeing port 53 on Ubuntu](docs/DEPLOYMENT.md#freeing-port-53-on-ubuntu).
 Existing config files remain valid; `[cache] max_peers` defaults to 100000.
 The SQLite schema and v1 federation format are retained. Mesh v2, signed seeder
 identities, config v2 and persistence migration remain future milestones.

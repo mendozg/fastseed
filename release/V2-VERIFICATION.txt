@@ -1,3 +1,11 @@
+Documentation revision docs-r1 — 2026-10-31T19:17:06+00:00
+Added Ubuntu port-53 diagnosis, FastSeed stop instructions, systemd-resolved
+stub/upstream configuration, host DNS checks and rollback. Six new Bash examples
+passed syntax parsing; they were NOT executed against a host's resolver.
+Runtime, tests and historical test evidence are unchanged. No C++ build or tests
+were rerun for this documentation-only revision. Existing alpha3 results follow.
+Reboot recovery and live Tor/I2P remain NOT TESTED.
+
 BSTY-FastSeed v2.0.0-alpha3 — Stage 14.3 verification
 Recorded UTC: 2026-10-31T18:52:03+00:00
 
